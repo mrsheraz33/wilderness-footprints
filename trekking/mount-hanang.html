@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mount Hanang - Fourth Highest Mountain in Tanzania - Wilderness Footprints Tanzania</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+        * { font-family: 'Poppins', sans-serif; }
+        .dropdown:hover .dropdown-menu { display: block; }
+        .dropdown-menu {
+            display: none; position: absolute; top: 100%; left: 0;
+            background: white; min-width: 220px; box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            z-index: 1000; border-radius: 8px; padding: 8px 0;
+        }
+        .dropdown-menu a {
+            display: block; padding: 10px 20px; color: #1e3a2e;
+            text-decoration: none; font-size: 14px; transition: all 0.3s;
+        }
+        .dropdown-menu a:hover { background: #e8f0e8; color: #0f2b1f; }
+        .btn-primary {
+            background: #2d6a4f; color: white; padding: 14px 32px;
+            border-radius: 50px; text-decoration: none; font-weight: 600;
+            transition: all 0.3s; display: inline-block;
+        }
+        .btn-primary:hover { background: #1b4d3e; transform: translateY(-3px); box-shadow: 0 10px 25px rgba(45,106,79,0.3); }
+        .hero-section {
+            background: linear-gradient(135deg, #fef3c7 0%, #fde68a 100%);
+        }
+        .stat-card {
+            background: white;
+            border-radius: 24px;
+            transition: all 0.3s ease;
+            border: 1px solid #fef3c7;
+        }
+        .stat-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 30px rgba(0,0,0,0.08);
+            border-color: #d97706;
+        }
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 800;
+            color: #d97706;
+        }
+        .gallery-img {
+            transition: all 0.3s ease;
+            border-radius: 20px;
+        }
+        .gallery-img:hover {
+            transform: scale(1.02);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+        }
+        .feature-card {
+            background: linear-gradient(135deg, #fffbeb, #fef3c7);
+            border-radius: 20px;
+        }
+        .info-badge {
+            background: #d97706;
+            color: white;
+            border-radius: 30px;
+            padding: 4px 16px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="bg-white shadow-md fixed w-full z-50">
+    <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center space-x-2">
+            <img src="images/logo.jpeg" alt="Logo" class="h-12 w-auto" onerror="this.src='https://via.placeholder.com/50x50?text=WFT'">
+            <span class="font-bold text-xl text-green-800 hidden sm:inline">Wilderness Footprints</span>
+        </a>
+
+        <!-- Desktop Menu -->
+        <div class="hidden lg:flex space-x-4 xl:space-x-6 items-center">
+            
+            <!-- About Us Dropdown -->
+            <div class="dropdown relative">
+                <a href="#" class="text-gray-700 hover:text-green-700 font-medium">About Us <i class="fas fa-chevron-down text-xs"></i></a>
+                <div class="dropdown-menu">
+                    <a href="who-are-we.html">Who Are We</a>
+                </div>
+            </div>
+
+            <!-- Safaris Dropdown -->
+            <div class="dropdown relative">
+                <a href="#" class="text-gray-700 hover:text-green-700 font-medium">Safaris <i class="fas fa-chevron-down text-xs"></i></a>
+                <div class="dropdown-menu">
+                    <a href="safaris/3-days-family-safari.html">3 Days Family Safari</a>
+                    <a href="safaris/4-days-classic-safari.html">4 Days Classic Safari</a>
+                    <a href="safaris/5-days-safari-footprints.html">5 Days Safari Footprints</a>
+                    <a href="safaris/6-days-safari-experience.html">6 Days Safari Experience</a>
+                    <a href="safaris/7-days-cultural-safari.html">7 Days Cultural Safari</a>
+                    <a href="safaris/8-days-ngorongoro-highlands-treks.html">8 Days Ngorongoro Highlands Treks</a>
+                    <a href="safaris/9-days-mara-river-crossing.html">9 Days Mara River Crossing</a>
+                    <a href="safaris/8-days-honeymoon-safaris.html">8 Days Honeymoon Safaris</a>
+                    <a href="safaris/western-safari-tanzania.html">Western Safari Tanzania</a>
+                    <a href="safaris/southern-safari-tanzania.html">Southern Safari Tanzania</a>
+                    <a href="safaris/4-days-tanzania-safari-isbania.html">4 Days Tanzania Safari from Isbania</a>
+                    <a href="safaris/balloon-safari.html">Balloon Safari</a>
+                    <a href="safaris/olduvai-gorge.html">Olduvai Gorge</a>
+                    <a href="safaris/lake-natron.html">Lake Natron</a>
+                    <a href="safaris/lake-eyasi.html">Lake Eyasi</a>
+                    <a href="safaris/kenya-safaris.html">Kenya Safaris</a>
+                </div>
+            </div>
+
+            <!-- Trekking Dropdown -->
+            <div class="dropdown relative">
+                <a href="#" class="text-gray-700 hover:text-green-700 font-medium">Trekking <i class="fas fa-chevron-down text-xs"></i></a>
+                <div class="dropdown-menu">
+                    <a href="kilimanjaro-routes.html">Kilimanjaro Routes</a>
+                    <a href="kili-day-trip.html">Kili Day Trip</a>
+                    <a href="trekking/mount-kenya-trekking-4-days.html">Mount Kenya Trekking</a>
+                    <a href="trekking/mount-meru-treks.html">Mount Meru Treks</a>
+                    <a href="trekking/mount-lolmalasin.html">Mount Lolmalasin</a>
+                    <a href="trekking/mount-hanang.html">Mount Hanang</a>
+                    <a href="trekking/mount-oldonyo-lengai.html">Mount Oldonyo Lengai</a>
+                </div>
+            </div>
+
+            <!-- Destinations Dropdown -->
+            <div class="dropdown relative">
+                <a href="#" class="text-gray-700 hover:text-green-700 font-medium">Destinations <i class="fas fa-chevron-down text-xs"></i></a>
+                <div class="dropdown-menu">
+                    <a href="beach-holidays.html">Beach Holidays</a>
+                    <a href="maasai-visit.html">Maasai Visit</a>
+                    <a href="serval-wildlife.html">Serval Wildlife</a>
+                    <a href="tour-in-mto-wa-mbu.html">Mto Wa Mbu Tour</a>
+                    <a href="cycling-tour.html">Cycling Tour</a>
+                </div>
+            </div>
+
+            <!-- Direct Links -->
+            <a href="tour-faq.html" class="text-gray-700 hover:text-green-700 font-medium">Tour FAQ</a>
+            <a href="booking-policy.html" class="text-gray-700 hover:text-green-700 font-medium">Booking Policy</a>
+            <a href="contact.html" class="btn-primary text-sm py-2 px-5">Contact Us</a>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button class="lg:hidden text-gray-700" onclick="toggleMobileMenu()">
+            <i class="fas fa-bars text-2xl"></i>
+        </button>
+    </div>
+
+    <!-- Mobile Menu (All Pages as per your folder structure) -->
+    <div id="mobileMenu" class="hidden lg:hidden bg-white border-t px-4 py-3 space-y-2 max-h-screen overflow-y-auto">
+        
+        <!-- About Us -->
+        <div class="font-bold text-green-800 pt-2">About Us</div>
+        <div class="pl-4 space-y-1">
+            <a href="who-are-we.html" class="block py-1 text-sm text-gray-600">Who Are We</a>
+        </div>
+
+        <!-- Safaris -->
+        <div class="font-bold text-green-800 pt-3">Safaris</div>
+        <div class="pl-4 space-y-1">
+            <a href="safaris/3-days-family-safari.html" class="block py-1 text-sm text-gray-600">3 Days Family Safari</a>
+            <a href="safaris/4-days-classic-safari.html" class="block py-1 text-sm text-gray-600">4 Days Classic Safari</a>
+            <a href="safaris/5-days-safari-footprints.html" class="block py-1 text-sm text-gray-600">5 Days Safari Footprints</a>
+            <a href="safaris/6-days-safari-experience.html" class="block py-1 text-sm text-gray-600">6 Days Safari Experience</a>
+            <a href="safaris/7-days-cultural-safari.html" class="block py-1 text-sm text-gray-600">7 Days Cultural Safari</a>
+            <a href="safaris/8-days-ngorongoro-highlands-treks.html" class="block py-1 text-sm text-gray-600">8 Days Ngorongoro Highlands Treks</a>
+            <a href="safaris/9-days-mara-river-crossing.html" class="block py-1 text-sm text-gray-600">9 Days Mara River Crossing</a>
+            <a href="safaris/8-days-honeymoon-safaris.html" class="block py-1 text-sm text-gray-600">8 Days Honeymoon Safaris</a>
+            <a href="safaris/western-safari-tanzania.html" class="block py-1 text-sm text-gray-600">Western Safari Tanzania</a>
+            <a href="safaris/southern-safari-tanzania.html" class="block py-1 text-sm text-gray-600">Southern Safari Tanzania</a>
+            <a href="safaris/4-days-tanzania-safari-isbania.html" class="block py-1 text-sm text-gray-600">4 Days Safari from Isbania</a>
+            <a href="safaris/balloon-safari.html" class="block py-1 text-sm text-gray-600">Balloon Safari</a>
+            <a href="safaris/olduvai-gorge.html" class="block py-1 text-sm text-gray-600">Olduvai Gorge</a>
+            <a href="safaris/lake-natron.html" class="block py-1 text-sm text-gray-600">Lake Natron</a>
+            <a href="safaris/lake-eyasi.html" class="block py-1 text-sm text-gray-600">Lake Eyasi</a>
+            <a href="safaris/kenya-safaris.html" class="block py-1 text-sm text-gray-600">Kenya Safaris</a>
+        </div>
+
+        <!-- Trekking -->
+        <div class="font-bold text-green-800 pt-3">Trekking</div>
+        <div class="pl-4 space-y-1">
+            <a href="kilimanjaro-routes.html" class="block py-1 text-sm text-gray-600">Kilimanjaro Routes</a>
+            <a href="kili-day-trip.html" class="block py-1 text-sm text-gray-600">Kili Day Trip</a>
+            <a href="trekking/mount-kenya-trekking-4-days.html" class="block py-1 text-sm text-gray-600">Mount Kenya Trekking</a>
+            <a href="trekking/mount-meru-treks.html" class="block py-1 text-sm text-gray-600">Mount Meru Treks</a>
+            <a href="trekking/mount-lolmalasin.html" class="block py-1 text-sm text-gray-600">Mount Lolmalasin</a>
+            <a href="trekking/mount-hanang.html" class="block py-1 text-sm text-gray-600">Mount Hanang</a>
+            <a href="trekking/mount-oldonyo-lengai.html" class="block py-1 text-sm text-gray-600">Mount Oldonyo Lengai</a>
+        </div>
+
+        <!-- Destinations & Activities -->
+        <div class="font-bold text-green-800 pt-3">Destinations & Activities</div>
+        <div class="pl-4 space-y-1">
+            <a href="beach-holidays.html" class="block py-1 text-sm text-gray-600">Beach Holidays</a>
+            <a href="maasai-visit.html" class="block py-1 text-sm text-gray-600">Maasai Visit</a>
+            <a href="serval-wildlife.html" class="block py-1 text-sm text-gray-600">Serval Wildlife</a>
+            <a href="tour-in-mto-wa-mbu.html" class="block py-1 text-sm text-gray-600">Mto Wa Mbu Tour</a>
+            <a href="cycling-tour.html" class="block py-1 text-sm text-gray-600">Cycling Tour</a>
+        </div>
+
+        <!-- Information -->
+        <div class="font-bold text-green-800 pt-3">Information</div>
+        <div class="pl-4 space-y-1">
+            <a href="tour-faq.html" class="block py-1 text-sm text-gray-600">Tour FAQ</a>
+            <a href="booking-policy.html" class="block py-1 text-sm text-gray-600">Booking Policy</a>
+        </div>
+
+        <!-- Contact -->
+        <a href="contact.html" class="block py-2 text-green-700 font-semibold border-t mt-2 pt-2">Contact Us</a>
+    </div>
+</nav>
+    <!-- Hero Section -->
+    <section class="hero-section pt-32 pb-16">
+        <div class="container mx-auto px-4">
+            <div class="max-w-5xl mx-auto text-center">
+                <i class="fas fa-mountain-sun text-5xl text-amber-700 mb-4"></i>
+                <h1 class="text-4xl md:text-6xl font-bold text-gray-800 mb-4">MOUNT HANANG</h1>
+                <div class="w-24 h-1 bg-amber-600 mx-auto mb-5"></div>
+                <p class="text-xl text-gray-600 max-w-2xl mx-auto">Fourth Highest Mountain in Tanzania • 3,422m</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery - 3 Different Images -->
+    <section class="py-0 -mt-4">
+        <div class="container mx-auto px-4">
+            <div class="max-w-5xl mx-auto">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                    <img src="https://images.pexels.com/photos/3614349/pexels-photo-3614349.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Mount Hanang Peak" class="gallery-img w-full h-48 object-cover shadow-md">
+                    <img src="https://images.pexels.com/photos/417037/pexels-photo-417037.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Mount Hanang Landscape" class="gallery-img w-full h-48 object-cover shadow-md">
+                    <img src="https://images.pexels.com/photos/8040059/pexels-photo-8040059.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Mount Hanang Scenery" class="gallery-img w-full h-48 object-cover shadow-md">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+
+                <!-- Description Card -->
+                <div class="bg-amber-50 rounded-2xl p-8 mb-10">
+                    <p class="text-gray-700 text-lg leading-relaxed">Mount Hanang is the <span class="font-bold text-amber-700">fourth highest mountain in Tanzania</span>, standing at about <span class="font-bold text-amber-700">3,422 meters (11,524 feet)</span> above sea level. It is located in the central part of Tanzania, specifically in the Hanang District of the Manyara Region. The mountain is part of the East African Rift and features a variety of ecosystems, including montane forests and grasslands.</p>
+                </div>
+
+                <!-- Stats Cards -->
+                <div class="grid md:grid-cols-3 gap-5 mb-10">
+                    <div class="stat-card p-5 text-center">
+                        <i class="fas fa-chart-line text-3xl text-amber-600 mb-2"></i>
+                        <div class="stat-number">4th</div>
+                        <p class="text-gray-500 text-sm">Highest Mountain in Tanzania</p>
+                    </div>
+                    <div class="stat-card p-5 text-center">
+                        <i class="fas fa-ruler-combined text-3xl text-amber-600 mb-2"></i>
+                        <div class="stat-number">3,422m</div>
+                        <p class="text-gray-500 text-sm">Height Above Sea Level</p>
+                    </div>
+                    <div class="stat-card p-5 text-center">
+                        <i class="fas fa-map-marker-alt text-3xl text-amber-600 mb-2"></i>
+                        <div class="stat-number">Manyara</div>
+                        <p class="text-gray-500 text-sm">Region in Central Tanzania</p>
+                    </div>
+                </div>
+
+                <!-- Features Grid -->
+                <div class="grid md:grid-cols-2 gap-5 mb-10">
+                    <div class="feature-card p-5">
+                        <i class="fas fa-tree text-2xl text-amber-700 mb-2"></i>
+                        <h4 class="font-bold text-gray-800 mb-1">Rich Biodiversity</h4>
+                        <p class="text-gray-600 text-sm">Montane forests, grasslands, diverse wildlife and rich plant life</p>
+                    </div>
+                    <div class="feature-card p-5">
+                        <i class="fas fa-hiking text-2xl text-amber-700 mb-2"></i>
+                        <h4 class="font-bold text-gray-800 mb-1">Trekking Destination</h4>
+                        <p class="text-gray-600 text-sm">Popular for hiking, 2-day ascent with base camp near summit</p>
+                    </div>
+                    <div class="feature-card p-5">
+                        <i class="fas fa-eye text-2xl text-amber-700 mb-2"></i>
+                        <h4 class="font-bold text-gray-800 mb-1">Breathtaking Views</h4>
+                        <p class="text-gray-600 text-sm">Views of other nearby peaks and lakes from the top</p>
+                    </div>
+                    <div class="feature-card p-5">
+                        <i class="fas fa-peace text-2xl text-amber-700 mb-2"></i>
+                        <h4 class="font-bold text-gray-800 mb-1">Less Crowded</h4>
+                        <p class="text-gray-600 text-sm">Serene experience, less crowded than Kilimanjaro</p>
+                    </div>
+                </div>
+
+                <!-- Location & Details -->
+                <div class="bg-gray-50 rounded-xl p-6 mb-10">
+                    <div class="flex items-start gap-4">
+                        <i class="fas fa-location-dot text-2xl text-amber-600 mt-1"></i>
+                        <div>
+                            <h4 class="font-bold text-gray-800">Location Details</h4>
+                            <p class="text-gray-600">Hanang District, Manyara Region, Central Tanzania. Part of the East African Rift system.</p>
+                            <div class="flex flex-wrap gap-2 mt-3">
+                                <span class="info-badge"><i class="fas fa-calendar-alt mr-1"></i> 2 Days Ascent</span>
+                                <span class="info-badge"><i class="fas fa-campground mr-1"></i> Base Camp Available</span>
+                                <span class="info-badge"><i class="fas fa-mountain mr-1"></i> East African Rift</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Trekking Note -->
+                <div class="bg-amber-100 rounded-xl p-5 mb-10 text-center">
+                    <i class="fas fa-quote-left text-amber-500 text-2xl mb-2"></i>
+                    <p class="text-gray-700">The ascent typically takes two days, with a recommended base camp located near the mountain's summit. Visitors often enjoy the breathtaking views from the top, which can include sights of other nearby peaks and lakes. The area is less crowded than more famous mountains like Kilimanjaro, making it an attractive option for those seeking a more serene hiking experience.</p>
+                </div>
+
+                <!-- CTA - Email -->
+                <div class="bg-gradient-to-r from-amber-700 to-amber-600 rounded-2xl p-8 text-center text-white">
+                    <i class="fas fa-envelope text-4xl mb-3"></i>
+                    <h3 class="text-2xl font-bold mb-2">ASK THE BEST QUOTES!</h3>
+                    <p class="text-amber-100 text-xl">mussaonkilimanjaro@outlook.com</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-10">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-white text-xl font-bold mb-4">Wilderness Footprints</h3>
+                    <p class="text-sm">Tanzania Trekking & Safaris. Step into the heart of the wilderness with us.</p>
+                </div>
+                <div>
+                    <h3 class="text-white text-xl font-bold mb-4">Contact</h3>
+                    <p class="text-sm"><i class="fas fa-map-marker-alt mr-2"></i> Boma Road, Near New Safari Hotel, Arusha, Tanzania</p>
+                    <p class="text-sm mt-2"><i class="fab fa-whatsapp mr-2"></i> +255789178090 (WhatsApp)</p>
+                    <p class="text-sm mt-2"><i class="fas fa-envelope mr-2"></i> wildernessfootprints@gmail.com</p>
+                </div>
+                <div>
+                    <h3 class="text-white text-xl font-bold mb-4">Follow Us</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white text-2xl"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white text-2xl"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                    <div class="mt-4 text-sm">Select Language: <span class="text-green-400">Google Translate</span></div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-6 text-center text-sm">
+                <p>&copy; 2024 Wilderness Footprints Tanzania. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+        }
+    </script>
+</body>
+</html>

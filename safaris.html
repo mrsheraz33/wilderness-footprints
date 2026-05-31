@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Safaris - Tanzania Safari Circuits - Wilderness Footprints Tanzania</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+        * { font-family: 'Poppins', sans-serif; }
+        .dropdown:hover .dropdown-menu { display: block; }
+        .dropdown-menu {
+            display: none; position: absolute; top: 100%; left: 0;
+            background: white; min-width: 220px; box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            z-index: 1000; border-radius: 8px; padding: 8px 0;
+        }
+        .dropdown-menu a {
+            display: block; padding: 10px 20px; color: #1e3a2e;
+            text-decoration: none; font-size: 14px; transition: all 0.3s;
+        }
+        .dropdown-menu a:hover { background: #e8f0e8; color: #0f2b1f; }
+        .btn-primary {
+            background: #2d6a4f; color: white; padding: 14px 32px;
+            border-radius: 50px; text-decoration: none; font-weight: 600;
+            transition: all 0.3s; display: inline-block;
+        }
+        .btn-primary:hover { background: #1b4d3e; transform: translateY(-3px); box-shadow: 0 10px 25px rgba(45,106,79,0.3); }
+        .hero-section {
+            background: linear-gradient(135deg, #e8f0ec 0%, #d4e4dc 100%);
+        }
+        .circuit-card {
+            background: white;
+            border-radius: 24px;
+            transition: all 0.35s ease;
+            border: 1px solid #e2e8f0;
+        }
+        .circuit-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 35px rgba(0,0,0,0.1);
+            border-color: #2d6a4f;
+        }
+        .day-card {
+            background: white;
+            border-radius: 18px;
+            transition: all 0.3s ease;
+            border: 1px solid #e2e8f0;
+        }
+        .day-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+        }
+        .duration-badge {
+            background: #e8f0ec;
+            color: #2d6a4f;
+            border-radius: 30px;
+            padding: 4px 14px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            display: inline-block;
+        }
+        .gallery-img {
+            transition: all 0.3s ease;
+            border-radius: 20px;
+        }
+        .gallery-img:hover {
+            transform: scale(1.02);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+        }
+        .tab-button {
+            cursor: pointer;
+            transition: all 0.3s;
+            border-bottom: 3px solid transparent;
+        }
+        .tab-button.active {
+            border-bottom-color: #2d6a4f;
+            color: #2d6a4f;
+            font-weight: 600;
+        }
+        .circuit-content {
+            display: none;
+        }
+        .circuit-content.active-circuit {
+            display: block;
+            animation: fadeIn 0.4s ease;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+ <!-- Navbar -->
+<nav class="bg-white shadow-md fixed w-full z-50">
+    <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center space-x-2">
+            <img src="images/logo.jpeg" alt="Logo" class="h-12 w-auto" onerror="this.src='https://via.placeholder.com/50x50?text=WFT'">
+            <span class="font-bold text-xl text-green-800 hidden sm:inline">Wilderness Footprints</span>
+        </a>
+
+        <!-- Desktop Menu -->
+        <div class="hidden lg:flex space-x-4 xl:space-x-6 items-center">
+            
+            <!-- About Us Dropdown -->
+            <div class="dropdown relative">
+                <a href="#" class="text-gray-700 hover:text-green-700 font-medium">About Us <i class="fas fa-chevron-down text-xs"></i></a>
+                <div class="dropdown-menu">
+                    <a href="who-are-we.html">Who Are We</a>
+                </div>
+            </div>
+
+            <!-- Safaris Dropdown -->
+            <div class="dropdown relative">
+                <a href="#" class="text-gray-700 hover:text-green-700 font-medium">Safaris <i class="fas fa-chevron-down text-xs"></i></a>
+                <div class="dropdown-menu">
+                    <a href="safaris/3-days-family-safari.html">3 Days Family Safari</a>
+                    <a href="safaris/4-days-classic-safari.html">4 Days Classic Safari</a>
+                    <a href="safaris/5-days-safari-footprints.html">5 Days Safari Footprints</a>
+                    <a href="safaris/6-days-safari-experience.html">6 Days Safari Experience</a>
+                    <a href="safaris/7-days-cultural-safari.html">7 Days Cultural Safari</a>
+                    <a href="safaris/8-days-ngorongoro-highlands-treks.html">8 Days Ngorongoro Highlands Treks</a>
+                    <a href="safaris/9-days-mara-river-crossing.html">9 Days Mara River Crossing</a>
+                    <a href="safaris/8-days-honeymoon-safaris.html">8 Days Honeymoon Safaris</a>
+                    <a href="safaris/western-safari-tanzania.html">Western Safari Tanzania</a>
+                    <a href="safaris/southern-safari-tanzania.html">Southern Safari Tanzania</a>
+                    <a href="safaris/4-days-tanzania-safari-isbania.html">4 Days Tanzania Safari from Isbania</a>
+                    <a href="safaris/balloon-safari.html">Balloon Safari</a>
+                    <a href="safaris/olduvai-gorge.html">Olduvai Gorge</a>
+                    <a href="safaris/lake-natron.html">Lake Natron</a>
+                    <a href="safaris/lake-eyasi.html">Lake Eyasi</a>
+                    <a href="safaris/kenya-safaris.html">Kenya Safaris</a>
+                </div>
+            </div>
+
+            <!-- Trekking Dropdown -->
+            <div class="dropdown relative">
+                <a href="#" class="text-gray-700 hover:text-green-700 font-medium">Trekking <i class="fas fa-chevron-down text-xs"></i></a>
+                <div class="dropdown-menu">
+                    <a href="kilimanjaro-routes.html">Kilimanjaro Routes</a>
+                    <a href="kili-day-trip.html">Kili Day Trip</a>
+                    <a href="trekking/mount-kenya-trekking-4-days.html">Mount Kenya Trekking</a>
+                    <a href="trekking/mount-meru-treks.html">Mount Meru Treks</a>
+                    <a href="trekking/mount-lolmalasin.html">Mount Lolmalasin</a>
+                    <a href="trekking/mount-hanang.html">Mount Hanang</a>
+                    <a href="trekking/mount-oldonyo-lengai.html">Mount Oldonyo Lengai</a>
+                </div>
+            </div>
+
+            <!-- Destinations Dropdown -->
+            <div class="dropdown relative">
+                <a href="#" class="text-gray-700 hover:text-green-700 font-medium">Destinations <i class="fas fa-chevron-down text-xs"></i></a>
+                <div class="dropdown-menu">
+                    <a href="beach-holidays.html">Beach Holidays</a>
+                    <a href="maasai-visit.html">Maasai Visit</a>
+                    <a href="serval-wildlife.html">Serval Wildlife</a>
+                    <a href="tour-in-mto-wa-mbu.html">Mto Wa Mbu Tour</a>
+                    <a href="cycling-tour.html">Cycling Tour</a>
+                </div>
+            </div>
+
+            <!-- Direct Links -->
+            <a href="tour-faq.html" class="text-gray-700 hover:text-green-700 font-medium">Tour FAQ</a>
+            <a href="booking-policy.html" class="text-gray-700 hover:text-green-700 font-medium">Booking Policy</a>
+            <a href="contact.html" class="btn-primary text-sm py-2 px-5">Contact Us</a>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button class="lg:hidden text-gray-700" onclick="toggleMobileMenu()">
+            <i class="fas fa-bars text-2xl"></i>
+        </button>
+    </div>
+
+    <!-- Mobile Menu (All Pages as per your folder structure) -->
+    <div id="mobileMenu" class="hidden lg:hidden bg-white border-t px-4 py-3 space-y-2 max-h-screen overflow-y-auto">
+        
+        <!-- About Us -->
+        <div class="font-bold text-green-800 pt-2">About Us</div>
+        <div class="pl-4 space-y-1">
+            <a href="who-are-we.html" class="block py-1 text-sm text-gray-600">Who Are We</a>
+        </div>
+
+        <!-- Safaris -->
+        <div class="font-bold text-green-800 pt-3">Safaris</div>
+        <div class="pl-4 space-y-1">
+            <a href="safaris/3-days-family-safari.html" class="block py-1 text-sm text-gray-600">3 Days Family Safari</a>
+            <a href="safaris/4-days-classic-safari.html" class="block py-1 text-sm text-gray-600">4 Days Classic Safari</a>
+            <a href="safaris/5-days-safari-footprints.html" class="block py-1 text-sm text-gray-600">5 Days Safari Footprints</a>
+            <a href="safaris/6-days-safari-experience.html" class="block py-1 text-sm text-gray-600">6 Days Safari Experience</a>
+            <a href="safaris/7-days-cultural-safari.html" class="block py-1 text-sm text-gray-600">7 Days Cultural Safari</a>
+            <a href="safaris/8-days-ngorongoro-highlands-treks.html" class="block py-1 text-sm text-gray-600">8 Days Ngorongoro Highlands Treks</a>
+            <a href="safaris/9-days-mara-river-crossing.html" class="block py-1 text-sm text-gray-600">9 Days Mara River Crossing</a>
+            <a href="safaris/8-days-honeymoon-safaris.html" class="block py-1 text-sm text-gray-600">8 Days Honeymoon Safaris</a>
+            <a href="safaris/western-safari-tanzania.html" class="block py-1 text-sm text-gray-600">Western Safari Tanzania</a>
+            <a href="safaris/southern-safari-tanzania.html" class="block py-1 text-sm text-gray-600">Southern Safari Tanzania</a>
+            <a href="safaris/4-days-tanzania-safari-isbania.html" class="block py-1 text-sm text-gray-600">4 Days Safari from Isbania</a>
+            <a href="safaris/balloon-safari.html" class="block py-1 text-sm text-gray-600">Balloon Safari</a>
+            <a href="safaris/olduvai-gorge.html" class="block py-1 text-sm text-gray-600">Olduvai Gorge</a>
+            <a href="safaris/lake-natron.html" class="block py-1 text-sm text-gray-600">Lake Natron</a>
+            <a href="safaris/lake-eyasi.html" class="block py-1 text-sm text-gray-600">Lake Eyasi</a>
+            <a href="safaris/kenya-safaris.html" class="block py-1 text-sm text-gray-600">Kenya Safaris</a>
+        </div>
+
+        <!-- Trekking -->
+        <div class="font-bold text-green-800 pt-3">Trekking</div>
+        <div class="pl-4 space-y-1">
+            <a href="kilimanjaro-routes.html" class="block py-1 text-sm text-gray-600">Kilimanjaro Routes</a>
+            <a href="kili-day-trip.html" class="block py-1 text-sm text-gray-600">Kili Day Trip</a>
+            <a href="trekking/mount-kenya-trekking-4-days.html" class="block py-1 text-sm text-gray-600">Mount Kenya Trekking</a>
+            <a href="trekking/mount-meru-treks.html" class="block py-1 text-sm text-gray-600">Mount Meru Treks</a>
+            <a href="trekking/mount-lolmalasin.html" class="block py-1 text-sm text-gray-600">Mount Lolmalasin</a>
+            <a href="trekking/mount-hanang.html" class="block py-1 text-sm text-gray-600">Mount Hanang</a>
+            <a href="trekking/mount-oldonyo-lengai.html" class="block py-1 text-sm text-gray-600">Mount Oldonyo Lengai</a>
+        </div>
+
+        <!-- Destinations & Activities -->
+        <div class="font-bold text-green-800 pt-3">Destinations & Activities</div>
+        <div class="pl-4 space-y-1">
+            <a href="beach-holidays.html" class="block py-1 text-sm text-gray-600">Beach Holidays</a>
+            <a href="maasai-visit.html" class="block py-1 text-sm text-gray-600">Maasai Visit</a>
+            <a href="serval-wildlife.html" class="block py-1 text-sm text-gray-600">Serval Wildlife</a>
+            <a href="tour-in-mto-wa-mbu.html" class="block py-1 text-sm text-gray-600">Mto Wa Mbu Tour</a>
+            <a href="cycling-tour.html" class="block py-1 text-sm text-gray-600">Cycling Tour</a>
+        </div>
+
+        <!-- Information -->
+        <div class="font-bold text-green-800 pt-3">Information</div>
+        <div class="pl-4 space-y-1">
+            <a href="tour-faq.html" class="block py-1 text-sm text-gray-600">Tour FAQ</a>
+            <a href="booking-policy.html" class="block py-1 text-sm text-gray-600">Booking Policy</a>
+        </div>
+
+        <!-- Contact -->
+        <a href="contact.html" class="block py-2 text-green-700 font-semibold border-t mt-2 pt-2">Contact Us</a>
+    </div>
+</nav>
+    <!-- Hero Section -->
+    <section class="hero-section pt-32 pb-16">
+        <div class="container mx-auto px-4 text-center">
+            <div class="max-w-3xl mx-auto">
+                <i class="fas fa-paw text-4xl text-green-700 mb-4"></i>
+                <h1 class="text-4xl md:text-6xl font-bold text-gray-800 mb-4">SAFARIS</h1>
+                <div class="w-24 h-1 bg-green-600 mx-auto mb-5"></div>
+                <p class="text-xl text-gray-600">Tanzania Safari Circuits</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="py-16 bg-white">
+        <div class="container mx-auto px-4">
+            <div class="max-w-5xl mx-auto">
+
+                <!-- Post Meta -->
+                <div class="text-center mb-8">
+                    <span class="bg-gray-100 text-gray-600 px-3 py-1 rounded-full text-xs"><i class="far fa-calendar-alt mr-1"></i> March 27, 2026</span>
+                    <span class="bg-gray-100 text-gray-600 px-3 py-1 rounded-full text-xs ml-2"><i class="far fa-folder mr-1"></i> Travel With Expert in Tanzania</span>
+                </div>
+
+                <!-- Elephant Image -->
+                <div class="mb-10 rounded-2xl overflow-hidden shadow-xl">
+                    <img src="https://images.pexels.com/photos/247502/pexels-photo-247502.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Elephant Tanzania Safari" class="w-full h-80 object-cover gallery-img">
+                </div>
+
+                <!-- Circuit Tabs -->
+                <div class="flex flex-wrap border-b border-gray-200 mb-8 gap-2 justify-center">
+                    <button class="tab-button active px-6 py-3 text-gray-600 hover:text-green-600 transition font-medium" data-circuit="northern">Northern Circuit</button>
+                    <button class="tab-button px-6 py-3 text-gray-600 hover:text-green-600 transition font-medium" data-circuit="southern">Southern Circuit</button>
+                    <button class="tab-button px-6 py-3 text-gray-600 hover:text-green-600 transition font-medium" data-circuit="western">Western Circuit</button>
+                </div>
+
+                <!-- Northern Circuit Content -->
+                <div id="northern" class="circuit-content active-circuit">
+                    <div class="circuit-card p-6 mb-6">
+                        <h2 class="text-2xl font-bold text-gray-800 mb-2">Northern Circuit Safari</h2>
+                        <p class="text-gray-600 mb-4">The Northern Circuit is the most popular safari route in Tanzania, offering world-famous parks, excellent road access, and diverse wildlife experiences.</p>
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <h3 class="font-bold text-green-700 mb-2"><i class="fas fa-location-dot mr-2"></i> Key Destinations</h3>
+                                <ul class="space-y-1 text-gray-600 text-sm">
+                                    <li><i class="fas fa-check-circle text-green-600 mr-2"></i> Serengeti National Park – Great Migration</li>
+                                    <li><i class="fas fa-check-circle text-green-600 mr-2"></i> Ngorongoro Crater – UNESCO Site</li>
+                                    <li><i class="fas fa-check-circle text-green-600 mr-2"></i> Tarangire National Park – Elephants & Baobabs</li>
+                                    <li><i class="fas fa-check-circle text-green-600 mr-2"></i> Lake Manyara – Tree-climbing lions</li>
+                                    <li><i class="fas fa-check-circle text-green-600 mr-2"></i> Arusha National Park – Short safaris</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-green-700 mb-2"><i class="fas fa-star mr-2"></i> Highlights</h3>
+                                <ul class="space-y-1 text-gray-600 text-sm">
+                                    <li><i class="fas fa-eye mr-2"></i> Witness the Great Migration</li>
+                                    <li><i class="fas fa-eye mr-2"></i> Big Five game viewing</li>
+                                    <li><i class="fas fa-eye mr-2"></i> Savannah, crater, forest, lakes</li>
+                                    <li><i class="fas fa-eye mr-2"></i> Easy access from Arusha</li>
+                                </ul>
+                                <div class="mt-3"><span class="duration-badge"><i class="far fa-clock mr-1"></i> Recommended: 5-8 days</span></div>
+                                <p class="text-gray-600 text-sm mt-2"><strong>Best For:</strong> First-time visitors, classic safari experiences</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Southern Circuit Content -->
+                <div id="southern" class="circuit-content">
+                    <div class="circuit-card p-6 mb-6">
+                        <h2 class="text-2xl font-bold text-gray-800 mb-2">Southern Circuit Safari</h2>
+                        <p class="text-gray-600 mb-4">The Southern Circuit is perfect for travelers seeking a quieter, more exclusive safari away from the crowds.</p>
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <h3 class="font-bold text-green-700 mb-2"><i class="fas fa-location-dot mr-2"></i> Key Destinations</h3>
+                                <ul class="space-y-1 text-gray-600 text-sm">
+                                    <li><i class="fas fa-check-circle text-green-600 mr-2"></i> Nyerere National Park (Selous) – Largest protected area</li>
+                                    <li><i class="fas fa-check-circle text-green-600 mr-2"></i> Ruaha National Park – Large predators</li>
+                                    <li><i class="fas fa-check-circle text-green-600 mr-2"></i> Mikumi National Park – Open plains</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-green-700 mb-2"><i class="fas fa-star mr-2"></i> Highlights</h3>
+                                <ul class="space-y-1 text-gray-600 text-sm">
+                                    <li><i class="fas fa-eye mr-2"></i> Boat safaris on Rufiji River</li>
+                                    <li><i class="fas fa-eye mr-2"></i> Walking safaris with guides</li>
+                                    <li><i class="fas fa-eye mr-2"></i> Fewer crowds, exclusive feel</li>
+                                </ul>
+                                <div class="mt-3"><span class="duration-badge"><i class="far fa-clock mr-1"></i> Recommended: 4-7 days</span></div>
+                                <p class="text-gray-600 text-sm mt-2"><strong>Best For:</strong> Repeat visitors, nature lovers, off-the-beaten-path</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Western Circuit Content -->
+                <div id="western" class="circuit-content">
+                    <div class="circuit-card p-6 mb-10">
+                        <h2 class="text-2xl font-bold text-gray-800 mb-2">Western Circuit Safari</h2>
+                        <p class="text-gray-600 mb-4">The Western Circuit is the most remote and untouched safari region, offering rare wildlife encounters and breathtaking scenery.</p>
+                        <div class="grid md:grid-cols-2 gap-6">
+                            <div>
+                                <h3 class="font-bold text-green-700 mb-2"><i class="fas fa-location-dot mr-2"></i> Key Destinations</h3>
+                                <ul class="space-y-1 text-gray-600 text-sm">
+                                    <li><i class="fas fa-check-circle text-green-600 mr-2"></i> Mahale Mountains – Chimpanzee trekking</li>
+                                    <li><i class="fas fa-check-circle text-green-600 mr-2"></i> Gombe Stream – Jane Goodall's chimps</li>
+                                    <li><i class="fas fa-check-circle text-green-600 mr-2"></i> Katavi National Park – Buffalo & hippos</li>
+                                </ul>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-green-700 mb-2"><i class="fas fa-star mr-2"></i> Highlights</h3>
+                                <ul class="space-y-1 text-gray-600 text-sm">
+                                    <li><i class="fas fa-eye mr-2"></i> Chimpanzee trekking experience</li>
+                                    <li><i class="fas fa-eye mr-2"></i> Remote untouched wilderness</li>
+                                    <li><i class="fas fa-eye mr-2"></i> Views of Lake Tanganyika</li>
+                                </ul>
+                                <div class="mt-3"><span class="duration-badge"><i class="far fa-clock mr-1"></i> Recommended: 6-10 days</span></div>
+                                <p class="text-gray-600 text-sm mt-2"><strong>Best For:</strong> Adventure travelers, wildlife enthusiasts</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Why Choose Section -->
+                <div class="bg-green-50 rounded-2xl p-6 mb-10 text-center">
+                    <h3 class="text-xl font-bold text-green-800 mb-3">Why Choose Tanzania Safari Circuits?</h3>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-3 mt-4">
+                        <div><i class="fas fa-paw text-green-600 text-xl"></i><p class="text-sm">Incredible wildlife diversity</p></div>
+                        <div><i class="fas fa-calendar-alt text-green-600 text-xl"></i><p class="text-sm">Year-round opportunities</p></div>
+                        <div><i class="fas fa-tree text-green-600 text-xl"></i><p class="text-sm">Unique ecosystems</p></div>
+                        <div><i class="fas fa-chart-line text-green-600 text-xl"></i><p class="text-sm">Luxury to budget options</p></div>
+                    </div>
+                </div>
+
+                <!-- Day Trips Section -->
+                <h2 class="text-2xl font-bold text-gray-800 mb-5 text-center">Popular Day-Trip Safaris – Northern Circuit</h2>
+                <div class="grid md:grid-cols-2 gap-5 mb-10">
+                    <div class="day-card p-5">
+                        <i class="fas fa-tree text-2xl text-green-600 mb-2"></i>
+                        <h3 class="font-bold text-gray-800">Tarangire National Park Day Safari</h3>
+                        <p class="text-gray-600 text-sm mt-1">Famous for huge elephant herds and baobab trees. Wildlife includes lions, leopards, giraffes, zebras.</p>
+                    </div>
+                    <div class="day-card p-5">
+                        <i class="fas fa-water text-2xl text-green-600 mb-2"></i>
+                        <h3 class="font-bold text-gray-800">Lake Manyara National Park Day Safari</h3>
+                        <p class="text-gray-600 text-sm mt-1">Known for tree-climbing lions and flamingos. Great for landscape and wildlife photography.</p>
+                    </div>
+                    <div class="day-card p-5">
+                        <i class="fas fa-mountain text-2xl text-green-600 mb-2"></i>
+                        <h3 class="font-bold text-gray-800">Ngorongoro Crater Day Safari</h3>
+                        <p class="text-gray-600 text-sm mt-1">High density of animals including lions, elephants, rhinos. Full-day private safari experience.</p>
+                    </div>
+                    <div class="day-card p-5">
+                        <i class="fas fa-hiking text-2xl text-green-600 mb-2"></i>
+                        <h3 class="font-bold text-gray-800">Arusha National Park Day Trip</h3>
+                        <p class="text-gray-600 text-sm mt-1">Mix of wildlife, scenic landscapes, optional canoeing on Momella Lakes. Ideal for beginners.</p>
+                    </div>
+                </div>
+
+                <!-- Tips Box -->
+                <div class="bg-amber-50 rounded-2xl p-5 mb-8 border-l-4 border-amber-500">
+                    <h3 class="font-bold text-amber-800 mb-2"><i class="fas fa-lightbulb mr-2"></i> Tips for Day Trips</h3>
+                    <p class="text-gray-600 text-sm">Most safaris include hotel pickup/drop-off, 4×4 safari vehicle with professional driver-guide, park entrance fees, picnic lunch, and bottled water. Early morning departures recommended for maximum wildlife viewing.</p>
+                </div>
+
+                <!-- CTA -->
+                <div class="bg-gradient-to-r from-green-800 to-green-700 rounded-2xl p-8 text-center text-white">
+                    <i class="fas fa-envelope text-3xl mb-3"></i>
+                    <h3 class="text-2xl font-bold mb-2">Plan Your Safari</h3>
+                    <p class="text-green-100 mb-4">Request this tour – Available on request. Let us design your perfect Tanzania safari based on your time, budget, and travel style.</p>
+                    <a href="contact.html" class="bg-white text-green-700 px-8 py-3 rounded-full font-semibold hover:bg-gray-100 transition inline-flex items-center gap-2 shadow-lg"><i class="fas fa-paper-plane mr-2"></i> Request Your Safari</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-10">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-white text-xl font-bold mb-4">Wilderness Footprints</h3>
+                    <p class="text-sm">Tanzania Trekking & Safaris. Step into the heart of the wilderness with us.</p>
+                </div>
+                <div>
+                    <h3 class="text-white text-xl font-bold mb-4">Contact</h3>
+                    <p class="text-sm"><i class="fas fa-map-marker-alt mr-2"></i> Boma Road, Near New Safari Hotel, Arusha, Tanzania</p>
+                    <p class="text-sm mt-2"><i class="fab fa-whatsapp mr-2"></i> +255789178090 (WhatsApp)</p>
+                    <p class="text-sm mt-2"><i class="fas fa-envelope mr-2"></i> wildernessfootprints@gmail.com</p>
+                </div>
+                <div>
+                    <h3 class="text-white text-xl font-bold mb-4">Follow Us</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white text-2xl"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white text-2xl"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                    <div class="mt-4 text-sm">Select Language: <span class="text-green-400">Google Translate</span></div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-6 text-center text-sm">
+                <p>&copy; 2024 Wilderness Footprints Tanzania. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+        }
+
+        // Tab functionality for circuits
+        document.querySelectorAll('.tab-button').forEach(button => {
+            button.addEventListener('click', function() {
+                document.querySelectorAll('.tab-button').forEach(btn => btn.classList.remove('active'));
+                this.classList.add('active');
+                const circuit = this.getAttribute('data-circuit');
+                document.querySelectorAll('.circuit-content').forEach(content => content.classList.remove('active-circuit'));
+                document.getElementById(circuit).classList.add('active-circuit');
+            });
+        });
+    </script>
+</body>
+</html>

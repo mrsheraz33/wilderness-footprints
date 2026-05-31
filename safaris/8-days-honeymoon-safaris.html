@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>8 Days Honeymoon Safaris - Wilderness Footprints Tanzania</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+        * { font-family: 'Poppins', sans-serif; }
+        .dropdown:hover .dropdown-menu { display: block; }
+        .dropdown-menu {
+            display: none; position: absolute; top: 100%; left: 0;
+            background: white; min-width: 220px; box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            z-index: 1000; border-radius: 8px; padding: 8px 0;
+        }
+        .dropdown-menu a {
+            display: block; padding: 10px 20px; color: #1e3a2e;
+            text-decoration: none; font-size: 14px; transition: all 0.3s;
+        }
+        .dropdown-menu a:hover { background: #e8f0e8; color: #0f2b1f; }
+        .btn-primary {
+            background: #2d6a4f; color: white; padding: 12px 28px;
+            border-radius: 40px; text-decoration: none; font-weight: 600;
+            transition: all 0.3s; display: inline-block;
+        }
+        .btn-primary:hover { background: #1b4d3e; transform: translateY(-2px); }
+        .page-banner {
+            background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.pexels.com/photos/1054659/pexels-photo-1054659.jpeg?auto=compress&cs=tinysrgb&w=1600');
+            background-size: cover; background-position: center; height: 50vh;
+        }
+        .day-card {
+            background: white;
+            border-radius: 16px;
+            transition: all 0.3s ease;
+            border-left: 4px solid #b7415c;
+        }
+        .day-card:hover {
+            transform: translateX(6px);
+            box-shadow: 0 12px 28px rgba(0,0,0,0.12);
+        }
+        .romance-bg {
+            background: linear-gradient(135deg, #fdf2f5 0%, #fce7f0 100%);
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="bg-white shadow-md fixed w-full z-50">
+    <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+        <!-- Logo -->
+        <a href="index.html" class="flex items-center space-x-2">
+            <img src="images/logo.jpeg" alt="Logo" class="h-12 w-auto" onerror="this.src='https://via.placeholder.com/50x50?text=WFT'">
+            <span class="font-bold text-xl text-green-800 hidden sm:inline">Wilderness Footprints</span>
+        </a>
+
+        <!-- Desktop Menu -->
+        <div class="hidden lg:flex space-x-4 xl:space-x-6 items-center">
+            
+            <!-- About Us Dropdown -->
+            <div class="dropdown relative">
+                <a href="#" class="text-gray-700 hover:text-green-700 font-medium">About Us <i class="fas fa-chevron-down text-xs"></i></a>
+                <div class="dropdown-menu">
+                    <a href="who-are-we.html">Who Are We</a>
+                </div>
+            </div>
+
+            <!-- Safaris Dropdown -->
+            <div class="dropdown relative">
+                <a href="#" class="text-gray-700 hover:text-green-700 font-medium">Safaris <i class="fas fa-chevron-down text-xs"></i></a>
+                <div class="dropdown-menu">
+                    <a href="safaris/3-days-family-safari.html">3 Days Family Safari</a>
+                    <a href="safaris/4-days-classic-safari.html">4 Days Classic Safari</a>
+                    <a href="safaris/5-days-safari-footprints.html">5 Days Safari Footprints</a>
+                    <a href="safaris/6-days-safari-experience.html">6 Days Safari Experience</a>
+                    <a href="safaris/7-days-cultural-safari.html">7 Days Cultural Safari</a>
+                    <a href="safaris/8-days-ngorongoro-highlands-treks.html">8 Days Ngorongoro Highlands Treks</a>
+                    <a href="safaris/9-days-mara-river-crossing.html">9 Days Mara River Crossing</a>
+                    <a href="safaris/8-days-honeymoon-safaris.html">8 Days Honeymoon Safaris</a>
+                    <a href="safaris/western-safari-tanzania.html">Western Safari Tanzania</a>
+                    <a href="safaris/southern-safari-tanzania.html">Southern Safari Tanzania</a>
+                    <a href="safaris/4-days-tanzania-safari-isbania.html">4 Days Tanzania Safari from Isbania</a>
+                    <a href="safaris/balloon-safari.html">Balloon Safari</a>
+                    <a href="safaris/olduvai-gorge.html">Olduvai Gorge</a>
+                    <a href="safaris/lake-natron.html">Lake Natron</a>
+                    <a href="safaris/lake-eyasi.html">Lake Eyasi</a>
+                    <a href="safaris/kenya-safaris.html">Kenya Safaris</a>
+                </div>
+            </div>
+
+            <!-- Trekking Dropdown -->
+            <div class="dropdown relative">
+                <a href="#" class="text-gray-700 hover:text-green-700 font-medium">Trekking <i class="fas fa-chevron-down text-xs"></i></a>
+                <div class="dropdown-menu">
+                    <a href="kilimanjaro-routes.html">Kilimanjaro Routes</a>
+                    <a href="kili-day-trip.html">Kili Day Trip</a>
+                    <a href="trekking/mount-kenya-trekking-4-days.html">Mount Kenya Trekking</a>
+                    <a href="trekking/mount-meru-treks.html">Mount Meru Treks</a>
+                    <a href="trekking/mount-lolmalasin.html">Mount Lolmalasin</a>
+                    <a href="trekking/mount-hanang.html">Mount Hanang</a>
+                    <a href="trekking/mount-oldonyo-lengai.html">Mount Oldonyo Lengai</a>
+                </div>
+            </div>
+
+            <!-- Destinations Dropdown -->
+            <div class="dropdown relative">
+                <a href="#" class="text-gray-700 hover:text-green-700 font-medium">Destinations <i class="fas fa-chevron-down text-xs"></i></a>
+                <div class="dropdown-menu">
+                    <a href="beach-holidays.html">Beach Holidays</a>
+                    <a href="maasai-visit.html">Maasai Visit</a>
+                    <a href="serval-wildlife.html">Serval Wildlife</a>
+                    <a href="tour-in-mto-wa-mbu.html">Mto Wa Mbu Tour</a>
+                    <a href="cycling-tour.html">Cycling Tour</a>
+                </div>
+            </div>
+
+            <!-- Direct Links -->
+            <a href="tour-faq.html" class="text-gray-700 hover:text-green-700 font-medium">Tour FAQ</a>
+            <a href="booking-policy.html" class="text-gray-700 hover:text-green-700 font-medium">Booking Policy</a>
+            <a href="contact.html" class="btn-primary text-sm py-2 px-5">Contact Us</a>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button class="lg:hidden text-gray-700" onclick="toggleMobileMenu()">
+            <i class="fas fa-bars text-2xl"></i>
+        </button>
+    </div>
+
+    <!-- Mobile Menu (All Pages as per your folder structure) -->
+    <div id="mobileMenu" class="hidden lg:hidden bg-white border-t px-4 py-3 space-y-2 max-h-screen overflow-y-auto">
+        
+        <!-- About Us -->
+        <div class="font-bold text-green-800 pt-2">About Us</div>
+        <div class="pl-4 space-y-1">
+            <a href="who-are-we.html" class="block py-1 text-sm text-gray-600">Who Are We</a>
+        </div>
+
+        <!-- Safaris -->
+        <div class="font-bold text-green-800 pt-3">Safaris</div>
+        <div class="pl-4 space-y-1">
+            <a href="safaris/3-days-family-safari.html" class="block py-1 text-sm text-gray-600">3 Days Family Safari</a>
+            <a href="safaris/4-days-classic-safari.html" class="block py-1 text-sm text-gray-600">4 Days Classic Safari</a>
+            <a href="safaris/5-days-safari-footprints.html" class="block py-1 text-sm text-gray-600">5 Days Safari Footprints</a>
+            <a href="safaris/6-days-safari-experience.html" class="block py-1 text-sm text-gray-600">6 Days Safari Experience</a>
+            <a href="safaris/7-days-cultural-safari.html" class="block py-1 text-sm text-gray-600">7 Days Cultural Safari</a>
+            <a href="safaris/8-days-ngorongoro-highlands-treks.html" class="block py-1 text-sm text-gray-600">8 Days Ngorongoro Highlands Treks</a>
+            <a href="safaris/9-days-mara-river-crossing.html" class="block py-1 text-sm text-gray-600">9 Days Mara River Crossing</a>
+            <a href="safaris/8-days-honeymoon-safaris.html" class="block py-1 text-sm text-gray-600">8 Days Honeymoon Safaris</a>
+            <a href="safaris/western-safari-tanzania.html" class="block py-1 text-sm text-gray-600">Western Safari Tanzania</a>
+            <a href="safaris/southern-safari-tanzania.html" class="block py-1 text-sm text-gray-600">Southern Safari Tanzania</a>
+            <a href="safaris/4-days-tanzania-safari-isbania.html" class="block py-1 text-sm text-gray-600">4 Days Safari from Isbania</a>
+            <a href="safaris/balloon-safari.html" class="block py-1 text-sm text-gray-600">Balloon Safari</a>
+            <a href="safaris/olduvai-gorge.html" class="block py-1 text-sm text-gray-600">Olduvai Gorge</a>
+            <a href="safaris/lake-natron.html" class="block py-1 text-sm text-gray-600">Lake Natron</a>
+            <a href="safaris/lake-eyasi.html" class="block py-1 text-sm text-gray-600">Lake Eyasi</a>
+            <a href="safaris/kenya-safaris.html" class="block py-1 text-sm text-gray-600">Kenya Safaris</a>
+        </div>
+
+        <!-- Trekking -->
+        <div class="font-bold text-green-800 pt-3">Trekking</div>
+        <div class="pl-4 space-y-1">
+            <a href="kilimanjaro-routes.html" class="block py-1 text-sm text-gray-600">Kilimanjaro Routes</a>
+            <a href="kili-day-trip.html" class="block py-1 text-sm text-gray-600">Kili Day Trip</a>
+            <a href="trekking/mount-kenya-trekking-4-days.html" class="block py-1 text-sm text-gray-600">Mount Kenya Trekking</a>
+            <a href="trekking/mount-meru-treks.html" class="block py-1 text-sm text-gray-600">Mount Meru Treks</a>
+            <a href="trekking/mount-lolmalasin.html" class="block py-1 text-sm text-gray-600">Mount Lolmalasin</a>
+            <a href="trekking/mount-hanang.html" class="block py-1 text-sm text-gray-600">Mount Hanang</a>
+            <a href="trekking/mount-oldonyo-lengai.html" class="block py-1 text-sm text-gray-600">Mount Oldonyo Lengai</a>
+        </div>
+
+        <!-- Destinations & Activities -->
+        <div class="font-bold text-green-800 pt-3">Destinations & Activities</div>
+        <div class="pl-4 space-y-1">
+            <a href="beach-holidays.html" class="block py-1 text-sm text-gray-600">Beach Holidays</a>
+            <a href="maasai-visit.html" class="block py-1 text-sm text-gray-600">Maasai Visit</a>
+            <a href="serval-wildlife.html" class="block py-1 text-sm text-gray-600">Serval Wildlife</a>
+            <a href="tour-in-mto-wa-mbu.html" class="block py-1 text-sm text-gray-600">Mto Wa Mbu Tour</a>
+            <a href="cycling-tour.html" class="block py-1 text-sm text-gray-600">Cycling Tour</a>
+        </div>
+
+        <!-- Information -->
+        <div class="font-bold text-green-800 pt-3">Information</div>
+        <div class="pl-4 space-y-1">
+            <a href="tour-faq.html" class="block py-1 text-sm text-gray-600">Tour FAQ</a>
+            <a href="booking-policy.html" class="block py-1 text-sm text-gray-600">Booking Policy</a>
+        </div>
+
+        <!-- Contact -->
+        <a href="contact.html" class="block py-2 text-green-700 font-semibold border-t mt-2 pt-2">Contact Us</a>
+    </div>
+</nav>
+
+    <!-- Page Banner -->
+    <section class="page-banner flex items-center justify-center text-center">
+        <div class="container mx-auto px-4 text-white">
+            <h1 class="text-4xl md:text-6xl font-bold mb-4">8 DAYS HONEYMOON SAFARIS</h1>
+            <p class="text-xl md:text-2xl">Lake Manyara · Ngorongoro Crater · Serengeti National Park</p>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="max-w-4xl mx-auto">
+
+                <!-- Why Tanzania Section -->
+                <div class="romance-bg rounded-xl shadow-md p-6 mb-8 text-center">
+                    <h2 class="text-2xl font-bold text-pink-700 mb-3"><i class="fas fa-heart mr-2"></i> TANZANIA HONEYMOONS – WHY IS TANZANIA SO GOOD</h2>
+                    <p class="text-gray-700">Tanzania is superb as a honeymoon destination, not only for its stunning natural landscapes and wildlife, but also because you can take a safari and beach within such close proximity of each other. With such efficient internal flights to whisk you from luxury safari to luxury beach, the memories you make in Tanzania will be with you forever. And of course, the climate is excellent in all months other than April and May, specifically during our summer and winter wedding/honeymoon seasons.</p>
+                </div>
+
+                <!-- Image -->
+                <div class="mb-8 rounded-xl overflow-hidden shadow-lg">
+                    <img src="https://images.pexels.com/photos/3155669/pexels-photo-3155669.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Honeymoon Safari Picnic Tanzania" class="w-full h-80 object-cover">
+                </div>
+
+                <!-- Day 1 -->
+                <div class="day-card p-6 mb-5">
+                    <h2 class="text-xl font-bold text-gray-800 mb-2"><i class="fas fa-plane-arrival text-pink-500 mr-2"></i> DAY 1: ARRIVAL DAY</h2>
+                    <p class="text-gray-700">Arriving in Kilimanjaro International Airport from home and meet our representative. After greetings you will be transferred to the hotel in Moshi for hot shower and overnight at a designated hotel.</p>
+                </div>
+
+                <!-- Day 2 -->
+                <div class="day-card p-6 mb-5">
+                    <h2 class="text-xl font-bold text-gray-800 mb-2"><i class="fas fa-tree text-pink-500 mr-2"></i> DAY 2: ARUSHA TOWN – LAKE MANYARA NATIONAL PARK</h2>
+                    <p class="text-gray-700">After breakfast you are met by our tour guide/driver, who will deliver a short safari briefing. You will be driving to Lake Manyara National Park for a game drive with our picnic lunch. Upon your arrival Manyara you will be welcomed by the Great Rift Valley Escarpment view and fun makers' baboon at the entrance of Manyara in large groups. We will travel through the agricultural and fresh produce market town of Mto Wa Mbu, which is situated next to the entrance of the Lake Manyara National Park.</p>
+                    <p class="text-gray-700 mt-2">The Lake Manyara National Park is one of Tanzania's most dramatically located African wildlife areas, consisting of a massive but shallow soda lake at the foot of the Great Rift Valley's western escarpment. The park's varied habitat attracts a wide variety of animals; including one of Africa's densely populated of herd of African elephant, famous tree-climbing lions, as well as large flocks of flamingos. Late afternoon you will be transferred to Lake Manyara Hotel or Lake Manyara Serena Lodge for hot shower, dinner and overnight.</p>
+                </div>
+
+                <!-- Day 3 -->
+                <div class="day-card p-6 mb-5">
+                    <h2 class="text-xl font-bold text-gray-800 mb-2"><i class="fas fa-paw text-pink-500 mr-2"></i> DAY 3: SERENGETI NATIONAL PARK</h2>
+                    <p class="text-gray-700">After breakfast depart for Serengeti National Park passing through Olduvai Gorge, the site of Leakey's family discovery of fossils of human and animal ancestors dating back to almost two million years. You will have your picnic lunch on the way to Serengeti. Upon your arrival you will check in to the lodge for hot shower, dinner and overnight at Serengeti Sopa / Seronera Wildlife Lodge or Serengeti Serena.</p>
+                </div>
+
+                <!-- Day 4-5 -->
+                <div class="day-card p-6 mb-5">
+                    <h2 class="text-xl font-bold text-gray-800 mb-2"><i class="fas fa-sun text-pink-500 mr-2"></i> DAY 4 – 5: SERENGETI NATIONAL PARK – FULL DAY</h2>
+                    <p class="text-gray-700">In the morning after breakfast you will meet your tour guide for starting a game drive to Serengeti National Park for a full day game drive. Serengeti is the largest national park in Tanzania covering more than 14,000 square kilometers. The park is having numerous numbers of unique features and attractions among them include: The annual great wildebeest migration, the park is famous for its endless plains and the savannah vegetation that it owns, balloon safari and been the richest park full of wildlife and birdlife elsewhere in Africa.</p>
+                    <p class="text-gray-700 mt-2">The park also supports many species of wildlife including Lion, African Leopard, African Elephant, cheetah, African Buffalo, Thomson's and Grant's gazelle, topi, eland, water buck, hyena, baboon, impala, African wild dog and giraffe. The park also boasts about 500 bird species. Your tour guide will therefore take you back late in the afternoon at your lodge for hot shower, dinner and overnight.</p>
+                </div>
+
+                <!-- Day 6 -->
+                <div class="day-card p-6 mb-5">
+                    <h2 class="text-xl font-bold text-gray-800 mb-2"><i class="fas fa-mountain text-pink-500 mr-2"></i> DAY 6: NGORONGORO CRATER</h2>
+                    <p class="text-gray-700">In the morning after breakfast you will meet your driver guide and been transfer to Ngorongoro crater gate with your picnic lunch ready for a full day crater tour, explore the crater which is famous for its great concentration of wildlife and bird life. If you're lucky enough you can see a predator hunting a prey. Ngorongoro crater is famous for its different attraction which includes alkaline lakes, forest, different vegetation, hot springs, different kinds of wildlife and birdlife and its landscape. In the late afternoon you will ascend the crater floor and been transferred to Ngorongoro Sopa Lodge / Ngorongoro Serena for hot shower, dinner and overnight.</p>
+                </div>
+
+                <!-- Day 7 -->
+                <div class="day-card p-6 mb-5">
+                    <h2 class="text-xl font-bold text-gray-800 mb-2"><i class="fas fa-leaf text-pink-500 mr-2"></i> DAY 7: LAKE MANYARA NATURE WALK</h2>
+                    <p class="text-gray-700">Leave after breakfast for nature walk Mto Wa Mbu Village lunch in the middle of banana farm later walk back to the lodge for hot shower, dinner and overnight at Lake Manyara Hotel or Lake Manyara Serena lodge.</p>
+                </div>
+
+                <!-- Day 8 -->
+                <div class="day-card p-6 mb-8">
+                    <h2 class="text-xl font-bold text-gray-800 mb-2"><i class="fas fa-plane-departure text-pink-500 mr-2"></i> DAY 8: ARUSHA / MOSHI / DEPARTURE</h2>
+                    <p class="text-gray-700">After breakfast visit of a Masai Village, then drive back to Arusha. We will arrive in Arusha in the afternoon for shopping and other formalities or relaxing and resting in a day room. You can decide to extend your trip to Zanzibar beach holiday. Else we will transfer you to the Kilimanjaro International Airport ready for flight back home.</p>
+                </div>
+
+                <!-- Included & Excluded -->
+                <div class="grid md:grid-cols-2 gap-6 mb-8">
+                    <div class="bg-white rounded-xl shadow-md p-6 border-t-4 border-green-600">
+                        <h2 class="text-xl font-bold text-green-800 mb-4"><i class="fas fa-check-circle mr-2"></i> INCLUDED IN YOUR SAFARI PACKAGE:</h2>
+                        <ul class="space-y-2 text-gray-700 text-sm">
+                            <li><i class="fas fa-check text-green-600 mr-2"></i> Accommodation as specified in the itinerary</li>
+                            <li><i class="fas fa-check text-green-600 mr-2"></i> All meals at lodges and tented camps</li>
+                            <li><i class="fas fa-check text-green-600 mr-2"></i> Flight from Kilimanjaro to Serengeti</li>
+                            <li><i class="fas fa-check text-green-600 mr-2"></i> Experienced English speaking guide</li>
+                            <li><i class="fas fa-check text-green-600 mr-2"></i> Unlimited kms, Toyota Landcruiser 4×4 Safari vehicle with pop up roof, 6 window seats, power adapters, and refrigerator</li>
+                            <li><i class="fas fa-check text-green-600 mr-2"></i> Drinking water</li>
+                            <li><i class="fas fa-check text-green-600 mr-2"></i> All park entry fees and 18% VAT</li>
+                        </ul>
+                    </div>
+                    <div class="bg-white rounded-xl shadow-md p-6 border-t-4 border-red-600">
+                        <h2 class="text-xl font-bold text-red-700 mb-4"><i class="fas fa-times-circle mr-2"></i> EXCLUDED FROM YOUR SAFARI PACKAGE:</h2>
+                        <ul class="space-y-2 text-gray-700 text-sm">
+                            <li><i class="fas fa-times text-red-500 mr-2"></i> International Flights</li>
+                            <li><i class="fas fa-times text-red-500 mr-2"></i> Visa</li>
+                            <li><i class="fas fa-times text-red-500 mr-2"></i> Medications</li>
+                            <li><i class="fas fa-times text-red-500 mr-2"></i> Medical / Travel Insurance</li>
+                            <li><i class="fas fa-times text-red-500 mr-2"></i> Hot Air Balloon Ride in Serengeti $650 per person</li>
+                            <li><i class="fas fa-times text-red-500 mr-2"></i> Alcoholic and soft drinks</li>
+                            <li><i class="fas fa-times text-red-500 mr-2"></i> Tip for Your Driver ($70 per day per car)</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Book Now Button -->
+                <div class="text-center">
+                    <a href="../contact.html" class="btn-primary text-lg px-10 py-3 shadow-lg">BOOK YOUR HONEYMOON SAFARI</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-10">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-white text-xl font-bold mb-4">Wilderness Footprints</h3>
+                    <p class="text-sm">Tanzania Trekking & Safaris. Step into the heart of the wilderness with us.</p>
+                </div>
+                <div>
+                    <h3 class="text-white text-xl font-bold mb-4">Contact</h3>
+                    <p class="text-sm"><i class="fas fa-map-marker-alt mr-2"></i> Boma Road, Near New Safari Hotel, Arusha, Tanzania</p>
+                    <p class="text-sm mt-2"><i class="fab fa-whatsapp mr-2"></i> +255789178090 (WhatsApp)</p>
+                    <p class="text-sm mt-2"><i class="fas fa-envelope mr-2"></i> wildernessfootprints@gmail.com</p>
+                </div>
+                <div>
+                    <h3 class="text-white text-xl font-bold mb-4">Follow Us</h3>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white text-2xl"><i class="fab fa-facebook"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white text-2xl"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                    <div class="mt-4 text-sm">Select Language: <span class="text-green-400">Google Translate</span></div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-6 text-center text-sm">
+                <p>&copy; 2024 Wilderness Footprints Tanzania. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('hidden');
+        }
+    </script>
+</body>
+</html>
