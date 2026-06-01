@@ -1,0 +1,404 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Menu - Kilimanjaro Trekking - Wilderness Footprints Tanzania</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+        * { font-family: 'Poppins', sans-serif; }
+        .dropdown:hover .dropdown-menu { display: block; }
+        .dropdown-menu {
+            display: none; position: absolute; top: 100%; left: 0;
+            background: white; min-width: 220px; box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            z-index: 1000; border-radius: 8px; padding: 8px 0;
+            max-height: 70vh; overflow-y: auto;
+        }
+        .dropdown-menu a {
+            display: block; padding: 10px 20px; color: #1e3a2e;
+            text-decoration: none; font-size: 14px; transition: all 0.3s;
+        }
+        .dropdown-menu a:hover { background: #e8f0e8; color: #0f2b1f; }
+        .btn-primary {
+            background: #e67e22; color: white; padding: 14px 32px;
+            border-radius: 50px; text-decoration: none; font-weight: 700;
+            transition: all 0.3s; display: inline-block;
+        }
+        .btn-primary:hover { background: #d35400; transform: translateY(-3px); box-shadow: 0 10px 25px rgba(230,126,34,0.3); }
+        .hero-section {
+            background: linear-gradient(135deg, #1a3c2c 0%, #2d6a4f 50%, #38a169 100%);
+        }
+        .menu-card {
+            background: white;
+            border-radius: 24px;
+            transition: all 0.35s ease;
+            border: 1px solid #e2e8f0;
+        }
+        .menu-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 20px 35px rgba(0,0,0,0.1);
+            border-color: #e67e22;
+        }
+        .meal-badge {
+            background: #fef3c7;
+            color: #d97706;
+            border-radius: 30px;
+            padding: 6px 18px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            display: inline-block;
+        }
+        .snack-box {
+            background: linear-gradient(135deg, #fef3c7, #fde68a);
+            border-radius: 20px;
+        }
+        .summit-snack {
+            background: linear-gradient(135deg, #e0f2fe, #bae6fd);
+            border-radius: 20px;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="bg-white shadow-md fixed w-full z-50">
+    <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+        <a href="index.html" class="flex items-center space-x-2">
+            <img src="images/logo.jpeg" alt="Logo" class="h-12 w-auto" onerror="this.src='https://via.placeholder.com/50x50?text=WFT'">
+            <span class="font-bold text-base sm:text-lg md:text-xl text-green-800">Wilderness Footprints</span>
+        </a>
+
+        <!-- Desktop Menu -->
+        <div class="hidden lg:flex space-x-4 xl:space-x-6 items-center">
+            
+            <!-- About Us Dropdown -->
+            <div class="dropdown relative">
+                <a href="#" class="text-gray-700 hover:text-green-700 font-medium">About Us <i class="fas fa-chevron-down text-xs"></i></a>
+                <div class="dropdown-menu">
+                    <a href="index.html">Home</a>
+                    <a href="who-are-we.html">Who Are We</a>
+                </div>
+            </div>
+
+            <!-- Day Trips Dropdown -->
+            <div class="dropdown relative">
+                <a href="#" class="text-gray-700 hover:text-green-700 font-medium">Day Trips <i class="fas fa-chevron-down text-xs"></i></a>
+                <div class="dropdown-menu">
+                    <a href="day-trips.html">All Day Trips</a>
+                </div>
+            </div>
+
+            <!-- Safaris Dropdown -->
+            <div class="dropdown relative">
+                <a href="#" class="text-gray-700 hover:text-green-700 font-medium">Safaris <i class="fas fa-chevron-down text-xs"></i></a>
+                <div class="dropdown-menu">
+                    <a href="3-days-family-safari.html">3 Days Family Safari</a>
+                    <a href="4-days-classic-safari.html">4 Days Classic Safari</a>
+                    <a href="5-days-safari-footprints.html">5 Days Safari Footprints</a>
+                    <a href="6-days-safari-experience.html">6 Days Safari Experience</a>
+                    <a href="7-days-cultural-safari.html">7 Days Cultural Safari</a>
+                    <a href="8-days-ngorongoro-highlands-treks.html">8 Days Ngorongoro Highlands Treks</a>
+                    <a href="9-days-mara-river-crossing.html">9 Days Mara River Crossing</a>
+                    <a href="8-days-honeymoon-safaris.html">8 Days Honeymoon Safaris</a>
+                    <a href="western-safari-tanzania.html">Western Safari Tanzania</a>
+                    <a href="southern-safari-tanzania.html">Southern Safari Tanzania</a>
+                    <a href="4-days-tanzania-safari-isbania.html">4 Days Safari from Isbania</a>
+                    <a href="balloon-safari.html">Balloon Safari</a>
+                    <a href="olduvai-gorge.html">Olduvai Gorge</a>
+                    <a href="lake-natron.html">Lake Natron</a>
+                    <a href="lake-eyasi.html">Lake Eyasi</a>
+                    <a href="kenya-safaris.html">Kenya Safaris</a>
+                </div>
+            </div>
+
+            <!-- Trekking Dropdown -->
+            <div class="dropdown relative">
+                <a href="#" class="text-gray-700 hover:text-green-700 font-medium">Trekking <i class="fas fa-chevron-down text-xs"></i></a>
+                <div class="dropdown-menu">
+                    <a href="kilimanjaro-routes.html">Kilimanjaro Routes</a>
+                    <a href="kili-day-trip.html">Kili Day Trip</a>
+                    <a href="mount-kenya-trekking-4-days.html">Mount Kenya Trekking</a>
+                    <a href="mount-meru-treks.html">Mount Meru Treks</a>
+                    <a href="mount-lolmalasin.html">Mount Lolmalasin</a>
+                    <a href="mount-hanang.html">Mount Hanang</a>
+                    <a href="mount-oldonyo-lengai.html">Mount Oldonyo Lengai</a>
+                    <a href="food-menu.html">Food Menu</a>
+                    <a href="careful-acclimatisation.html">Careful Acclimatisation</a>
+                    <a href="health-info.html">Health Information</a>
+                    <a href="what-to-pack.html">What to Pack</a>
+                </div>
+            </div>
+
+            <!-- Activities Dropdown -->
+            <div class="dropdown relative">
+                <a href="#" class="text-gray-700 hover:text-green-700 font-medium">Activities <i class="fas fa-chevron-down text-xs"></i></a>
+                <div class="dropdown-menu">
+                    <a href="beach-holidays.html">Beach Holidays</a>
+                    <a href="maasai-visit.html">Maasai Visit</a>
+                    <a href="serval-wildlife.html">Serval Wildlife</a>
+                    <a href="tour-in-mto-wa-mbu.html">Mto Wa Mbu Tour</a>
+                    <a href="cycling-tour.html">Cycling Tour</a>
+                    <a href="moshi-tour.html">Moshi Tour</a>
+                </div>
+            </div>
+
+            <!-- Direct Links -->
+            <a href="tour-faq.html" class="text-gray-700 hover:text-green-700 font-medium">Tour FAQ</a>
+            <a href="booking-policy.html" class="text-gray-700 hover:text-green-700 font-medium">Booking Policy</a>
+            <a href="contact.html" class="btn-primary text-sm py-2 px-5">Contact Us</a>
+        </div>
+
+        <!-- Mobile Menu Button -->
+        <button class="lg:hidden text-gray-700" onclick="toggleMobileMenu()">
+            <i class="fas fa-bars text-2xl"></i>
+        </button>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="hidden lg:hidden bg-white border-t px-4 py-3 space-y-2 max-h-[92vh] overflow-y-auto">
+        
+        <!-- About Us -->
+        <div class="font-bold text-green-800 pt-2">About Us</div>
+        <div class="pl-4 space-y-1">
+             <a href="index.html" class="block py-1 text-sm text-gray-600">Home</a>
+            <a href="who-are-we.html" class="block py-1 text-sm text-gray-600">Who Are We</a>
+        </div>
+
+        <!-- Day Trips -->
+        <div class="font-bold text-green-800 pt-3">Day Trips</div>
+        <div class="pl-4 space-y-1">
+            <a href="day-trips.html" class="block py-1 text-sm text-gray-600">All Day Trips</a>
+        </div>
+
+        <!-- Safaris -->
+        <div class="font-bold text-green-800 pt-3">Safaris</div>
+        <div class="pl-4 space-y-1">
+            <a href="3-days-family-safari.html" class="block py-1 text-sm text-gray-600">3 Days Family Safari</a>
+            <a href="4-days-classic-safari.html" class="block py-1 text-sm text-gray-600">4 Days Classic Safari</a>
+            <a href="5-days-safari-footprints.html" class="block py-1 text-sm text-gray-600">5 Days Safari Footprints</a>
+            <a href="6-days-safari-experience.html" class="block py-1 text-sm text-gray-600">6 Days Safari Experience</a>
+            <a href="7-days-cultural-safari.html" class="block py-1 text-sm text-gray-600">7 Days Cultural Safari</a>
+            <a href="8-days-ngorongoro-highlands-treks.html" class="block py-1 text-sm text-gray-600">8 Days Ngorongoro Highlands Treks</a>
+            <a href="9-days-mara-river-crossing.html" class="block py-1 text-sm text-gray-600">9 Days Mara River Crossing</a>
+            <a href="8-days-honeymoon-safaris.html" class="block py-1 text-sm text-gray-600">8 Days Honeymoon Safaris</a>
+            <a href="western-safari-tanzania.html" class="block py-1 text-sm text-gray-600">Western Safari Tanzania</a>
+            <a href="southern-safari-tanzania.html" class="block py-1 text-sm text-gray-600">Southern Safari Tanzania</a>
+            <a href="4-days-tanzania-safari-isbania.html" class="block py-1 text-sm text-gray-600">4 Days Safari from Isbania</a>
+            <a href="balloon-safari.html" class="block py-1 text-sm text-gray-600">Balloon Safari</a>
+            <a href="olduvai-gorge.html" class="block py-1 text-sm text-gray-600">Olduvai Gorge</a>
+            <a href="lake-natron.html" class="block py-1 text-sm text-gray-600">Lake Natron</a>
+            <a href="lake-eyasi.html" class="block py-1 text-sm text-gray-600">Lake Eyasi</a>
+            <a href="kenya-safaris.html" class="block py-1 text-sm text-gray-600">Kenya Safaris</a>
+        </div>
+
+        <!-- Trekking -->
+        <div class="font-bold text-green-800 pt-3">Trekking</div>
+        <div class="pl-4 space-y-1">
+            <a href="kilimanjaro-routes.html" class="block py-1 text-sm text-gray-600">Kilimanjaro Routes</a>
+            <a href="kili-day-trip.html" class="block py-1 text-sm text-gray-600">Kili Day Trip</a>
+            <a href="mount-kenya-trekking-4-days.html" class="block py-1 text-sm text-gray-600">Mount Kenya Trekking</a>
+            <a href="mount-meru-treks.html" class="block py-1 text-sm text-gray-600">Mount Meru Treks</a>
+            <a href="mount-lolmalasin.html" class="block py-1 text-sm text-gray-600">Mount Lolmalasin</a>
+            <a href="mount-hanang.html" class="block py-1 text-sm text-gray-600">Mount Hanang</a>
+            <a href="mount-oldonyo-lengai.html" class="block py-1 text-sm text-gray-600">Mount Oldonyo Lengai</a>
+            <a href="food-menu.html" class="block py-1 text-sm text-gray-600">Food Menu</a>
+            <a href="careful-acclimatisation.html" class="block py-1 text-sm text-gray-600">Careful Acclimatisation</a>
+            <a href="health-info.html" class="block py-1 text-sm text-gray-600">Health Information</a>
+            <a href="what-to-pack.html" class="block py-1 text-sm text-gray-600">What to Pack</a>
+        </div>
+
+        <!-- Activities -->
+        <div class="font-bold text-green-800 pt-3">Activities</div>
+        <div class="pl-4 space-y-1">
+            <a href="beach-holidays.html" class="block py-1 text-sm text-gray-600">Beach Holidays</a>
+            <a href="maasai-visit.html" class="block py-1 text-sm text-gray-600">Maasai Visit</a>
+            <a href="serval-wildlife.html" class="block py-1 text-sm text-gray-600">Serval Wildlife</a>
+            <a href="tour-in-mto-wa-mbu.html" class="block py-1 text-sm text-gray-600">Mto Wa Mbu Tour</a>
+            <a href="cycling-tour.html" class="block py-1 text-sm text-gray-600">Cycling Tour</a>
+            <a href="moshi-tour.html" class="block py-1 text-sm text-gray-600">Moshi Tour</a>
+        </div>
+
+        <!-- Information -->
+        <div class="font-bold text-green-800 pt-3">Information</div>
+        <div class="pl-4 space-y-1">
+            <a href="tour-faq.html" class="block py-1 text-sm text-gray-600">Tour FAQ</a>
+            <a href="booking-policy.html" class="block py-1 text-sm text-gray-600">Booking Policy</a>
+        </div>
+
+        <!-- Contact Us -->
+        <div class="pt-4 border-t mt-4">
+            <a href="contact.html" class="block py-3 px-4 text-center bg-green-700 text-white font-semibold rounded-xl hover:bg-green-800 transition">Contact Us</a>
+        </div>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero-section pt-32 pb-20">
+    <div class="container mx-auto px-4 text-center text-white">
+        <div class="max-w-3xl mx-auto">
+            <i class="fas fa-utensils text-4xl text-orange-300 mb-4"></i>
+            <h1 class="text-4xl md:text-6xl font-bold mb-4">FOOD MENU</h1>
+            <div class="w-24 h-1 bg-orange-400 mx-auto mb-6"></div>
+            <p class="text-xl opacity-95">Delicious & Nutritious Meals on Mount Kilimanjaro</p>
+        </div>
+    </div>
+</section>
+
+<!-- Main Content -->
+<section class="py-16 bg-gray-50">
+    <div class="container mx-auto px-4">
+        <div class="max-w-5xl mx-auto">
+
+            <!-- Intro Section -->
+            <div class="bg-white rounded-2xl p-8 mb-10 shadow-sm">
+                <p class="text-gray-700 text-lg leading-relaxed">Our menus are always improving and we always have new dishes being introduced accordingly and you can have any of special requirements before climb even if you aren't a vegetarian. What about have birthday cakes during the climb or a Christmas, New Year cards and cakes at the top of Kilimanjaro! Come with us to experience the authentic nature.</p>
+                <div class="mt-4 p-4 bg-orange-50 rounded-xl">
+                    <p class="text-orange-800"><i class="fas fa-info-circle mr-2"></i> Please let us know in advance if there is any special dietary request (e.g. vegetarian), we are happy to cater for this as well. The fruits are always added in our highest quality ingredients using the fresh season fruits.</p>
+                </div>
+            </div>
+
+            <!-- Chef Section -->
+            <div class="menu-card p-6 mb-8">
+                <div class="flex items-center gap-3 mb-4">
+                    <i class="fas fa-chef-hat text-3xl text-orange-600"></i>
+                    <h2 class="text-2xl font-bold text-gray-800">Our Mountain Chefs</h2>
+                </div>
+                <p class="text-gray-600">Foot On Kili Tanzania Adventure has an experienced mountain chefs who prepare delicious and palatable food for your health to manage succeed to the Mount Kilimanjaro summit. Provided that human body develops tendency of losing appetite in high altitude one should force him/herself to eat and drink as much as he/she can to put the body fit. Good food and plenty of drinking water are essential ingredients, both physically and psychologically, to make your climb rewarding. At high altitudes, drinking a lot of water is essential for your health and helps preventing altitude sicknesses. Take as many as you can as we provide both of them in plenty.</p>
+            </div>
+
+            <!-- Meal Overview -->
+            <div class="grid md:grid-cols-3 gap-5 mb-10">
+                <div class="menu-card p-5 text-center">
+                    <i class="fas fa-sun text-2xl text-orange-500 mb-2"></i>
+                    <h3 class="font-bold text-gray-800">Three Healthy Meals Daily</h3>
+                    <p class="text-gray-600 text-sm">Breakfast • Picnic Lunch • Hot Dinner</p>
+                </div>
+                <div class="menu-card p-5 text-center">
+                    <i class="fas fa-apple-alt text-2xl text-orange-500 mb-2"></i>
+                    <h3 class="font-bold text-gray-800">Speciality Foods</h3>
+                    <p class="text-gray-600 text-sm">Dried fruits, chocolates, cheeses</p>
+                </div>
+                <div class="menu-card p-5 text-center">
+                    <i class="fas fa-thermometer-half text-2xl text-orange-500 mb-2"></i>
+                    <h3 class="font-bold text-gray-800">Fresh Ingredients</h3>
+                    <p class="text-gray-600 text-sm">Cooler boxes keep food fresh throughout the trek</p>
+                </div>
+            </div>
+
+            <!-- Breakfast Card -->
+            <div class="menu-card p-6 mb-6">
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="meal-badge"><i class="fas fa-sun mr-1"></i> Breakfast</span>
+                </div>
+                <div class="grid md:grid-cols-2 gap-4">
+                    <div>
+                        <p class="text-gray-600"><i class="fas fa-check-circle text-green-600 mr-2"></i> Fruit Juice</p>
+                        <p class="text-gray-600"><i class="fas fa-check-circle text-green-600 mr-2"></i> Fresh Fruit</p>
+                        <p class="text-gray-600"><i class="fas fa-check-circle text-green-600 mr-2"></i> Cereal / Porridge</p>
+                        <p class="text-gray-600"><i class="fas fa-check-circle text-green-600 mr-2"></i> Eggs (bread/French-toast/Plain-toast/Pancakes)</p>
+                        <p class="text-gray-600"><i class="fas fa-check-circle text-green-600 mr-2"></i> Sausages</p>
+                    </div>
+                    <div>
+                        <p class="text-gray-600"><i class="fas fa-check-circle text-green-600 mr-2"></i> Margarine, Jam / Honey</p>
+                        <p class="text-gray-600"><i class="fas fa-check-circle text-green-600 mr-2"></i> Tea / Coffee / Drinking chocolate</p>
+                        <p class="text-gray-600"><i class="fas fa-check-circle text-green-600 mr-2"></i> Boiled egg, spinach omelette or fried egg with bacon and bread</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Snacks Card -->
+            <div class="snack-box p-6 mb-6">
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="meal-badge bg-white"><i class="fas fa-cookie-bite mr-1"></i> Snacks</span>
+                </div>
+                <div class="flex flex-wrap gap-3">
+                    <span class="bg-white px-4 py-2 rounded-full text-sm shadow-sm"><i class="fas fa-pepper-hot mr-1"></i> Peanuts</span>
+                    <span class="bg-white px-4 py-2 rounded-full text-sm shadow-sm"><i class="fas fa-cookie mr-1"></i> Crisps</span>
+                    <span class="bg-white px-4 py-2 rounded-full text-sm shadow-sm"><i class="fas fa-popcorn mr-1"></i> Popcorn</span>
+                    <span class="bg-white px-4 py-2 rounded-full text-sm shadow-sm"><i class="fas fa-cookie-bite mr-1"></i> Cookies</span>
+                </div>
+            </div>
+
+            <!-- Lunch Card -->
+            <div class="menu-card p-6 mb-6">
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="meal-badge"><i class="fas fa-utensil-spoon mr-1"></i> Picnic Lunch</span>
+                </div>
+                <div class="grid md:grid-cols-2 gap-4">
+                    <div>
+                        <p class="text-gray-600"><i class="fas fa-check-circle text-green-600 mr-2"></i> Sliced Carrot and Cucumber stripes</p>
+                        <p class="text-gray-600"><i class="fas fa-check-circle text-green-600 mr-2"></i> Avocado slices</p>
+                        <p class="text-gray-600"><i class="fas fa-check-circle text-green-600 mr-2"></i> Boiled egg</p>
+                        <p class="text-gray-600"><i class="fas fa-check-circle text-green-600 mr-2"></i> Vegetable / Meat cutlets</p>
+                        <p class="text-gray-600"><i class="fas fa-check-circle text-green-600 mr-2"></i> Sandwiches (Egg/Cheese/Tomato/Tuna/Meat/Peanut butter)</p>
+                    </div>
+                    <div>
+                        <p class="text-gray-600"><i class="fas fa-check-circle text-green-600 mr-2"></i> Fresh Fruit</p>
+                        <p class="text-gray-600"><i class="fas fa-check-circle text-green-600 mr-2"></i> Salami sandwich</p>
+                        <p class="text-gray-600"><i class="fas fa-check-circle text-green-600 mr-2"></i> Cheese, French toast</p>
+                        <p class="text-gray-600"><i class="fas fa-check-circle text-green-600 mr-2"></i> Macaroni and meat sauce with bread</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dinner Card -->
+            <div class="menu-card p-6 mb-6">
+                <div class="flex items-center gap-3 mb-4">
+                    <span class="meal-badge"><i class="fas fa-moon mr-1"></i> Hot Dinner</span>
+                </div>
+                <div class="grid md:grid-cols-2 gap-4">
+                    <div>
+                        <p class="text-gray-600"><i class="fas fa-check-circle text-green-600 mr-2"></i> Soup of the day with Bread</p>
+                        <p class="text-gray-600"><i class="fas fa-check-circle text-green-600 mr-2"></i> Fresh Salad</p>
+                        <p class="text-gray-600"><i class="fas fa-check-circle text-green-600 mr-2"></i> Rice / Pasta / Potatoes</p>
+                        <p class="text-gray-600"><i class="fas fa-check-circle text-green-600 mr-2"></i> Chicken / Meat</p>
+                        <p class="text-gray-600"><i class="fas fa-check-circle text-green-600 mr-2"></i> Mixed Vegetables (Carrot/French-Beans/Cabbage)</p>
+                    </div>
+                    <div>
+                        <p class="text-gray-600"><i class="fas fa-check-circle text-green-600 mr-2"></i> Lentils</p>
+                        <p class="text-gray-600"><i class="fas fa-check-circle text-green-600 mr-2"></i> Fruit Salad / Fruit with custard</p>
+                        <p class="text-gray-600"><i class="fas fa-check-circle text-green-600 mr-2"></i> Tea / Coffee / Milo / Drinking chocolate</p>
+                        <p class="text-gray-600"><i class="fas fa-check-circle text-green-600 mr-2"></i> Spaghetti with meat sauce or fish with rice</p>
+                        <p class="text-gray-600"><i class="fas fa-check-circle text-green-600 mr-2"></i> Fried beef with roast potatoes, rice, carrots, cabbage</p>
+                        <p class="text-gray-600"><i class="fas fa-check-circle text-green-600 mr-2"></i> Roast chicken with vegetable, fried rice, green pepper, carrots</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Summit Snack -->
+            <div class="summit-snack p-6 mb-10">
+                <div class="flex items-center gap-3 mb-3">
+                    <i class="fas fa-mountain text-2xl text-sky-700"></i>
+                    <h3 class="text-xl font-bold text-gray-800">On The Way To The Summit</h3>
+                </div>
+                <p class="text-gray-700"><strong>Midnight Snack:</strong> Hot Chocolate, Tea or Coffee and biscuits, orange squash or soup.</p>
+            </div>
+
+            <!-- Request Button -->
+            <div class="text-center">
+                <a href="contact.html" class="btn-primary text-lg px-10 py-4">Book Your Kilimanjaro Trek</a>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-gray-900 text-gray-300 py-10">
+    <div class="container mx-auto px-4">
+        <div class="grid md:grid-cols-3 gap-8">
+            <div><h3 class="text-white text-xl font-bold mb-4">Wilderness Footprints</h3><p class="text-sm">Tanzania Trekking & Safaris. Step into the heart of the wilderness with us.</p></div>
+            <div><h3 class="text-white text-xl font-bold mb-4">Contact</h3><p class="text-sm"><i class="fas fa-map-marker-alt mr-2"></i> Boma Road, Near New Safari Hotel, Arusha, Tanzania</p><p class="text-sm mt-2"><i class="fab fa-whatsapp mr-2"></i> +255789178090 (WhatsApp)</p><p class="text-sm mt-2"><i class="fas fa-envelope mr-2"></i> wildernessfootprints@gmail.com</p></div>
+            <div><h3 class="text-white text-xl font-bold mb-4">Follow Us</h3><div class="flex space-x-4"><a href="#" class="text-gray-400 hover:text-white text-2xl"><i class="fab fa-facebook"></i></a><a href="#" class="text-gray-400 hover:text-white text-2xl"><i class="fab fa-whatsapp"></i></a></div><div class="mt-4 text-sm">Select Language: <span class="text-green-400">Google Translate</span></div></div>
+        </div>
+        <div class="border-t border-gray-800 mt-8 pt-6 text-center text-sm"><p>&copy; 2024 Wilderness Footprints Tanzania. All rights reserved.</p></div>
+    </div>
+</footer>
+
+<script>
+    function toggleMobileMenu() { document.getElementById('mobileMenu').classList.toggle('hidden'); }
+</script>
+</body>
+</html>
