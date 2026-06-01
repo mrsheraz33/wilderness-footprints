@@ -14,8 +14,8 @@
             display: none; position: absolute; top: 100%; left: 0;
             background: white; min-width: 220px; box-shadow: 0 10px 25px rgba(0,0,0,0.1);
             z-index: 1000; border-radius: 8px; padding: 8px 0;
-              max-height: 70vh;       
-             overflow-y: auto; 
+            max-height: 70vh;       
+            overflow-y: auto; 
         }
         .dropdown-menu a {
             display: block; padding: 10px 20px; color: #1e3a2e;
@@ -69,32 +69,24 @@
 <!-- Navbar -->
 <nav class="bg-white shadow-md fixed w-full z-50">
     <div class="container mx-auto px-4 py-3 flex justify-between items-center">
-        <!-- Logo -->
         <a href="index.html" class="flex items-center space-x-2">
             <img src="images/logo.jpeg" alt="Logo" class="h-12 w-auto" onerror="this.src='https://via.placeholder.com/50x50?text=WFT'">
-            <span class="font-bold text-xl text-green-800 hidden sm:inline">Wilderness Footprints</span>
+            <span class="font-bold text-base sm:text-lg md:text-xl text-green-800">Wilderness Footprints</span>
         </a>
 
-        <!-- Desktop Menu -->
         <div class="hidden lg:flex space-x-4 xl:space-x-6 items-center">
-            
-            <!-- About Us Dropdown -->
             <div class="dropdown relative">
                 <a href="#" class="text-gray-700 hover:text-green-700 font-medium">About Us <i class="fas fa-chevron-down text-xs"></i></a>
                 <div class="dropdown-menu">
                     <a href="who-are-we.html">Who Are We</a>
                 </div>
             </div>
-
-            <!-- Day Trips Dropdown -->
             <div class="dropdown relative">
                 <a href="#" class="text-gray-700 hover:text-green-700 font-medium">Day Trips <i class="fas fa-chevron-down text-xs"></i></a>
                 <div class="dropdown-menu">
                     <a href="day-trips.html">All Day Trips</a>
                 </div>
             </div>
-
-            <!-- Safaris Dropdown -->
             <div class="dropdown relative">
                 <a href="#" class="text-gray-700 hover:text-green-700 font-medium">Safaris <i class="fas fa-chevron-down text-xs"></i></a>
                 <div class="dropdown-menu">
@@ -116,8 +108,6 @@
                     <a href="kenya-safaris.html">Kenya Safaris</a>
                 </div>
             </div>
-
-            <!-- Trekking Dropdown -->
             <div class="dropdown relative">
                 <a href="#" class="text-gray-700 hover:text-green-700 font-medium">Trekking <i class="fas fa-chevron-down text-xs"></i></a>
                 <div class="dropdown-menu">
@@ -130,8 +120,6 @@
                     <a href="mount-oldonyo-lengai.html">Mount Oldonyo Lengai</a>
                 </div>
             </div>
-
-            <!-- Destinations & Activities Dropdown -->
             <div class="dropdown relative">
                 <a href="#" class="text-gray-700 hover:text-green-700 font-medium">Activities <i class="fas fa-chevron-down text-xs"></i></a>
                 <div class="dropdown-menu">
@@ -142,93 +130,70 @@
                     <a href="cycling-tour.html">Cycling Tour</a>
                 </div>
             </div>
-
-            <!-- Direct Links -->
             <a href="tour-faq.html" class="text-gray-700 hover:text-green-700 font-medium">Tour FAQ</a>
             <a href="booking-policy.html" class="text-gray-700 hover:text-green-700 font-medium">Booking Policy</a>
             <a href="contact.html" class="btn-primary text-sm py-2 px-5">Contact Us</a>
         </div>
 
-        <!-- Mobile Menu Button -->
         <button class="lg:hidden text-gray-700" onclick="toggleMobileMenu()">
             <i class="fas fa-bars text-2xl"></i>
         </button>
     </div>
 
-<!-- Mobile Menu -->
-<div id="mobileMenu" class="hidden lg:hidden bg-white border-t px-4 py-3 space-y-2 max-h-[92vh] overflow-y-auto">
-    
-    <!-- About Us -->
-    <div class="font-bold text-green-800 pt-2">About Us</div>
-    <div class="pl-4 space-y-1">
-        <a href="who-are-we.html" class="block py-1 text-sm text-gray-600">Who Are We</a>
+    <!-- Mobile Menu -->
+    <div id="mobileMenu" class="hidden lg:hidden bg-white border-t px-4 py-3 space-y-2 max-h-[92vh] overflow-y-auto">
+        <div class="font-bold text-green-800 pt-2">About Us</div>
+        <div class="pl-4 space-y-1"><a href="who-are-we.html" class="block py-1 text-sm text-gray-600">Who Are We</a></div>
+        <div class="font-bold text-green-800 pt-3">Day Trips</div>
+        <div class="pl-4 space-y-1"><a href="day-trips.html" class="block py-1 text-sm text-gray-600">All Day Trips</a></div>
+        <div class="font-bold text-green-800 pt-3">Safaris</div>
+        <div class="pl-4 space-y-1">
+            <a href="3-days-family-safari.html" class="block py-1 text-sm text-gray-600">3 Days Family Safari</a>
+            <a href="4-days-classic-safari.html" class="block py-1 text-sm text-gray-600">4 Days Classic Safari</a>
+            <a href="5-days-safari-footprints.html" class="block py-1 text-sm text-gray-600">5 Days Safari Footprints</a>
+            <a href="6-days-safari-experience.html" class="block py-1 text-sm text-gray-600">6 Days Safari Experience</a>
+            <a href="7-days-cultural-safari.html" class="block py-1 text-sm text-gray-600">7 Days Cultural Safari</a>
+            <a href="8-days-ngorongoro-highlands-treks.html" class="block py-1 text-sm text-gray-600">8 Days Ngorongoro Highlands Treks</a>
+            <a href="9-days-mara-river-crossing.html" class="block py-1 text-sm text-gray-600">9 Days Mara River Crossing</a>
+            <a href="8-days-honeymoon-safaris.html" class="block py-1 text-sm text-gray-600">8 Days Honeymoon Safaris</a>
+            <a href="western-safari-tanzania.html" class="block py-1 text-sm text-gray-600">Western Safari Tanzania</a>
+            <a href="southern-safari-tanzania.html" class="block py-1 text-sm text-gray-600">Southern Safari Tanzania</a>
+            <a href="4-days-tanzania-safari-isbania.html" class="block py-1 text-sm text-gray-600">4 Days Safari from Isbania</a>
+            <a href="balloon-safari.html" class="block py-1 text-sm text-gray-600">Balloon Safari</a>
+            <a href="olduvai-gorge.html" class="block py-1 text-sm text-gray-600">Olduvai Gorge</a>
+            <a href="lake-natron.html" class="block py-1 text-sm text-gray-600">Lake Natron</a>
+            <a href="lake-eyasi.html" class="block py-1 text-sm text-gray-600">Lake Eyasi</a>
+            <a href="kenya-safaris.html" class="block py-1 text-sm text-gray-600">Kenya Safaris</a>
+        </div>
+        <div class="font-bold text-green-800 pt-3">Trekking</div>
+        <div class="pl-4 space-y-1">
+            <a href="kilimanjaro-routes.html" class="block py-1 text-sm text-gray-600">Kilimanjaro Routes</a>
+            <a href="kili-day-trip.html" class="block py-1 text-sm text-gray-600">Kili Day Trip</a>
+            <a href="mount-kenya-trekking-4-days.html" class="block py-1 text-sm text-gray-600">Mount Kenya Trekking</a>
+            <a href="mount-meru-treks.html" class="block py-1 text-sm text-gray-600">Mount Meru Treks</a>
+            <a href="mount-lolmalasin.html" class="block py-1 text-sm text-gray-600">Mount Lolmalasin</a>
+            <a href="mount-hanang.html" class="block py-1 text-sm text-gray-600">Mount Hanang</a>
+            <a href="mount-oldonyo-lengai.html" class="block py-1 text-sm text-gray-600">Mount Oldonyo Lengai</a>
+        </div>
+        <div class="font-bold text-green-800 pt-3">Activities</div>
+        <div class="pl-4 space-y-1">
+            <a href="beach-holidays.html" class="block py-1 text-sm text-gray-600">Beach Holidays</a>
+            <a href="maasai-visit.html" class="block py-1 text-sm text-gray-600">Maasai Visit</a>
+            <a href="serval-wildlife.html" class="block py-1 text-sm text-gray-600">Serval Wildlife</a>
+            <a href="tour-in-mto-wa-mbu.html" class="block py-1 text-sm text-gray-600">Mto Wa Mbu Tour</a>
+            <a href="cycling-tour.html" class="block py-1 text-sm text-gray-600">Cycling Tour</a>
+        </div>
+        <div class="font-bold text-green-800 pt-3">Information</div>
+        <div class="pl-4 space-y-1">
+            <a href="tour-faq.html" class="block py-1 text-sm text-gray-600">Tour FAQ</a>
+            <a href="booking-policy.html" class="block py-1 text-sm text-gray-600">Booking Policy</a>
+        </div>
+        <div class="pt-4 border-t mt-4">
+            <a href="contact.html" class="block py-3 px-4 text-center bg-green-700 text-white font-semibold rounded-xl hover:bg-green-800 transition">Contact Us</a>
+        </div>
     </div>
-
-    <!-- Day Trips -->
-    <div class="font-bold text-green-800 pt-3">Day Trips</div>
-    <div class="pl-4 space-y-1">
-        <a href="day-trips.html" class="block py-1 text-sm text-gray-600">All Day Trips</a>
-    </div>
-
-    <!-- Safaris -->
-    <div class="font-bold text-green-800 pt-3">Safaris</div>
-    <div class="pl-4 space-y-1">
-        <a href="3-days-family-safari.html" class="block py-1 text-sm text-gray-600">3 Days Family Safari</a>
-        <a href="4-days-classic-safari.html" class="block py-1 text-sm text-gray-600">4 Days Classic Safari</a>
-        <a href="5-days-safari-footprints.html" class="block py-1 text-sm text-gray-600">5 Days Safari Footprints</a>
-        <a href="6-days-safari-experience.html" class="block py-1 text-sm text-gray-600">6 Days Safari Experience</a>
-        <a href="7-days-cultural-safari.html" class="block py-1 text-sm text-gray-600">7 Days Cultural Safari</a>
-        <a href="8-days-ngorongoro-highlands-treks.html" class="block py-1 text-sm text-gray-600">8 Days Ngorongoro Highlands Treks</a>
-        <a href="9-days-mara-river-crossing.html" class="block py-1 text-sm text-gray-600">9 Days Mara River Crossing</a>
-        <a href="8-days-honeymoon-safaris.html" class="block py-1 text-sm text-gray-600">8 Days Honeymoon Safaris</a>
-        <a href="western-safari-tanzania.html" class="block py-1 text-sm text-gray-600">Western Safari Tanzania</a>
-        <a href="southern-safari-tanzania.html" class="block py-1 text-sm text-gray-600">Southern Safari Tanzania</a>
-        <a href="4-days-tanzania-safari-isbania.html" class="block py-1 text-sm text-gray-600">4 Days Safari from Isbania</a>
-        <a href="balloon-safari.html" class="block py-1 text-sm text-gray-600">Balloon Safari</a>
-        <a href="olduvai-gorge.html" class="block py-1 text-sm text-gray-600">Olduvai Gorge</a>
-        <a href="lake-natron.html" class="block py-1 text-sm text-gray-600">Lake Natron</a>
-        <a href="lake-eyasi.html" class="block py-1 text-sm text-gray-600">Lake Eyasi</a>
-        <a href="kenya-safaris.html" class="block py-1 text-sm text-gray-600">Kenya Safaris</a>
-    </div>
-
-    <!-- Trekking -->
-    <div class="font-bold text-green-800 pt-3">Trekking</div>
-    <div class="pl-4 space-y-1">
-        <a href="kilimanjaro-routes.html" class="block py-1 text-sm text-gray-600">Kilimanjaro Routes</a>
-        <a href="kili-day-trip.html" class="block py-1 text-sm text-gray-600">Kili Day Trip</a>
-        <a href="mount-kenya-trekking-4-days.html" class="block py-1 text-sm text-gray-600">Mount Kenya Trekking</a>
-        <a href="mount-meru-treks.html" class="block py-1 text-sm text-gray-600">Mount Meru Treks</a>
-        <a href="mount-lolmalasin.html" class="block py-1 text-sm text-gray-600">Mount Lolmalasin</a>
-        <a href="mount-hanang.html" class="block py-1 text-sm text-gray-600">Mount Hanang</a>
-        <a href="mount-oldonyo-lengai.html" class="block py-1 text-sm text-gray-600">Mount Oldonyo Lengai</a>
-    </div>
-
-    <!-- Activities -->
-    <div class="font-bold text-green-800 pt-3">Activities</div>
-    <div class="pl-4 space-y-1">
-        <a href="beach-holidays.html" class="block py-1 text-sm text-gray-600">Beach Holidays</a>
-        <a href="maasai-visit.html" class="block py-1 text-sm text-gray-600">Maasai Visit</a>
-        <a href="serval-wildlife.html" class="block py-1 text-sm text-gray-600">Serval Wildlife</a>
-        <a href="tour-in-mto-wa-mbu.html" class="block py-1 text-sm text-gray-600">Mto Wa Mbu Tour</a>
-        <a href="cycling-tour.html" class="block py-1 text-sm text-gray-600">Cycling Tour</a>
-    </div>
-
-    <!-- Information -->
-    <div class="font-bold text-green-800 pt-3">Information</div>
-    <div class="pl-4 space-y-1">
-        <a href="tour-faq.html" class="block py-1 text-sm text-gray-600">Tour FAQ</a>
-        <a href="booking-policy.html" class="block py-1 text-sm text-gray-600">Booking Policy</a>
-    </div>
-
-    <!-- Contact Us - FIXED -->
-    <div class="pt-4 border-t mt-4">
-        <a href="contact.html" 
-           class="block py-3 px-4 text-center bg-green-700 text-white font-semibold rounded-xl hover:bg-green-800 transition">
-            Contact Us
-        </a>
-    </div>
-</div>
 </nav>
+
     <!-- Hero Section -->
     <section class="hero-section pt-32 pb-16">
         <div class="container mx-auto px-4 text-center">
@@ -246,12 +211,13 @@
         <div class="container mx-auto px-4">
             <div class="max-w-4xl mx-auto">
 
-                <!-- Tabs -->
-                <div class="flex flex-wrap border-b border-gray-200 mb-8 rounded-t-xl overflow-hidden">
-                    <button class="tab-button active px-5 py-3 text-gray-600 hover:text-green-600 transition font-medium" data-tab="arusha">Arusha National Park</button>
-                    <button class="tab-button px-5 py-3 text-gray-600 hover:text-green-600 transition font-medium" data-tab="tarangire">Tarangire National Park</button>
-                    <button class="tab-button px-5 py-3 text-gray-600 hover:text-green-600 transition font-medium" data-tab="manyara">Lake Manyara</button>
-                    <button class="tab-button px-5 py-3 text-gray-600 hover:text-green-600 transition font-medium" data-tab="ngorongoro">Ngorongoro Crater</button>
+                <!-- Tabs - 5 tabs now -->
+                <div class="flex align-items justify-center flex-wrap border-b border-gray-200 mb-8 rounded-t-xl overflow-hidden">
+                    <button class="tab-button active px-4 py-3 text-gray-600 hover:text-green-600 transition font-medium" data-tab="arusha">Arusha NP</button>
+                    <button class="tab-button px-4 py-3 text-gray-600 hover:text-green-600 transition font-medium" data-tab="tarangire">Tarangire NP</button>
+                    <button class="tab-button px-4 py-3 text-gray-600 hover:text-green-600 transition font-medium" data-tab="manyara">Lake Manyara</button>
+                    <button class="tab-button px-4 py-3 text-gray-600 hover:text-green-600 transition font-medium" data-tab="ngorongoro">Ngorongoro</button>
+                    <button class="tab-button px-4 py-3 text-gray-600 hover:text-green-600 transition font-medium" data-tab="mkomazi">Mkomazi NP</button>
                 </div>
 
                 <!-- Tab 1: Arusha -->
@@ -413,6 +379,68 @@
                     </div>
                 </div>
 
+                <!-- Tab 5: Mkomazi National Park (NEW) -->
+                <div id="mkomazi" class="tab-content">
+                    <div class="info-card p-6">
+                        <div class="flex items-center gap-3 mb-4">
+                            <i class="fas fa-paw text-3xl text-green-600"></i>
+                            <h2 class="text-2xl font-bold text-gray-800">Mkomazi National Park</h2>
+                        </div>
+                        <p class="text-gray-600 mt-2">Mkomazi National Park is located in northeastern Tanzania, near the border with Kenya. It covers an area of about 3,245 square kilometers and is known for its diverse landscapes, including savannah, acacia woodlands, and rocky hills. The park is less visited than some of Tanzania's more famous national parks, offering a more secluded safari experience.</p>
+                        
+                        <div class="grid md:grid-cols-2 gap-4 mt-4">
+                            <div class="bg-green-50 p-4 rounded-lg">
+                                <span class="font-bold text-green-800"><i class="fas fa-check-circle mr-1"></i> Key Features</span>
+                                <ul class="mt-2 space-y-1 text-sm">
+                                    <li>• Elephants, giraffes, zebras, lions, cheetahs</li>
+                                    <li>• Black Rhino Sanctuary</li>
+                                    <li>• Wild Dog Conservation Program</li>
+                                    <li>• Over 450 bird species</li>
+                                </ul>
+                            </div>
+                            <div class="bg-blue-50 p-4 rounded-lg">
+                                <span class="font-bold text-blue-800"><i class="fas fa-clock mr-1"></i> Day Trip Itinerary</span>
+                                <ul class="mt-2 space-y-1 text-sm">
+                                    <li>• 5:30 AM - Pickup from Moshi</li>
+                                    <li>• 9:30 AM - Arrive at Mkomazi</li>
+                                    <li>• 10:00 AM - Morning game drive</li>
+                                    <li>• 1:00 PM - Picnic lunch</li>
+                                    <li>• 2:00 PM - Afternoon game drive</li>
+                                    <li>• 4:30 PM - Depart for return</li>
+                                    <li>• 8:30 PM - Arrive back in Moshi</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <div class="grid md:grid-cols-2 gap-4 mt-4">
+                            <div class="bg-green-50 p-4 rounded-lg">
+                                <span class="font-bold text-green-800"><i class="fas fa-check-circle mr-1"></i> Package Includes</span>
+                                <ul class="mt-2 space-y-1 text-sm">
+                                    <li>• 4×4 Safari Vehicle</li>
+                                    <li>• Park entrance fees</li>
+                                    <li>• Professional guide</li>
+                                    <li>• Picnic lunch box</li>
+                                    <li>• Bottled water</li>
+                                </ul>
+                            </div>
+                            <div class="bg-red-50 p-4 rounded-lg">
+                                <span class="font-bold text-red-800"><i class="fas fa-times-circle mr-1"></i> Not Included</span>
+                                <ul class="mt-2 space-y-1 text-sm">
+                                    <li>• Personal expenses</li>
+                                    <li>• Tips for guide</li>
+                                    <li>• Travel insurance</li>
+                                    <li>• Rhino Sanctuary visit (subject to availability)</li>
+                                </ul>
+                            </div>
+                        </div>
+                        
+                        <div class="mt-4 p-3 bg-amber-50 rounded-lg">
+                            <i class="fas fa-lightbulb text-amber-600 mr-2"></i>
+                            <span class="font-semibold">Important Notes:</span> Long day with considerable driving time. Book through reputable tour operator. Bring sunscreen, hat, binoculars, camera, and plenty of water. Some areas may be inaccessible during rainy season (March to May).
+                        </div>
+                    </div>
+                </div>
+
                 <!-- CTA -->
                 <div class="mt-10 bg-gradient-to-r from-green-800 to-green-700 rounded-2xl p-8 text-center text-white">
                     <i class="fas fa-calendar-check text-3xl mb-3"></i>
@@ -455,7 +483,7 @@
     </footer>
 
     <script>
-        function toggleMenu() { 
+        function toggleMobileMenu() { 
             document.getElementById('mobileMenu').classList.toggle('hidden'); 
         }
         
