@@ -29,7 +29,7 @@
         }
         .btn-primary:hover { background: #1b4d3e; transform: translateY(-2px); }
         .page-banner {
-            background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.pexels.com/photos/3591708/pexels-photo-3591708.jpeg?auto=compress&cs=tinysrgb&w=1600');
+            background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('./images/93.jpeg');
             background-size: cover; background-position: center; height: 50vh;
         }
         .info-card {
@@ -234,10 +234,15 @@
         <div class="container mx-auto px-4">
             <div class="max-w-4xl mx-auto">
 
-                <!-- Image -->
-                <div class="mb-8 rounded-xl overflow-hidden shadow-lg">
-                    <img src="https://images.pexels.com/photos/162281/balloon-hot-air-balloon-hot-air-ballooning-ballooning-162281.jpeg?auto=compress&cs=tinysrgb&w=1200" alt="Hot Air Balloon Safari Serengeti" class="w-full h-80 object-cover">
-                </div>
+              <!-- Images - 2 Images Side by Side (Safety Theme) -->
+<div class="grid md:grid-cols-2 gap-6 mb-10">
+    <div class="rounded-2xl overflow-hidden shadow-xl">
+        <img src="./images/92.jpeg" alt="Mountain Safety Rescue" class="w-full h-80 object-cover hover:scale-105 transition duration-300">
+    </div>
+    <div class="rounded-2xl overflow-hidden shadow-xl">
+        <img src="./images/94.jpeg" alt="Health Check Medical" class="w-full h-80 object-cover hover:scale-105 transition duration-300">
+    </div>
+</div>
 
                 <!-- Add Balloon Activities -->
                 <div class="info-card p-6 mb-6">
@@ -302,7 +307,24 @@
                 <div class="text-center">
                     <a href="../contact.html" class="btn-primary text-lg px-10 py-3 shadow-lg">BOOK BALLOON SAFARI</a>
                 </div>
+                            <!-- Gallery - 3 Images -->
+            <div class="mt-12 mb-10">
+                <h3 class="text-2xl font-bold text-center text-gray-800 mb-6">Balloon Safari Gallery</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+                    <div class="rounded-2xl overflow-hidden shadow-lg">
+                        <img src="./images/99.jpeg" alt="Hot Air Balloon Safari" class="w-full h-56 object-cover hover:scale-105 transition duration-300">
+                    </div>
+                    <div class="rounded-2xl overflow-hidden shadow-lg">
+                        <img src="./images/100.jpeg" alt="Serengeti Balloon" class="w-full h-56 object-cover hover:scale-105 transition duration-300">
+                    </div>
+                    <div class="rounded-2xl overflow-hidden shadow-lg">
+                        <img src="./images/101.jpeg" alt="Balloon Sunrise" class="w-full h-56 object-cover hover:scale-105 transition duration-300">
+                    </div>
+                </div>
             </div>
+            </div>
+
+            
         </div>
     </section>
 
