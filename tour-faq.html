@@ -1,227 +1,287 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Wilderness Footprints Tanzania | Tanzania Safaris, Kilimanjaro Treks & Zanzibar Holidays</title>
+    <title>Wilderness Footprints Tanzania | Tanzania Safaris, Kilimanjaro Treks & Zanzibar Holidays</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
-        * { font-family: 'Poppins', sans-serif; }
-        .dropdown:hover .dropdown-menu { display: block; }
+
+        * {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+
         .dropdown-menu {
-            display: none; position: absolute; top: 100%; left: 0;
-            background: white; min-width: 220px; box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-            z-index: 1000; border-radius: 8px; padding: 8px 0;
-              max-height: 70vh;       
-             overflow-y: auto; 
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: white;
+            min-width: 220px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            border-radius: 8px;
+            padding: 8px 0;
+            max-height: 70vh;
+            overflow-y: auto;
         }
+
         .dropdown-menu a {
-            display: block; padding: 10px 20px; color: #1e3a2e;
-            text-decoration: none; font-size: 14px; transition: all 0.3s;
+            display: block;
+            padding: 10px 20px;
+            color: #1e3a2e;
+            text-decoration: none;
+            font-size: 14px;
+            transition: all 0.3s;
         }
-        .dropdown-menu a:hover { background: #e8f0e8; color: #0f2b1f; }
+
+        .dropdown-menu a:hover {
+            background: #e8f0e8;
+            color: #0f2b1f;
+        }
+
         .btn-primary {
-            background: #2d6a4f; color: white; padding: 14px 32px;
-            border-radius: 50px; text-decoration: none; font-weight: 600;
-            transition: all 0.3s; display: inline-block;
+            background: #2d6a4f;
+            color: white;
+            padding: 14px 32px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            display: inline-block;
         }
-        .btn-primary:hover { background: #1b4d3e; transform: translateY(-3px); box-shadow: 0 10px 25px rgba(45,106,79,0.3); }
+
+        .btn-primary:hover {
+            background: #1b4d3e;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(45, 106, 79, 0.3);
+        }
+
         .hero-section {
             background: linear-gradient(135deg, #1a3c2c 0%, #2d6a4f 50%, #38a169 100%);
         }
+
         .faq-item {
             background: white;
             border-radius: 16px;
             transition: all 0.3s ease;
             border: 1px solid #e2e8f0;
         }
+
         .faq-item:hover {
             transform: translateX(6px);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
             border-color: #2d6a4f;
         }
+
         .sidebar-card {
-            background: rgba(255,255,255,0.1);
+            background: rgba(255, 255, 255, 0.1);
             backdrop-filter: blur(10px);
             border-radius: 24px;
         }
     </style>
 </head>
+
 <body>
 
-<!-- Navbar -->
-<nav class="bg-white shadow-md fixed w-full z-50">
-    <div class="container mx-auto px-4 py-3 flex justify-between items-center">
-        <a href="index.html" class="flex items-center space-x-2">
-            <img src="images/logo.jpeg" alt="Logo" class="h-12 w-auto" onerror="this.src='https://via.placeholder.com/50x50?text=WFT'">
-            <span class="font-bold text-base sm:text-lg md:text-xl text-green-800">Wilderness Footprints</span>
-        </a>
+    <!-- Navbar -->
+    <nav class="bg-white shadow-md fixed w-full z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="index.html" class="flex items-center space-x-2">
+                <img src="images/logo.jpeg" alt="Logo" class="h-12 w-auto"
+                    onerror="this.src='https://via.placeholder.com/50x50?text=WFT'">
+                <span class="font-bold text-base sm:text-lg md:text-xl text-green-800">Wilderness Footprints</span>
+            </a>
 
-        <!-- Desktop Menu -->
-        <div class="hidden lg:flex space-x-4 xl:space-x-6 items-center">
-            
-            <!-- About Us Dropdown -->
-            <div class="dropdown relative">
-                <a href="#" class="text-gray-700 hover:text-green-700 font-medium">About Us <i class="fas fa-chevron-down text-xs"></i></a>
-                <div class="dropdown-menu">
-                    <a href="index.html">Home</a>
-                    <a href="who-are-we.html">Who Are We</a>
+            <!-- Desktop Menu -->
+            <div class="hidden lg:flex space-x-4 xl:space-x-6 items-center">
+
+                <!-- About Us Dropdown -->
+                <div class="dropdown relative">
+                    <a href="#" class="text-gray-700 hover:text-green-700 font-medium">About Us <i
+                            class="fas fa-chevron-down text-xs"></i></a>
+                    <div class="dropdown-menu">
+                        <a href="index.html">Home</a>
+                        <a href="who-are-we.html">Who Are We</a>
+                    </div>
                 </div>
+
+                <!-- Day Trips Dropdown -->
+                <div class="dropdown relative">
+                    <a href="#" class="text-gray-700 hover:text-green-700 font-medium">Day Trips <i
+                            class="fas fa-chevron-down text-xs"></i></a>
+                    <div class="dropdown-menu">
+                        <a href="day-trips.html">All Day Trips</a>
+                    </div>
+                </div>
+
+                <!-- Safaris Dropdown -->
+                <div class="dropdown relative">
+                    <a href="#" class="text-gray-700 hover:text-green-700 font-medium">Safaris <i
+                            class="fas fa-chevron-down text-xs"></i></a>
+                    <div class="dropdown-menu">
+                        <a href="3-days-family-safari.html">3 Days Family Safari</a>
+                        <a href="4-days-classic-safari.html">4 Days Classic Safari</a>
+                        <a href="5-days-safari-footprints.html">5 Days Safari Footprints</a>
+                        <a href="6-days-safari-experience.html">6 Days Safari Experience</a>
+                        <a href="7-days-cultural-safari.html">7 Days Cultural Safari</a>
+                        <a href="8-days-ngorongoro-highlands-treks.html">8 Days Ngorongoro Highlands Treks</a>
+                        <a href="9-days-mara-river-crossing.html">9 Days Mara River Crossing</a>
+                        <a href="8-days-honeymoon-safaris.html">8 Days Honeymoon Safaris</a>
+                        <a href="western-safari-tanzania.html">Western Safari Tanzania</a>
+                        <a href="southern-safari-tanzania.html">Southern Safari Tanzania</a>
+                        <a href="4-days-tanzania-safari-isbania.html">4 Days Safari from Isbania</a>
+                        <a href="balloon-safari.html">Balloon Safari</a>
+                        <a href="olduvai-gorge.html">Olduvai Gorge</a>
+                        <a href="lake-natron.html">Lake Natron</a>
+                        <a href="lake-eyasi.html">Lake Eyasi</a>
+                        <a href="kenya-safaris.html">Kenya Safaris</a>
+                    </div>
+                </div>
+
+                <!-- Trekking Dropdown -->
+                <div class="dropdown relative">
+                    <a href="#" class="text-gray-700 hover:text-green-700 font-medium">Trekking <i
+                            class="fas fa-chevron-down text-xs"></i></a>
+                    <div class="dropdown-menu">
+                        <a href="kilimanjaro-routes.html">Kilimanjaro Routes</a>
+                        <a href="kili-day-trip.html">Kili Day Trip</a>
+                        <a href="mount-kenya-trekking-4-days.html">Mount Kenya Trekking</a>
+                        <a href="mount-meru-treks.html">Mount Meru Treks</a>
+                        <a href="mount-lolmalasin.html">Mount Lolmalasin</a>
+                        <a href="mount-hanang.html">Mount Hanang</a>
+                        <a href="mount-oldonyo-lengai.html">Mount Oldonyo Lengai</a>
+                        <a href="food-menu.html">Food Menu</a>
+                        <a href="careful-acclimatisation.html">Careful Acclimatisation</a>
+                        <a href="health-info.html">Health Information</a>
+                        <a href="what-to-pack.html">What to Pack</a>
+                    </div>
+                </div>
+
+                <!-- Activities Dropdown -->
+                <div class="dropdown relative">
+                    <a href="#" class="text-gray-700 hover:text-green-700 font-medium">Activities <i
+                            class="fas fa-chevron-down text-xs"></i></a>
+                    <div class="dropdown-menu">
+                        <a href="beach-holidays.html">Beach Holidays</a>
+                        <a href="maasai-visit.html">Maasai Visit</a>
+                        <a href="serval-wildlife.html">Serval Wildlife</a>
+                        <a href="tour-in-mto-wa-mbu.html">Mto Wa Mbu Tour</a>
+                        <a href="cycling-tour.html">Cycling Tour</a>
+                        <a href="moshi-tour.html">Moshi Tour</a>
+                    </div>
+                </div>
+
+                <!-- Direct Links -->
+                <a href="tour-faq.html" class="text-gray-700 hover:text-green-700 font-medium">Tour FAQ</a>
+                <a href="booking-policy.html" class="text-gray-700 hover:text-green-700 font-medium">Booking Policy</a>
+                <a href="contact.html" class="btn-primary text-sm py-2 px-5">Contact Us</a>
             </div>
 
-            <!-- Day Trips Dropdown -->
-            <div class="dropdown relative">
-                <a href="#" class="text-gray-700 hover:text-green-700 font-medium">Day Trips <i class="fas fa-chevron-down text-xs"></i></a>
-                <div class="dropdown-menu">
-                    <a href="day-trips.html">All Day Trips</a>
-                </div>
+            <!-- Mobile Menu Button -->
+            <button class="lg:hidden text-gray-700" onclick="toggleMobileMenu()">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobileMenu"
+            class="hidden lg:hidden bg-white border-t px-4 py-3 space-y-2 max-h-[92vh] overflow-y-auto">
+
+            <!-- About Us -->
+            <div class="font-bold text-green-800 pt-2">About Us</div>
+            <div class="pl-4 space-y-1">
+                <a href="index.html" class="block py-1 text-sm text-gray-600">Home</a>
+                <a href="who-are-we.html" class="block py-1 text-sm text-gray-600">Who Are We</a>
             </div>
 
-            <!-- Safaris Dropdown -->
-            <div class="dropdown relative">
-                <a href="#" class="text-gray-700 hover:text-green-700 font-medium">Safaris <i class="fas fa-chevron-down text-xs"></i></a>
-                <div class="dropdown-menu">
-                    <a href="3-days-family-safari.html">3 Days Family Safari</a>
-                    <a href="4-days-classic-safari.html">4 Days Classic Safari</a>
-                    <a href="5-days-safari-footprints.html">5 Days Safari Footprints</a>
-                    <a href="6-days-safari-experience.html">6 Days Safari Experience</a>
-                    <a href="7-days-cultural-safari.html">7 Days Cultural Safari</a>
-                    <a href="8-days-ngorongoro-highlands-treks.html">8 Days Ngorongoro Highlands Treks</a>
-                    <a href="9-days-mara-river-crossing.html">9 Days Mara River Crossing</a>
-                    <a href="8-days-honeymoon-safaris.html">8 Days Honeymoon Safaris</a>
-                    <a href="western-safari-tanzania.html">Western Safari Tanzania</a>
-                    <a href="southern-safari-tanzania.html">Southern Safari Tanzania</a>
-                    <a href="4-days-tanzania-safari-isbania.html">4 Days Safari from Isbania</a>
-                    <a href="balloon-safari.html">Balloon Safari</a>
-                    <a href="olduvai-gorge.html">Olduvai Gorge</a>
-                    <a href="lake-natron.html">Lake Natron</a>
-                    <a href="lake-eyasi.html">Lake Eyasi</a>
-                    <a href="kenya-safaris.html">Kenya Safaris</a>
-                </div>
+            <!-- Day Trips -->
+            <div class="font-bold text-green-800 pt-3">Day Trips</div>
+            <div class="pl-4 space-y-1">
+                <a href="day-trips.html" class="block py-1 text-sm text-gray-600">All Day Trips</a>
             </div>
 
-            <!-- Trekking Dropdown -->
-            <div class="dropdown relative">
-                <a href="#" class="text-gray-700 hover:text-green-700 font-medium">Trekking <i class="fas fa-chevron-down text-xs"></i></a>
-                <div class="dropdown-menu">
-                    <a href="kilimanjaro-routes.html">Kilimanjaro Routes</a>
-                    <a href="kili-day-trip.html">Kili Day Trip</a>
-                    <a href="mount-kenya-trekking-4-days.html">Mount Kenya Trekking</a>
-                    <a href="mount-meru-treks.html">Mount Meru Treks</a>
-                    <a href="mount-lolmalasin.html">Mount Lolmalasin</a>
-                    <a href="mount-hanang.html">Mount Hanang</a>
-                    <a href="mount-oldonyo-lengai.html">Mount Oldonyo Lengai</a>
-                    <a href="food-menu.html">Food Menu</a>
-                    <a href="careful-acclimatisation.html">Careful Acclimatisation</a>
-                    <a href="health-info.html">Health Information</a>
-                    <a href="what-to-pack.html">What to Pack</a>
-                </div>
+            <!-- Safaris -->
+            <div class="font-bold text-green-800 pt-3">Safaris</div>
+            <div class="pl-4 space-y-1">
+                <a href="3-days-family-safari.html" class="block py-1 text-sm text-gray-600">3 Days Family Safari</a>
+                <a href="4-days-classic-safari.html" class="block py-1 text-sm text-gray-600">4 Days Classic Safari</a>
+                <a href="5-days-safari-footprints.html" class="block py-1 text-sm text-gray-600">5 Days Safari
+                    Footprints</a>
+                <a href="6-days-safari-experience.html" class="block py-1 text-sm text-gray-600">6 Days Safari
+                    Experience</a>
+                <a href="7-days-cultural-safari.html" class="block py-1 text-sm text-gray-600">7 Days Cultural
+                    Safari</a>
+                <a href="8-days-ngorongoro-highlands-treks.html" class="block py-1 text-sm text-gray-600">8 Days
+                    Ngorongoro Highlands Treks</a>
+                <a href="9-days-mara-river-crossing.html" class="block py-1 text-sm text-gray-600">9 Days Mara River
+                    Crossing</a>
+                <a href="8-days-honeymoon-safaris.html" class="block py-1 text-sm text-gray-600">8 Days Honeymoon
+                    Safaris</a>
+                <a href="western-safari-tanzania.html" class="block py-1 text-sm text-gray-600">Western Safari
+                    Tanzania</a>
+                <a href="southern-safari-tanzania.html" class="block py-1 text-sm text-gray-600">Southern Safari
+                    Tanzania</a>
+                <a href="4-days-tanzania-safari-isbania.html" class="block py-1 text-sm text-gray-600">4 Days Safari
+                    from Isbania</a>
+                <a href="balloon-safari.html" class="block py-1 text-sm text-gray-600">Balloon Safari</a>
+                <a href="olduvai-gorge.html" class="block py-1 text-sm text-gray-600">Olduvai Gorge</a>
+                <a href="lake-natron.html" class="block py-1 text-sm text-gray-600">Lake Natron</a>
+                <a href="lake-eyasi.html" class="block py-1 text-sm text-gray-600">Lake Eyasi</a>
+                <a href="kenya-safaris.html" class="block py-1 text-sm text-gray-600">Kenya Safaris</a>
             </div>
 
-            <!-- Activities Dropdown -->
-            <div class="dropdown relative">
-                <a href="#" class="text-gray-700 hover:text-green-700 font-medium">Activities <i class="fas fa-chevron-down text-xs"></i></a>
-                <div class="dropdown-menu">
-                    <a href="beach-holidays.html">Beach Holidays</a>
-                    <a href="maasai-visit.html">Maasai Visit</a>
-                    <a href="serval-wildlife.html">Serval Wildlife</a>
-                    <a href="tour-in-mto-wa-mbu.html">Mto Wa Mbu Tour</a>
-                    <a href="cycling-tour.html">Cycling Tour</a>
-                    <a href="moshi-tour.html">Moshi Tour</a>
-                </div>
+            <!-- Trekking -->
+            <div class="font-bold text-green-800 pt-3">Trekking</div>
+            <div class="pl-4 space-y-1">
+                <a href="kilimanjaro-routes.html" class="block py-1 text-sm text-gray-600">Kilimanjaro Routes</a>
+                <a href="kili-day-trip.html" class="block py-1 text-sm text-gray-600">Kili Day Trip</a>
+                <a href="mount-kenya-trekking-4-days.html" class="block py-1 text-sm text-gray-600">Mount Kenya
+                    Trekking</a>
+                <a href="mount-meru-treks.html" class="block py-1 text-sm text-gray-600">Mount Meru Treks</a>
+                <a href="mount-lolmalasin.html" class="block py-1 text-sm text-gray-600">Mount Lolmalasin</a>
+                <a href="mount-hanang.html" class="block py-1 text-sm text-gray-600">Mount Hanang</a>
+                <a href="mount-oldonyo-lengai.html" class="block py-1 text-sm text-gray-600">Mount Oldonyo Lengai</a>
+                <a href="food-menu.html" class="block py-1 text-sm text-gray-600">Food Menu</a>
+                <a href="careful-acclimatisation.html" class="block py-1 text-sm text-gray-600">Careful
+                    Acclimatisation</a>
+                <a href="health-info.html" class="block py-1 text-sm text-gray-600">Health Information</a>
+                <a href="what-to-pack.html" class="block py-1 text-sm text-gray-600">What to Pack</a>
             </div>
 
-            <!-- Direct Links -->
-            <a href="tour-faq.html" class="text-gray-700 hover:text-green-700 font-medium">Tour FAQ</a>
-            <a href="booking-policy.html" class="text-gray-700 hover:text-green-700 font-medium">Booking Policy</a>
-            <a href="contact.html" class="btn-primary text-sm py-2 px-5">Contact Us</a>
-        </div>
+            <!-- Activities -->
+            <div class="font-bold text-green-800 pt-3">Activities</div>
+            <div class="pl-4 space-y-1">
+                <a href="beach-holidays.html" class="block py-1 text-sm text-gray-600">Beach Holidays</a>
+                <a href="maasai-visit.html" class="block py-1 text-sm text-gray-600">Maasai Visit</a>
+                <a href="serval-wildlife.html" class="block py-1 text-sm text-gray-600">Serval Wildlife</a>
+                <a href="tour-in-mto-wa-mbu.html" class="block py-1 text-sm text-gray-600">Mto Wa Mbu Tour</a>
+                <a href="cycling-tour.html" class="block py-1 text-sm text-gray-600">Cycling Tour</a>
+                <a href="moshi-tour.html" class="block py-1 text-sm text-gray-600">Moshi Tour</a>
+            </div>
 
-        <!-- Mobile Menu Button -->
-        <button class="lg:hidden text-gray-700" onclick="toggleMobileMenu()">
-            <i class="fas fa-bars text-2xl"></i>
-        </button>
-    </div>
+            <!-- Information -->
+            <div class="font-bold text-green-800 pt-3">Information</div>
+            <div class="pl-4 space-y-1">
+                <a href="tour-faq.html" class="block py-1 text-sm text-gray-600">Tour FAQ</a>
+                <a href="booking-policy.html" class="block py-1 text-sm text-gray-600">Booking Policy</a>
+            </div>
 
-    <!-- Mobile Menu -->
-    <div id="mobileMenu" class="hidden lg:hidden bg-white border-t px-4 py-3 space-y-2 max-h-[92vh] overflow-y-auto">
-        
-        <!-- About Us -->
-        <div class="font-bold text-green-800 pt-2">About Us</div>
-        <div class="pl-4 space-y-1">
-             <a href="index.html" class="block py-1 text-sm text-gray-600">Home</a>
-            <a href="who-are-we.html" class="block py-1 text-sm text-gray-600">Who Are We</a>
+            <!-- Contact Us -->
+            <div class="pt-4 border-t mt-4">
+                <a href="contact.html"
+                    class="block py-3 px-4 text-center bg-green-700 text-white font-semibold rounded-xl hover:bg-green-800 transition">Contact
+                    Us</a>
+            </div>
         </div>
-
-        <!-- Day Trips -->
-        <div class="font-bold text-green-800 pt-3">Day Trips</div>
-        <div class="pl-4 space-y-1">
-            <a href="day-trips.html" class="block py-1 text-sm text-gray-600">All Day Trips</a>
-        </div>
-
-        <!-- Safaris -->
-        <div class="font-bold text-green-800 pt-3">Safaris</div>
-        <div class="pl-4 space-y-1">
-            <a href="3-days-family-safari.html" class="block py-1 text-sm text-gray-600">3 Days Family Safari</a>
-            <a href="4-days-classic-safari.html" class="block py-1 text-sm text-gray-600">4 Days Classic Safari</a>
-            <a href="5-days-safari-footprints.html" class="block py-1 text-sm text-gray-600">5 Days Safari Footprints</a>
-            <a href="6-days-safari-experience.html" class="block py-1 text-sm text-gray-600">6 Days Safari Experience</a>
-            <a href="7-days-cultural-safari.html" class="block py-1 text-sm text-gray-600">7 Days Cultural Safari</a>
-            <a href="8-days-ngorongoro-highlands-treks.html" class="block py-1 text-sm text-gray-600">8 Days Ngorongoro Highlands Treks</a>
-            <a href="9-days-mara-river-crossing.html" class="block py-1 text-sm text-gray-600">9 Days Mara River Crossing</a>
-            <a href="8-days-honeymoon-safaris.html" class="block py-1 text-sm text-gray-600">8 Days Honeymoon Safaris</a>
-            <a href="western-safari-tanzania.html" class="block py-1 text-sm text-gray-600">Western Safari Tanzania</a>
-            <a href="southern-safari-tanzania.html" class="block py-1 text-sm text-gray-600">Southern Safari Tanzania</a>
-            <a href="4-days-tanzania-safari-isbania.html" class="block py-1 text-sm text-gray-600">4 Days Safari from Isbania</a>
-            <a href="balloon-safari.html" class="block py-1 text-sm text-gray-600">Balloon Safari</a>
-            <a href="olduvai-gorge.html" class="block py-1 text-sm text-gray-600">Olduvai Gorge</a>
-            <a href="lake-natron.html" class="block py-1 text-sm text-gray-600">Lake Natron</a>
-            <a href="lake-eyasi.html" class="block py-1 text-sm text-gray-600">Lake Eyasi</a>
-            <a href="kenya-safaris.html" class="block py-1 text-sm text-gray-600">Kenya Safaris</a>
-        </div>
-
-        <!-- Trekking -->
-        <div class="font-bold text-green-800 pt-3">Trekking</div>
-        <div class="pl-4 space-y-1">
-            <a href="kilimanjaro-routes.html" class="block py-1 text-sm text-gray-600">Kilimanjaro Routes</a>
-            <a href="kili-day-trip.html" class="block py-1 text-sm text-gray-600">Kili Day Trip</a>
-            <a href="mount-kenya-trekking-4-days.html" class="block py-1 text-sm text-gray-600">Mount Kenya Trekking</a>
-            <a href="mount-meru-treks.html" class="block py-1 text-sm text-gray-600">Mount Meru Treks</a>
-            <a href="mount-lolmalasin.html" class="block py-1 text-sm text-gray-600">Mount Lolmalasin</a>
-            <a href="mount-hanang.html" class="block py-1 text-sm text-gray-600">Mount Hanang</a>
-            <a href="mount-oldonyo-lengai.html" class="block py-1 text-sm text-gray-600">Mount Oldonyo Lengai</a>
-            <a href="food-menu.html" class="block py-1 text-sm text-gray-600">Food Menu</a>
-            <a href="careful-acclimatisation.html" class="block py-1 text-sm text-gray-600">Careful Acclimatisation</a>
-            <a href="health-info.html" class="block py-1 text-sm text-gray-600">Health Information</a>
-            <a href="what-to-pack.html" class="block py-1 text-sm text-gray-600">What to Pack</a>
-        </div>
-
-        <!-- Activities -->
-        <div class="font-bold text-green-800 pt-3">Activities</div>
-        <div class="pl-4 space-y-1">
-            <a href="beach-holidays.html" class="block py-1 text-sm text-gray-600">Beach Holidays</a>
-            <a href="maasai-visit.html" class="block py-1 text-sm text-gray-600">Maasai Visit</a>
-            <a href="serval-wildlife.html" class="block py-1 text-sm text-gray-600">Serval Wildlife</a>
-            <a href="tour-in-mto-wa-mbu.html" class="block py-1 text-sm text-gray-600">Mto Wa Mbu Tour</a>
-            <a href="cycling-tour.html" class="block py-1 text-sm text-gray-600">Cycling Tour</a>
-            <a href="moshi-tour.html" class="block py-1 text-sm text-gray-600">Moshi Tour</a>
-        </div>
-
-        <!-- Information -->
-        <div class="font-bold text-green-800 pt-3">Information</div>
-        <div class="pl-4 space-y-1">
-            <a href="tour-faq.html" class="block py-1 text-sm text-gray-600">Tour FAQ</a>
-            <a href="booking-policy.html" class="block py-1 text-sm text-gray-600">Booking Policy</a>
-        </div>
-
-        <!-- Contact Us -->
-        <div class="pt-4 border-t mt-4">
-            <a href="contact.html" class="block py-3 px-4 text-center bg-green-700 text-white font-semibold rounded-xl hover:bg-green-800 transition">Contact Us</a>
-        </div>
-    </div>
-</nav>
+    </nav>
     <!-- Hero Section -->
     <section class="hero-section pt-32 pb-20">
         <div class="container mx-auto px-4 text-center text-white">
@@ -234,6 +294,8 @@
         </div>
     </section>
 
+
+
     <!-- Main Content -->
     <section class="py-16 bg-gray-50">
         <div class="container mx-auto px-4">
@@ -241,51 +303,83 @@
 
                 <!-- Post Meta -->
                 <div class="text-center mb-10">
-                    <span class="bg-white text-gray-600 px-4 py-1 rounded-full text-xs shadow-sm"><i class="far fa-calendar-alt mr-1"></i> March 27, 2026</span>
-                    <span class="bg-white text-gray-600 px-4 py-1 rounded-full text-xs shadow-sm ml-2"><i class="far fa-folder mr-1"></i> Travel With Expert in Tanzania</span>
+                    <span class="bg-white text-gray-600 px-4 py-1 rounded-full text-xs shadow-sm"><i
+                            class="far fa-calendar-alt mr-1"></i> March 27, 2026</span>
+                    <span class="bg-white text-gray-600 px-4 py-1 rounded-full text-xs shadow-sm ml-2"><i
+                            class="far fa-folder mr-1"></i> Travel With Expert in Tanzania</span>
+                </div>
+
+
+                <div class="grid md:grid-cols-2 gap-6 mb-10">
+                    <div class="rounded-2xl overflow-hidden shadow-xl">
+                        <img src="./images/105.jpeg" alt="Mountain Safety"
+                            class="w-full h-64 object-cover hover:scale-105 transition duration-300">
+                    </div>
+                    <div class="rounded-2xl overflow-hidden shadow-xl">
+                        <img src="https://images.pexels.com/photos/271618/pexels-photo-271618.jpeg?auto=compress&cs=tinysrgb&w=800"
+                            alt="Health Check" class="w-full h-64 object-cover hover:scale-105 transition duration-300">
+                    </div>
                 </div>
 
                 <!-- Two Column Layout -->
                 <div class="grid md:grid-cols-3 gap-8">
-                    
+
                     <!-- Sidebar - Quick Info -->
                     <div class="md:col-span-1">
-                        <div class="bg-gradient-to-br from-green-800 to-green-700 rounded-2xl p-6 text-white sticky top-28">
+                        <div
+                            class="bg-gradient-to-br from-green-800 to-green-700 rounded-2xl p-6 text-white sticky top-28">
                             <i class="fas fa-headset text-3xl mb-4"></i>
                             <h3 class="text-xl font-bold mb-2">Still have questions?</h3>
-                            <p class="text-green-100 text-sm mb-4">Our team is ready to help you plan your perfect Tanzania adventure.</p>
+                            <p class="text-green-100 text-sm mb-4">Our team is ready to help you plan your perfect
+                                Tanzania adventure.</p>
                             <div class="border-t border-green-600 pt-4 mt-2">
-                                <p class="text-sm"><i class="fas fa-envelope mr-2"></i> wildernessfootprints@gmail.com</p>
+                                <p class="text-sm"><i class="fas fa-envelope mr-2"></i> wildernessfootprints@gmail.com
+                                </p>
                                 <p class="text-sm mt-2"><i class="fab fa-whatsapp mr-2"></i> +255789178090</p>
                             </div>
-                            <a href="contact.html" class="mt-5 block bg-white text-green-700 text-center py-2 rounded-full font-semibold hover:bg-gray-100 transition">Contact Us →</a>
+                            <a href="contact.html"
+                                class="mt-5 block bg-white text-green-700 text-center py-2 rounded-full font-semibold hover:bg-gray-100 transition">Contact
+                                Us →</a>
                         </div>
-                        
+
                         <div class="bg-white rounded-2xl p-5 mt-6 shadow-sm border border-gray-100">
                             <i class="fas fa-suitcase text-2xl text-green-700 mb-2"></i>
                             <h4 class="font-bold text-gray-800">Quick Links</h4>
                             <ul class="mt-3 space-y-2 text-sm">
-                                <li><a href="booking-policy.html" class="text-gray-600 hover:text-green-700"><i class="fas fa-chevron-right text-green-600 text-xs mr-2"></i> Booking Policy</a></li>
-                                <li><a href="tour-faq.html" class="text-gray-600 hover:text-green-700"><i class="fas fa-chevron-right text-green-600 text-xs mr-2"></i> Safari FAQ</a></li>
-                                <li><a href="contact.html" class="text-gray-600 hover:text-green-700"><i class="fas fa-chevron-right text-green-600 text-xs mr-2"></i> Contact Us</a></li>
+                                <li><a href="booking-policy.html" class="text-gray-600 hover:text-green-700"><i
+                                            class="fas fa-chevron-right text-green-600 text-xs mr-2"></i> Booking
+                                        Policy</a></li>
+                                <li><a href="tour-faq.html" class="text-gray-600 hover:text-green-700"><i
+                                            class="fas fa-chevron-right text-green-600 text-xs mr-2"></i> Safari FAQ</a>
+                                </li>
+                                <li><a href="contact.html" class="text-gray-600 hover:text-green-700"><i
+                                            class="fas fa-chevron-right text-green-600 text-xs mr-2"></i> Contact Us</a>
+                                </li>
                             </ul>
                         </div>
                     </div>
 
+
+
+
                     <!-- FAQ Content -->
                     <div class="md:col-span-2 space-y-4">
-                        
+
                         <!-- FAQ 1 -->
                         <div class="faq-item p-5">
                             <div class="flex items-start gap-3">
-                                <div class="w-8 h-8 bg-green-100 text-green-700 rounded-full flex items-center justify-center font-bold text-sm shrink-0">1</div>
+                                <div
+                                    class="w-8 h-8 bg-green-100 text-green-700 rounded-full flex items-center justify-center font-bold text-sm shrink-0">
+                                    1</div>
                                 <div>
                                     <h3 class="font-bold text-gray-800">What is the best time to visit Tanzania?</h3>
-                                    <p class="text-gray-600 text-sm mt-1">Tanzania can be visited year-round, but the best time depends on your interests:</p>
+                                    <p class="text-gray-600 text-sm mt-1">Tanzania can be visited year-round, but the
+                                        best time depends on your interests:</p>
                                     <ul class="mt-2 space-y-1 text-gray-600 text-sm list-disc list-inside">
                                         <li>Wildlife Safaris: June to October (dry season)</li>
                                         <li>Mount Kilimanjaro Trekking: January to March and June to October</li>
-                                        <li>Beach Holidays (Zanzibar & Pemba): June to October and December to February</li>
+                                        <li>Beach Holidays (Zanzibar & Pemba): June to October and December to February
+                                        </li>
                                     </ul>
                                 </div>
                             </div>
@@ -294,10 +388,14 @@
                         <!-- FAQ 2 -->
                         <div class="faq-item p-5">
                             <div class="flex items-start gap-3">
-                                <div class="w-8 h-8 bg-green-100 text-green-700 rounded-full flex items-center justify-center font-bold text-sm shrink-0">2</div>
+                                <div
+                                    class="w-8 h-8 bg-green-100 text-green-700 rounded-full flex items-center justify-center font-bold text-sm shrink-0">
+                                    2</div>
                                 <div>
                                     <h3 class="font-bold text-gray-800">Do I need a visa to visit Tanzania?</h3>
-                                    <p class="text-gray-600 text-sm mt-1">Yes, most travelers require a visa. You can obtain a Tanzania eVisa online before arrival or get a visa on arrival at major entry points. Check your country's requirements before travel.</p>
+                                    <p class="text-gray-600 text-sm mt-1">Yes, most travelers require a visa. You can
+                                        obtain a Tanzania eVisa online before arrival or get a visa on arrival at major
+                                        entry points. Check your country's requirements before travel.</p>
                                 </div>
                             </div>
                         </div>
@@ -305,9 +403,12 @@
                         <!-- FAQ 3 -->
                         <div class="faq-item p-5">
                             <div class="flex items-start gap-3">
-                                <div class="w-8 h-8 bg-green-100 text-green-700 rounded-full flex items-center justify-center font-bold text-sm shrink-0">3</div>
+                                <div
+                                    class="w-8 h-8 bg-green-100 text-green-700 rounded-full flex items-center justify-center font-bold text-sm shrink-0">
+                                    3</div>
                                 <div>
-                                    <h3 class="font-bold text-gray-800">What vaccinations or health precautions are required?</h3>
+                                    <h3 class="font-bold text-gray-800">What vaccinations or health precautions are
+                                        required?</h3>
                                     <ul class="mt-1 space-y-1 text-gray-600 text-sm list-disc list-inside">
                                         <li>Yellow fever vaccination required from risk countries</li>
                                         <li>Malaria prevention strongly recommended</li>
@@ -321,10 +422,15 @@
                         <!-- FAQ 4 -->
                         <div class="faq-item p-5">
                             <div class="flex items-start gap-3">
-                                <div class="w-8 h-8 bg-green-100 text-green-700 rounded-full flex items-center justify-center font-bold text-sm shrink-0">4</div>
+                                <div
+                                    class="w-8 h-8 bg-green-100 text-green-700 rounded-full flex items-center justify-center font-bold text-sm shrink-0">
+                                    4</div>
                                 <div>
                                     <h3 class="font-bold text-gray-800">What currency is used in Tanzania?</h3>
-                                    <p class="text-gray-600 text-sm mt-1">The official currency is Tanzanian Shilling (TZS). US dollars are widely accepted, especially in safari lodges and tourist areas. Credit cards accepted in major hotels, but cash preferred in remote locations.</p>
+                                    <p class="text-gray-600 text-sm mt-1">The official currency is Tanzanian Shilling
+                                        (TZS). US dollars are widely accepted, especially in safari lodges and tourist
+                                        areas. Credit cards accepted in major hotels, but cash preferred in remote
+                                        locations.</p>
                                 </div>
                             </div>
                         </div>
@@ -332,10 +438,13 @@
                         <!-- FAQ 5 -->
                         <div class="faq-item p-5">
                             <div class="flex items-start gap-3">
-                                <div class="w-8 h-8 bg-green-100 text-green-700 rounded-full flex items-center justify-center font-bold text-sm shrink-0">5</div>
+                                <div
+                                    class="w-8 h-8 bg-green-100 text-green-700 rounded-full flex items-center justify-center font-bold text-sm shrink-0">
+                                    5</div>
                                 <div>
                                     <h3 class="font-bold text-gray-800">What languages are spoken?</h3>
-                                    <p class="text-gray-600 text-sm mt-1">Swahili is the national language. English is widely spoken, especially in hotels, safari lodges, and tourist areas.</p>
+                                    <p class="text-gray-600 text-sm mt-1">Swahili is the national language. English is
+                                        widely spoken, especially in hotels, safari lodges, and tourist areas.</p>
                                 </div>
                             </div>
                         </div>
@@ -343,10 +452,14 @@
                         <!-- FAQ 6 -->
                         <div class="faq-item p-5">
                             <div class="flex items-start gap-3">
-                                <div class="w-8 h-8 bg-green-100 text-green-700 rounded-full flex items-center justify-center font-bold text-sm shrink-0">6</div>
+                                <div
+                                    class="w-8 h-8 bg-green-100 text-green-700 rounded-full flex items-center justify-center font-bold text-sm shrink-0">
+                                    6</div>
                                 <div>
                                     <h3 class="font-bold text-gray-800">Do you provide customized tour itineraries?</h3>
-                                    <p class="text-gray-600 text-sm mt-1">Yes! We can tailor your Tanzania holiday according to your preferences, whether it's safari, trekking, beach, or cultural experiences. Just request your personalized itinerary.</p>
+                                    <p class="text-gray-600 text-sm mt-1">Yes! We can tailor your Tanzania holiday
+                                        according to your preferences, whether it's safari, trekking, beach, or cultural
+                                        experiences. Just request your personalized itinerary.</p>
                                 </div>
                             </div>
                         </div>
@@ -354,10 +467,15 @@
                         <!-- FAQ 7 -->
                         <div class="faq-item p-5">
                             <div class="flex items-start gap-3">
-                                <div class="w-8 h-8 bg-green-100 text-green-700 rounded-full flex items-center justify-center font-bold text-sm shrink-0">7</div>
+                                <div
+                                    class="w-8 h-8 bg-green-100 text-green-700 rounded-full flex items-center justify-center font-bold text-sm shrink-0">
+                                    7</div>
                                 <div>
-                                    <h3 class="font-bold text-gray-800">Are the tours suitable for families and children?</h3>
-                                    <p class="text-gray-600 text-sm mt-1">Absolutely! We offer family-friendly safaris and cultural tours, with activities that are safe and enjoyable for children of all ages.</p>
+                                    <h3 class="font-bold text-gray-800">Are the tours suitable for families and
+                                        children?</h3>
+                                    <p class="text-gray-600 text-sm mt-1">Absolutely! We offer family-friendly safaris
+                                        and cultural tours, with activities that are safe and enjoyable for children of
+                                        all ages.</p>
                                 </div>
                             </div>
                         </div>
@@ -365,7 +483,9 @@
                         <!-- FAQ 8 -->
                         <div class="faq-item p-5">
                             <div class="flex items-start gap-3">
-                                <div class="w-8 h-8 bg-green-100 text-green-700 rounded-full flex items-center justify-center font-bold text-sm shrink-0">8</div>
+                                <div
+                                    class="w-8 h-8 bg-green-100 text-green-700 rounded-full flex items-center justify-center font-bold text-sm shrink-0">
+                                    8</div>
                                 <div>
                                     <h3 class="font-bold text-gray-800">What should I pack for my Tanzania holiday?</h3>
                                     <ul class="mt-1 space-y-1 text-gray-600 text-sm list-disc list-inside">
@@ -381,10 +501,14 @@
                         <!-- FAQ 9 -->
                         <div class="faq-item p-5">
                             <div class="flex items-start gap-3">
-                                <div class="w-8 h-8 bg-green-100 text-green-700 rounded-full flex items-center justify-center font-bold text-sm shrink-0">9</div>
+                                <div
+                                    class="w-8 h-8 bg-green-100 text-green-700 rounded-full flex items-center justify-center font-bold text-sm shrink-0">
+                                    9</div>
                                 <div>
                                     <h3 class="font-bold text-gray-800">Is it safe to travel in Tanzania?</h3>
-                                    <p class="text-gray-600 text-sm mt-1">Tanzania is generally safe for tourists. Avoid walking alone at night in urban areas, follow your guide's instructions during safaris and treks, and keep valuables secure.</p>
+                                    <p class="text-gray-600 text-sm mt-1">Tanzania is generally safe for tourists. Avoid
+                                        walking alone at night in urban areas, follow your guide's instructions during
+                                        safaris and treks, and keep valuables secure.</p>
                                 </div>
                             </div>
                         </div>
@@ -392,10 +516,14 @@
                         <!-- FAQ 10 -->
                         <div class="faq-item p-5">
                             <div class="flex items-start gap-3">
-                                <div class="w-8 h-8 bg-green-100 text-green-700 rounded-full flex items-center justify-center font-bold text-sm shrink-0">10</div>
+                                <div
+                                    class="w-8 h-8 bg-green-100 text-green-700 rounded-full flex items-center justify-center font-bold text-sm shrink-0">
+                                    10</div>
                                 <div>
                                     <h3 class="font-bold text-gray-800">How can I book a Tanzania holiday tour?</h3>
-                                    <p class="text-gray-600 text-sm mt-1">You can contact us directly, send an inquiry, or request a personalized itinerary. We offer flexible packages including safari, trekking, and beach tours.</p>
+                                    <p class="text-gray-600 text-sm mt-1">You can contact us directly, send an inquiry,
+                                        or request a personalized itinerary. We offer flexible packages including
+                                        safari, trekking, and beach tours.</p>
                                 </div>
                             </div>
                         </div>
@@ -408,7 +536,9 @@
                     <i class="fas fa-calendar-check text-3xl mb-2"></i>
                     <h3 class="text-xl font-bold">Ready to plan your Tanzania adventure?</h3>
                     <p class="text-green-100 mb-4">Get in touch with us for a personalized itinerary</p>
-                    <a href="contact.html" class="bg-white text-green-700 px-6 py-2 rounded-full font-semibold hover:bg-gray-100 transition inline-flex items-center gap-2">Request a Quote <i class="fas fa-arrow-right"></i></a>
+                    <a href="contact.html"
+                        class="bg-white text-green-700 px-6 py-2 rounded-full font-semibold hover:bg-gray-100 transition inline-flex items-center gap-2">Request
+                        a Quote <i class="fas fa-arrow-right"></i></a>
                 </div>
 
             </div>
@@ -425,7 +555,8 @@
                 </div>
                 <div>
                     <h3 class="text-white text-xl font-bold mb-4">Contact</h3>
-                    <p class="text-sm"><i class="fas fa-map-marker-alt mr-2"></i> Boma Road, Near New Safari Hotel, Arusha, Tanzania</p>
+                    <p class="text-sm"><i class="fas fa-map-marker-alt mr-2"></i> Boma Road, Near New Safari Hotel,
+                        Arusha, Tanzania</p>
                     <p class="text-sm mt-2"><i class="fab fa-whatsapp mr-2"></i> +255789178090 (WhatsApp)</p>
                     <p class="text-sm mt-2"><i class="fas fa-envelope mr-2"></i> wildernessfootprints@gmail.com</p>
                 </div>
@@ -435,7 +566,8 @@
                         <a href="#" class="text-gray-400 hover:text-white text-2xl"><i class="fab fa-facebook"></i></a>
                         <a href="#" class="text-gray-400 hover:text-white text-2xl"><i class="fab fa-whatsapp"></i></a>
                     </div>
-                    <div class="mt-4 text-sm">Select Language: <span class="text-green-400">Google Translate</span></div>
+                    <div class="mt-4 text-sm">Select Language: <span class="text-green-400">Google Translate</span>
+                    </div>
                 </div>
             </div>
             <div class="border-t border-gray-800 mt-8 pt-6 text-center text-sm">
@@ -451,4 +583,5 @@
         }
     </script>
 </body>
+
 </html>
