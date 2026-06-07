@@ -30,6 +30,10 @@
         .section-title {
             font-size: 2.5rem; font-weight: 700; color: #1e3a2e; margin-bottom: 1rem;
         }
+            /* Custom tooltip style */
+    .group:hover .group-hover\:block {
+        display: block;
+    }
         @media (max-width: 768px) { .section-title { font-size: 1.8rem; } }
         .hero-section {
             background-image: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('./images/161.jpeg');
@@ -411,6 +415,49 @@
     </div>
 </section>
 
+<!-- Group Joining Calendar Section -->
+<section class="py-16 bg-gradient-to-b from-gray-50 to-white">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-10">
+            <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-3">Kilimanjaro Trekking - Group Joining Dates</h2>
+            <div class="w-20 h-1 bg-green-600 mx-auto mb-4"></div>
+            <p class="text-gray-600 max-w-2xl mx-auto">Join our scheduled group treks. Select your preferred date and book your Kilimanjaro adventure.</p>
+        </div>
+
+        <!-- Calendar Container -->
+        <div class="max-w-4xl mx-auto bg-white rounded-2xl shadow-xl overflow-hidden">
+            
+            <!-- Calendar Header -->
+            <div class="bg-gradient-to-r from-green-800 to-green-700 px-6 py-4 flex justify-between items-center">
+                <button id="prevMonth" class="text-white hover:text-gray-200 transition text-2xl">&larr;</button>
+                <h3 id="monthYear" class="text-white text-xl md:text-2xl font-bold">June 2026</h3>
+                <button id="nextMonth" class="text-white hover:text-gray-200 transition text-2xl">&rarr;</button>
+            </div>
+
+            <!-- Weekday Headers -->
+            <div class="grid grid-cols-7 bg-gray-100 border-b">
+                <div class="py-3 text-center font-semibold text-gray-600">Sun</div>
+                <div class="py-3 text-center font-semibold text-gray-600">Mon</div>
+                <div class="py-3 text-center font-semibold text-gray-600">Tue</div>
+                <div class="py-3 text-center font-semibold text-gray-600">Wed</div>
+                <div class="py-3 text-center font-semibold text-gray-600">Thu</div>
+                <div class="py-3 text-center font-semibold text-gray-600">Fri</div>
+                <div class="py-3 text-center font-semibold text-gray-600">Sat</div>
+            </div>
+
+            <!-- Calendar Days -->
+            <div id="calendarDays" class="grid grid-cols-7 min-h-[400px]">
+                <!-- Days will be populated by JavaScript -->
+            </div>
+
+            <!-- Selected Date Info -->
+            <div id="selectedInfo" class="border-t p-4 text-center bg-gray-50">
+                <p class="text-gray-500">Click on a green date to join the trek</p>
+            </div>
+        </div>
+    </div>
+</section>
+
 <!-- Official Door Sticker - Image & Text Side by Side (Big Image) -->
 <div class="bg-gray-50 py-10">
     <div class="container mx-auto px-4">
@@ -444,5 +491,6 @@
 <script>
     function toggleMobileMenu() { document.getElementById('mobileMenu').classList.toggle('hidden'); }
 </script>
+<script src="./js/main.js"></script>
 </body>
 </html>
