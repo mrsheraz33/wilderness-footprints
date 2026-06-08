@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,371 +9,521 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
-        * { font-family: 'Poppins', sans-serif; }
-        .dropdown:hover .dropdown-menu { display: block; }
+
+        * {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+
         .dropdown-menu {
-            display: none; position: absolute; top: 100%; left: 0;
-            background: white; min-width: 220px; box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-            z-index: 1000; border-radius: 8px; padding: 8px 0;
-            max-height: 70vh; overflow-y: auto;
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: white;
+            min-width: 220px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            border-radius: 8px;
+            padding: 8px 0;
+            max-height: 70vh;
+            overflow-y: auto;
         }
+
         .dropdown-menu a {
-            display: block; padding: 10px 20px; color: #1e3a2e;
-            text-decoration: none; font-size: 14px; transition: all 0.3s;
+            display: block;
+            padding: 10px 20px;
+            color: #1e3a2e;
+            text-decoration: none;
+            font-size: 14px;
+            transition: all 0.3s;
         }
-        .dropdown-menu a:hover { background: #e8f0e8; color: #0f2b1f; }
+
+        .dropdown-menu a:hover {
+            background: #e8f0e8;
+            color: #0f2b1f;
+        }
+
         .btn-primary {
-            background: #e67e22; color: white; padding: 14px 32px;
-            border-radius: 50px; text-decoration: none; font-weight: 700;
-            transition: all 0.3s; display: inline-block;
+            background: #e67e22;
+            color: white;
+            padding: 14px 32px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: all 0.3s;
+            display: inline-block;
         }
-        .btn-primary:hover { background: #d35400; transform: translateY(-3px); box-shadow: 0 10px 25px rgba(230,126,34,0.3); }
+
+        .btn-primary:hover {
+            background: #d35400;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(230, 126, 34, 0.3);
+        }
+
         .hero-section {
             background: linear-gradient(135deg, #1a3c2c 0%, #2d6a4f 50%, #38a169 100%);
         }
+
         .info-card {
             background: white;
             border-radius: 24px;
             transition: all 0.35s ease;
             border: 1px solid #e2e8f0;
         }
+
         .info-card:hover {
             transform: translateY(-4px);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
             border-color: #e67e22;
         }
+
         .warning-box {
             background: #fef3c7;
             border-left: 4px solid #e67e22;
             border-radius: 12px;
         }
+
         .danger-box {
             background: #fee2e2;
             border-left: 4px solid #ef4444;
             border-radius: 12px;
         }
+
         .protocol-step {
             background: #f0fdf4;
             border-radius: 16px;
             border-left: 4px solid #10b981;
         }
+
         .key-point {
             background: #e8f0ec;
             border-radius: 12px;
         }
     </style>
 </head>
+
 <body>
 
-<!-- Navbar -->
-<nav class="bg-white shadow-md fixed w-full z-50">
-    <div class="container mx-auto px-4 py-3 flex justify-between items-center">
-        <a href="index.html" class="flex items-center space-x-2">
-            <img src="images/logo.jpeg" alt="Logo" class="h-12 w-auto" onerror="this.src='https://via.placeholder.com/50x50?text=WFT'">
-            <span class="font-bold text-base sm:text-lg md:text-xl text-green-800">Wilderness Footprints Tanzania</span>
-        </a>
+    <!-- Navbar -->
+    <nav class="bg-white shadow-md fixed w-full z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="index.html" class="flex items-center space-x-2">
+                <img src="images/logo.jpeg" alt="Logo" class="h-12 w-auto"
+                    onerror="this.src='https://via.placeholder.com/50x50?text=WFT'">
+                <span class="font-bold text-base sm:text-lg md:text-xl text-green-800">Wilderness Footprints
+                    Tanzania</span>
+            </a>
 
-        <!-- Desktop Menu -->
-        <div class="hidden lg:flex space-x-4 xl:space-x-6 items-center">
-            
-            <!-- About Us Dropdown -->
-            <div class="dropdown relative">
-                <a href="#" class="text-gray-700 hover:text-green-700 font-medium">About Us <i class="fas fa-chevron-down text-xs"></i></a>
-                <div class="dropdown-menu">
-                    <a href="index.html">Home</a>
-                    <a href="who-are-we.html">Who Are We</a>
+            <!-- Desktop Menu -->
+            <div class="hidden lg:flex space-x-4 xl:space-x-6 items-center">
+
+                <!-- About Us Dropdown -->
+                <div class="dropdown relative">
+                    <a href="#" class="text-gray-700 hover:text-green-700 font-medium">About Us <i
+                            class="fas fa-chevron-down text-xs"></i></a>
+                    <div class="dropdown-menu">
+                        <a href="index.html">Home</a>
+                        <a href="who-are-we.html">Who Are We</a>
+                    </div>
                 </div>
+
+                <!-- Day Trips Dropdown -->
+                <div class="dropdown relative">
+                    <a href="#" class="text-gray-700 hover:text-green-700 font-medium">Day Trips <i
+                            class="fas fa-chevron-down text-xs"></i></a>
+                    <div class="dropdown-menu">
+                        <a href="day-trips.html">All Day Trips</a>
+                    </div>
+                </div>
+
+                <!-- Safaris Dropdown -->
+                <div class="dropdown relative">
+                    <a href="#" class="text-gray-700 hover:text-green-700 font-medium">Safaris <i
+                            class="fas fa-chevron-down text-xs"></i></a>
+                    <div class="dropdown-menu">
+                        <a href="3-days-family-safari.html">3 Days Family Safari</a>
+                        <a href="4-days-classic-safari.html">4 Days Classic Safari</a>
+                        <a href="5-days-safari-footprints.html">5 Days Safari Footprints</a>
+                        <a href="6-days-safari-experience.html">6 Days Safari Experience</a>
+                        <a href="7-days-cultural-safari.html">7 Days Cultural Safari</a>
+                        <a href="8-days-ngorongoro-highlands-treks.html">8 Days Ngorongoro Highlands Treks</a>
+                        <a href="9-days-mara-river-crossing.html">9 Days Mara River Crossing</a>
+                        <a href="8-days-honeymoon-safaris.html">8 Days Honeymoon Safaris</a>
+                        <a href="western-safari-tanzania.html">Western Safari Tanzania</a>
+                        <a href="southern-safari-tanzania.html">Southern Safari Tanzania</a>
+                        <a href="4-days-tanzania-safari-isbania.html">4 Days Safari from Isbania</a>
+                        <a href="balloon-safari.html">Balloon Safari</a>
+                        <a href="olduvai-gorge.html">Olduvai Gorge</a>
+                        <a href="lake-natron.html">Lake Natron</a>
+                        <a href="lake-eyasi.html">Lake Eyasi</a>
+                        <a href="kenya-safaris.html">Kenya Safaris</a>
+                    </div>
+                </div>
+
+                <!-- Trekking Dropdown -->
+                <div class="dropdown relative">
+                    <a href="#" class="text-gray-700 hover:text-green-700 font-medium">Trekking <i
+                            class="fas fa-chevron-down text-xs"></i></a>
+                    <div class="dropdown-menu">
+                        <a href="kilimanjaro-routes.html">Kilimanjaro Routes</a>
+                        <a href="kili-day-trip.html">Kili Day Trip</a>
+                        <a href="mount-kenya-trekking-4-days.html">Mount Kenya Trekking</a>
+                        <a href="mount-meru-treks.html">Mount Meru Treks</a>
+                        <a href="mount-lolmalasin.html">Mount Lolmalasin</a>
+                        <a href="mount-hanang.html">Mount Hanang</a>
+                        <a href="mount-oldonyo-lengai.html">Mount Oldonyo Lengai</a>
+                        <a href="food-menu.html">Food Menu</a>
+                        <a href="careful-acclimatisation.html">Careful Acclimatisation</a>
+                        <a href="health-info.html">Health Information</a>
+                        <a href="what-to-pack.html">What to Pack</a>
+                    </div>
+                </div>
+
+                <!-- Activities Dropdown -->
+                <div class="dropdown relative">
+                    <a href="#" class="text-gray-700 hover:text-green-700 font-medium">Activities <i
+                            class="fas fa-chevron-down text-xs"></i></a>
+                    <div class="dropdown-menu">
+                        <a href="beach-holidays.html">Beach Holidays</a>
+                        <a href="maasai-visit.html">Maasai Visit</a>
+                        <a href="serval-wildlife.html">Serval Wildlife</a>
+                        <a href="tour-in-mto-wa-mbu.html">Mto Wa Mbu Tour</a>
+                        <a href="cycling-tour.html">Cycling Tour</a>
+                        <a href="moshi-tour.html">Moshi Tour</a>
+                    </div>
+                </div>
+
+                <!-- Direct Links -->
+                <a href="tour-faq.html" class="text-gray-700 hover:text-green-700 font-medium">Tour FAQ</a>
+                <a href="booking-policy.html" class="text-gray-700 hover:text-green-700 font-medium">Booking Policy</a>
+                <a href="contact.html" class="btn-primary text-sm py-2 px-5">Contact Us</a>
             </div>
 
-            <!-- Day Trips Dropdown -->
-            <div class="dropdown relative">
-                <a href="#" class="text-gray-700 hover:text-green-700 font-medium">Day Trips <i class="fas fa-chevron-down text-xs"></i></a>
-                <div class="dropdown-menu">
-                    <a href="day-trips.html">All Day Trips</a>
-                </div>
-            </div>
-
-            <!-- Safaris Dropdown -->
-            <div class="dropdown relative">
-                <a href="#" class="text-gray-700 hover:text-green-700 font-medium">Safaris <i class="fas fa-chevron-down text-xs"></i></a>
-                <div class="dropdown-menu">
-                    <a href="3-days-family-safari.html">3 Days Family Safari</a>
-                    <a href="4-days-classic-safari.html">4 Days Classic Safari</a>
-                    <a href="5-days-safari-footprints.html">5 Days Safari Footprints</a>
-                    <a href="6-days-safari-experience.html">6 Days Safari Experience</a>
-                    <a href="7-days-cultural-safari.html">7 Days Cultural Safari</a>
-                    <a href="8-days-ngorongoro-highlands-treks.html">8 Days Ngorongoro Highlands Treks</a>
-                    <a href="9-days-mara-river-crossing.html">9 Days Mara River Crossing</a>
-                    <a href="8-days-honeymoon-safaris.html">8 Days Honeymoon Safaris</a>
-                    <a href="western-safari-tanzania.html">Western Safari Tanzania</a>
-                    <a href="southern-safari-tanzania.html">Southern Safari Tanzania</a>
-                    <a href="4-days-tanzania-safari-isbania.html">4 Days Safari from Isbania</a>
-                    <a href="balloon-safari.html">Balloon Safari</a>
-                    <a href="olduvai-gorge.html">Olduvai Gorge</a>
-                    <a href="lake-natron.html">Lake Natron</a>
-                    <a href="lake-eyasi.html">Lake Eyasi</a>
-                    <a href="kenya-safaris.html">Kenya Safaris</a>
-                </div>
-            </div>
-
-            <!-- Trekking Dropdown -->
-            <div class="dropdown relative">
-                <a href="#" class="text-gray-700 hover:text-green-700 font-medium">Trekking <i class="fas fa-chevron-down text-xs"></i></a>
-                <div class="dropdown-menu">
-                    <a href="kilimanjaro-routes.html">Kilimanjaro Routes</a>
-                    <a href="kili-day-trip.html">Kili Day Trip</a>
-                    <a href="mount-kenya-trekking-4-days.html">Mount Kenya Trekking</a>
-                    <a href="mount-meru-treks.html">Mount Meru Treks</a>
-                    <a href="mount-lolmalasin.html">Mount Lolmalasin</a>
-                    <a href="mount-hanang.html">Mount Hanang</a>
-                    <a href="mount-oldonyo-lengai.html">Mount Oldonyo Lengai</a>
-                    <a href="food-menu.html">Food Menu</a>
-                    <a href="careful-acclimatisation.html">Careful Acclimatisation</a>
-                    <a href="health-info.html">Health Information</a>
-                    <a href="what-to-pack.html">What to Pack</a>
-                </div>
-            </div>
-
-            <!-- Activities Dropdown -->
-            <div class="dropdown relative">
-                <a href="#" class="text-gray-700 hover:text-green-700 font-medium">Activities <i class="fas fa-chevron-down text-xs"></i></a>
-                <div class="dropdown-menu">
-                    <a href="beach-holidays.html">Beach Holidays</a>
-                    <a href="maasai-visit.html">Maasai Visit</a>
-                    <a href="serval-wildlife.html">Serval Wildlife</a>
-                    <a href="tour-in-mto-wa-mbu.html">Mto Wa Mbu Tour</a>
-                    <a href="cycling-tour.html">Cycling Tour</a>
-                    <a href="moshi-tour.html">Moshi Tour</a>
-                </div>
-            </div>
-
-            <!-- Direct Links -->
-            <a href="tour-faq.html" class="text-gray-700 hover:text-green-700 font-medium">Tour FAQ</a>
-            <a href="booking-policy.html" class="text-gray-700 hover:text-green-700 font-medium">Booking Policy</a>
-            <a href="contact.html" class="btn-primary text-sm py-2 px-5">Contact Us</a>
+            <!-- Mobile Menu Button -->
+            <button class="lg:hidden text-gray-700" onclick="toggleMobileMenu()">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
         </div>
 
-        <!-- Mobile Menu Button -->
-        <button class="lg:hidden text-gray-700" onclick="toggleMobileMenu()">
-            <i class="fas fa-bars text-2xl"></i>
-        </button>
-    </div>
+        <!-- Mobile Menu -->
+        <div id="mobileMenu"
+            class="hidden lg:hidden bg-white border-t px-4 py-3 space-y-2 max-h-[92vh] overflow-y-auto">
 
-    <!-- Mobile Menu -->
-    <div id="mobileMenu" class="hidden lg:hidden bg-white border-t px-4 py-3 space-y-2 max-h-[92vh] overflow-y-auto">
+            <!-- About Us -->
+            <div class="font-bold text-green-800 pt-2">About Us</div>
+            <div class="pl-4 space-y-1">
+                <a href="index.html" class="block py-1 text-sm text-gray-600">Home</a>
+                <a href="who-are-we.html" class="block py-1 text-sm text-gray-600">Who Are We</a>
+            </div>
+
+            <!-- Day Trips -->
+            <div class="font-bold text-green-800 pt-3">Day Trips</div>
+            <div class="pl-4 space-y-1">
+                <a href="day-trips.html" class="block py-1 text-sm text-gray-600">All Day Trips</a>
+            </div>
+
+            <!-- Safaris -->
+            <div class="font-bold text-green-800 pt-3">Safaris</div>
+            <div class="pl-4 space-y-1">
+                <a href="3-days-family-safari.html" class="block py-1 text-sm text-gray-600">3 Days Family Safari</a>
+                <a href="4-days-classic-safari.html" class="block py-1 text-sm text-gray-600">4 Days Classic Safari</a>
+                <a href="5-days-safari-footprints.html" class="block py-1 text-sm text-gray-600">5 Days Safari
+                    Footprints</a>
+                <a href="6-days-safari-experience.html" class="block py-1 text-sm text-gray-600">6 Days Safari
+                    Experience</a>
+                <a href="7-days-cultural-safari.html" class="block py-1 text-sm text-gray-600">7 Days Cultural
+                    Safari</a>
+                <a href="8-days-ngorongoro-highlands-treks.html" class="block py-1 text-sm text-gray-600">8 Days
+                    Ngorongoro Highlands Treks</a>
+                <a href="9-days-mara-river-crossing.html" class="block py-1 text-sm text-gray-600">9 Days Mara River
+                    Crossing</a>
+                <a href="8-days-honeymoon-safaris.html" class="block py-1 text-sm text-gray-600">8 Days Honeymoon
+                    Safaris</a>
+                <a href="western-safari-tanzania.html" class="block py-1 text-sm text-gray-600">Western Safari
+                    Tanzania</a>
+                <a href="southern-safari-tanzania.html" class="block py-1 text-sm text-gray-600">Southern Safari
+                    Tanzania</a>
+                <a href="4-days-tanzania-safari-isbania.html" class="block py-1 text-sm text-gray-600">4 Days Safari
+                    from Isbania</a>
+                <a href="balloon-safari.html" class="block py-1 text-sm text-gray-600">Balloon Safari</a>
+                <a href="olduvai-gorge.html" class="block py-1 text-sm text-gray-600">Olduvai Gorge</a>
+                <a href="lake-natron.html" class="block py-1 text-sm text-gray-600">Lake Natron</a>
+                <a href="lake-eyasi.html" class="block py-1 text-sm text-gray-600">Lake Eyasi</a>
+                <a href="kenya-safaris.html" class="block py-1 text-sm text-gray-600">Kenya Safaris</a>
+            </div>
+
+            <!-- Trekking -->
+            <div class="font-bold text-green-800 pt-3">Trekking</div>
+            <div class="pl-4 space-y-1">
+                <a href="kilimanjaro-routes.html" class="block py-1 text-sm text-gray-600">Kilimanjaro Routes</a>
+                <a href="kili-day-trip.html" class="block py-1 text-sm text-gray-600">Kili Day Trip</a>
+                <a href="mount-kenya-trekking-4-days.html" class="block py-1 text-sm text-gray-600">Mount Kenya
+                    Trekking</a>
+                <a href="mount-meru-treks.html" class="block py-1 text-sm text-gray-600">Mount Meru Treks</a>
+                <a href="mount-lolmalasin.html" class="block py-1 text-sm text-gray-600">Mount Lolmalasin</a>
+                <a href="mount-hanang.html" class="block py-1 text-sm text-gray-600">Mount Hanang</a>
+                <a href="mount-oldonyo-lengai.html" class="block py-1 text-sm text-gray-600">Mount Oldonyo Lengai</a>
+                <a href="food-menu.html" class="block py-1 text-sm text-gray-600">Food Menu</a>
+                <a href="careful-acclimatisation.html" class="block py-1 text-sm text-gray-600">Careful
+                    Acclimatisation</a>
+                <a href="health-info.html" class="block py-1 text-sm text-gray-600">Health Information</a>
+                <a href="what-to-pack.html" class="block py-1 text-sm text-gray-600">What to Pack</a>
+            </div>
+
+            <!-- Activities -->
+            <div class="font-bold text-green-800 pt-3">Activities</div>
+            <div class="pl-4 space-y-1">
+                <a href="beach-holidays.html" class="block py-1 text-sm text-gray-600">Beach Holidays</a>
+                <a href="maasai-visit.html" class="block py-1 text-sm text-gray-600">Maasai Visit</a>
+                <a href="serval-wildlife.html" class="block py-1 text-sm text-gray-600">Serval Wildlife</a>
+                <a href="tour-in-mto-wa-mbu.html" class="block py-1 text-sm text-gray-600">Mto Wa Mbu Tour</a>
+                <a href="cycling-tour.html" class="block py-1 text-sm text-gray-600">Cycling Tour</a>
+                <a href="moshi-tour.html" class="block py-1 text-sm text-gray-600">Moshi Tour</a>
+            </div>
+
+            <!-- Information -->
+            <div class="font-bold text-green-800 pt-3">Information</div>
+            <div class="pl-4 space-y-1">
+                <a href="tour-faq.html" class="block py-1 text-sm text-gray-600">Tour FAQ</a>
+                <a href="booking-policy.html" class="block py-1 text-sm text-gray-600">Booking Policy</a>
+            </div>
+
+            <!-- Contact Us -->
+            <div class="pt-4 border-t mt-4">
+                <a href="contact.html"
+                    class="block py-3 px-4 text-center bg-green-700 text-white font-semibold rounded-xl hover:bg-green-800 transition">Contact
+                    Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section pt-32 pb-20">
+        <div class="container mx-auto px-4 text-center text-white">
+            <div class="max-w-3xl mx-auto">
+                <i class="fas fa-heartbeat text-4xl text-orange-300 mb-4"></i>
+                <h1 class="text-4xl md:text-6xl font-bold mb-4">CAREFUL ACCLIMATISATION</h1>
+                <div class="w-24 h-1 bg-orange-400 mx-auto mb-6"></div>
+                <p class="text-xl opacity-95">How to Avoid Altitude Sickness on Kilimanjaro</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="max-w-5xl mx-auto">
+
+                <!-- Images - 2 Images Side by Side -->
+                <div class="grid md:grid-cols-2 gap-6 mb-10">
+                    <div class="rounded-2xl overflow-hidden shadow-xl">
+                        <img src="./images/54.jpeg" alt="Moshi Tour"
+                            class="w-full h-80 object-cover hover:scale-105 transition duration-300">
+                    </div>
+                    <div class="rounded-2xl overflow-hidden shadow-xl">
+                        <img src="https://images.pexels.com/photos/4386467/pexels-photo-4386467.jpeg?auto=compress&cs=tinysrgb&w=800"
+                            alt="Health Check Medical"
+                            class="w-full h-80 object-cover hover:scale-105 transition duration-300">
+                    </div>
+                </div>
+
+                <!-- Three Key Points -->
+                <div class="grid md:grid-cols-3 gap-6 mb-10">
+                    <div class="info-card p-5 text-center">
+                        <i class="fas fa-turtle text-3xl text-orange-500 mb-3"></i>
+                        <h3 class="font-bold text-gray-800">Go Slowly</h3>
+                        <p class="text-gray-600 text-sm">"Pole Pole" - Swahili for slowly, slowly. If you cannot manage
+                            a conversation comfortably, you are going too fast.</p>
+                    </div>
+                    <div class="info-card p-5 text-center">
+                        <i class="fas fa-tint text-3xl text-blue-500 mb-3"></i>
+                        <h3 class="font-bold text-gray-800">Stay Hydrated</h3>
+                        <p class="text-gray-600 text-sm">Drink at least 3 litres of water daily. Proper hydration
+                            dramatically helps acclimatisation.</p>
+                    </div>
+                    <div class="info-card p-5 text-center">
+                        <i class="fas fa-capsules text-3xl text-green-600 mb-3"></i>
+                        <h3 class="font-bold text-gray-800">Consider Diamox</h3>
+                        <p class="text-gray-600 text-sm">Proven to help body acclimatise faster. Consult your doctor for
+                            prescription.</p>
+                    </div>
+                </div>
+
+                <!-- What is Altitude Sickness -->
+                <div class="info-card p-6 mb-8">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-4"><i
+                            class="fas fa-question-circle text-orange-500 mr-2"></i> What is Altitude Sickness?</h2>
+                    <p class="text-gray-600 leading-relaxed">Altitude sickness, also called Acute Mountain Sickness
+                        (AMS), hypobaropathy and soroche, is an illness caused by exposure to the low air pressure,
+                        especially low partial pressure of oxygen, which many climbers experience at high altitudes. AMS
+                        is caused by exerting yourself at high altitudes, especially if you have not been properly
+                        acclimatised. It is most common at altitudes above 2400 metres. Kilimanjaro's peak is nearly
+                        6000 metres above sea level. At this height, the air pressure (and the amount of oxygen it
+                        contains) is less than half that at sea level, and has been said to be comparable to 'working
+                        with only one lung'.</p>
+                    <p class="text-gray-600 mt-3">Not everyone suffers from AMS, of course, and it is very difficult to
+                        predict who is or is not vulnerable to it. Generally speaking, a fit person is less vulnerable
+                        than an unfit person. Even so, anyone can be vulnerable at altitudes above 3500 metres, no
+                        matter their fitness level.</p>
+                </div>
+
+                <!-- Avoiding AMS -->
+                <div class="info-card p-6 mb-8">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-4"><i
+                            class="fas fa-shield-alt text-orange-500 mr-2"></i> Avoiding AMS</h2>
+                    <div class="space-y-4">
+                        <div class="flex items-start gap-3">
+                            <i class="fas fa-mountain-city text-green-600 mt-1"></i>
+                            <div><strong class="text-gray-800">1. Walk high, sleep low</strong>
+                                <p class="text-gray-600 text-sm">Gradually climb higher each day, then descend lower to
+                                    sleep.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <i class="fas fa-turtle text-green-600 mt-1"></i>
+                            <div><strong class="text-gray-800">2. Slow and steady</strong>
+                                <p class="text-gray-600 text-sm">Keep respiration rate low enough to maintain normal
+                                    conversation.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <i class="fas fa-tint text-green-600 mt-1"></i>
+                            <div><strong class="text-gray-800">3. Drink much more water</strong>
+                                <p class="text-gray-600 text-sm">At least 3 litres each day.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <i class="fas fa-capsules text-green-600 mt-1"></i>
+                            <div><strong class="text-gray-800">4. Diamox</strong>
+                                <p class="text-gray-600 text-sm">Helpful in avoiding AMS. Consult your doctor before
+                                    taking.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Effects of Low Atmospheric Pressure -->
+                <div class="warning-box p-6 mb-8">
+                    <h3 class="text-xl font-bold text-orange-800 mb-3"><i class="fas fa-exclamation-triangle mr-2"></i>
+                        Effects of Exposure to Low Atmospheric Pressure</h3>
+                    <div class="space-y-3">
+                        <div><strong class="text-gray-800">1. Low oxygen saturation</strong>
+                            <p class="text-gray-600 text-sm">Blood with low oxygen leads to fatigue, breathlessness. Our
+                                guides have pulse-oxymeters to check oxygen saturation daily.</p>
+                        </div>
+                        <div><strong class="text-gray-800">2. Cerebral oedema</strong>
+                            <p class="text-gray-600 text-sm">Fluid collects in sinuses - presents as mild headache, can
+                                cause disorientation, coma.</p>
+                        </div>
+                        <div><strong class="text-gray-800">3. Pulmonary oedema</strong>
+                            <p class="text-gray-600 text-sm">Fluid seeps into lung air spaces - presents like pneumonia.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- How to Recognise AMS -->
+                <div class="danger-box p-6 mb-8">
+                    <h3 class="text-xl font-bold text-red-700 mb-3"><i class="fas fa-hand-holding-medical mr-2"></i> How
+                        to Recognise AMS</h3>
+                    <p class="text-gray-700">AMS does not present as a slow, gradual worsening. It is generally a rapid,
+                        dramatic onset of symptoms that can render a person unable to walk or take care of themselves.
+                        Our guides are trained to recognise AMS and apply appropriate first aid.</p>
+                </div>
+
+                <!-- Descent Protocol -->
+                <div class="info-card p-6 mb-8">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-4"><i
+                            class="fas fa-arrow-down text-orange-500 mr-2"></i> Our Client Descent Protocol</h2>
+
+                    <div class="protocol-step p-4 mb-4">
+                        <h4 class="font-bold text-green-800"><i class="fas fa-chart-line mr-2"></i> 1) Measuring Oxygen
+                            Saturation</h4>
+                        <p class="text-gray-600 text-sm mt-1">If below 80%: Test every half hour for 2 hours. If not
+                            rising to 75% → descend immediately. If at least 75% → continue with close monitoring.</p>
+                    </div>
+
+                    <div class="protocol-step p-4">
+                        <h4 class="font-bold text-green-800"><i class="fas fa-clipboard-list mr-2"></i> 2) Evaluation on
+                            the Lake Louise Scale</h4>
+                        <p class="text-gray-600 text-sm mt-1">Score 6-8: Guide considers whether you can continue based
+                            on score, oxygen saturation, pulse rate. If higher than 8 → descend immediately.</p>
+                    </div>
+                </div>
+
+                <!-- Key Points Summary -->
+                <div class="key-point p-6 mb-10 text-center">
+                    <i class="fas fa-lightbulb text-3xl text-orange-500 mb-3"></i>
+                    <h3 class="text-xl font-bold text-gray-800 mb-2">The Single Biggest Reason</h3>
+                    <p class="text-gray-600">The single biggest reason why people fail to summit is because they have
+                        not acclimatised well. Follow our guides' advice, stay hydrated, go slowly, and trust the
+                        process.</p>
+                </div>
+
+                <!-- Request Button -->
+                <div class="text-center">
+                    <a href="contact.html" class="btn-primary text-lg px-10 py-4">Book Your Kilimanjaro Trek</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-10">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-white text-xl font-bold mb-4">Wilderness Footprints</h3>
+                    <p class="text-sm">Tanzania Trekking & Safaris. Step into the heart of the wilderness with us.</p>
+                </div>
+                <div>
+                    <h3 class="text-white text-xl font-bold mb-4">Contact</h3>
+                    <p class="text-sm"><i class="fas fa-map-marker-alt mr-2"></i> Boma Road, Near New Safari Hotel,
+                        Arusha, Tanzania</p>
+                    <p class="text-sm mt-2"><i class="fab fa-whatsapp mr-2"></i> +255789178090 (WhatsApp)</p>
+                    <p class="text-sm mt-2"><i class="fas fa-envelope mr-2"></i> wildernessfootprints@gmail.com</p>
+                </div>
+           <div>
+    <h3 class="text-white text-xl font-bold mb-4">Follow Us</h3>
+    <div class="flex space-x-4">
         
-        <!-- About Us -->
-        <div class="font-bold text-green-800 pt-2">About Us</div>
-        <div class="pl-4 space-y-1">
-             <a href="index.html" class="block py-1 text-sm text-gray-600">Home</a>
-            <a href="who-are-we.html" class="block py-1 text-sm text-gray-600">Who Are We</a>
-        </div>
-
-        <!-- Day Trips -->
-        <div class="font-bold text-green-800 pt-3">Day Trips</div>
-        <div class="pl-4 space-y-1">
-            <a href="day-trips.html" class="block py-1 text-sm text-gray-600">All Day Trips</a>
-        </div>
-
-        <!-- Safaris -->
-        <div class="font-bold text-green-800 pt-3">Safaris</div>
-        <div class="pl-4 space-y-1">
-            <a href="3-days-family-safari.html" class="block py-1 text-sm text-gray-600">3 Days Family Safari</a>
-            <a href="4-days-classic-safari.html" class="block py-1 text-sm text-gray-600">4 Days Classic Safari</a>
-            <a href="5-days-safari-footprints.html" class="block py-1 text-sm text-gray-600">5 Days Safari Footprints</a>
-            <a href="6-days-safari-experience.html" class="block py-1 text-sm text-gray-600">6 Days Safari Experience</a>
-            <a href="7-days-cultural-safari.html" class="block py-1 text-sm text-gray-600">7 Days Cultural Safari</a>
-            <a href="8-days-ngorongoro-highlands-treks.html" class="block py-1 text-sm text-gray-600">8 Days Ngorongoro Highlands Treks</a>
-            <a href="9-days-mara-river-crossing.html" class="block py-1 text-sm text-gray-600">9 Days Mara River Crossing</a>
-            <a href="8-days-honeymoon-safaris.html" class="block py-1 text-sm text-gray-600">8 Days Honeymoon Safaris</a>
-            <a href="western-safari-tanzania.html" class="block py-1 text-sm text-gray-600">Western Safari Tanzania</a>
-            <a href="southern-safari-tanzania.html" class="block py-1 text-sm text-gray-600">Southern Safari Tanzania</a>
-            <a href="4-days-tanzania-safari-isbania.html" class="block py-1 text-sm text-gray-600">4 Days Safari from Isbania</a>
-            <a href="balloon-safari.html" class="block py-1 text-sm text-gray-600">Balloon Safari</a>
-            <a href="olduvai-gorge.html" class="block py-1 text-sm text-gray-600">Olduvai Gorge</a>
-            <a href="lake-natron.html" class="block py-1 text-sm text-gray-600">Lake Natron</a>
-            <a href="lake-eyasi.html" class="block py-1 text-sm text-gray-600">Lake Eyasi</a>
-            <a href="kenya-safaris.html" class="block py-1 text-sm text-gray-600">Kenya Safaris</a>
-        </div>
-
-        <!-- Trekking -->
-        <div class="font-bold text-green-800 pt-3">Trekking</div>
-        <div class="pl-4 space-y-1">
-            <a href="kilimanjaro-routes.html" class="block py-1 text-sm text-gray-600">Kilimanjaro Routes</a>
-            <a href="kili-day-trip.html" class="block py-1 text-sm text-gray-600">Kili Day Trip</a>
-            <a href="mount-kenya-trekking-4-days.html" class="block py-1 text-sm text-gray-600">Mount Kenya Trekking</a>
-            <a href="mount-meru-treks.html" class="block py-1 text-sm text-gray-600">Mount Meru Treks</a>
-            <a href="mount-lolmalasin.html" class="block py-1 text-sm text-gray-600">Mount Lolmalasin</a>
-            <a href="mount-hanang.html" class="block py-1 text-sm text-gray-600">Mount Hanang</a>
-            <a href="mount-oldonyo-lengai.html" class="block py-1 text-sm text-gray-600">Mount Oldonyo Lengai</a>
-            <a href="food-menu.html" class="block py-1 text-sm text-gray-600">Food Menu</a>
-            <a href="careful-acclimatisation.html" class="block py-1 text-sm text-gray-600">Careful Acclimatisation</a>
-            <a href="health-info.html" class="block py-1 text-sm text-gray-600">Health Information</a>
-            <a href="what-to-pack.html" class="block py-1 text-sm text-gray-600">What to Pack</a>
-        </div>
-
-        <!-- Activities -->
-        <div class="font-bold text-green-800 pt-3">Activities</div>
-        <div class="pl-4 space-y-1">
-            <a href="beach-holidays.html" class="block py-1 text-sm text-gray-600">Beach Holidays</a>
-            <a href="maasai-visit.html" class="block py-1 text-sm text-gray-600">Maasai Visit</a>
-            <a href="serval-wildlife.html" class="block py-1 text-sm text-gray-600">Serval Wildlife</a>
-            <a href="tour-in-mto-wa-mbu.html" class="block py-1 text-sm text-gray-600">Mto Wa Mbu Tour</a>
-            <a href="cycling-tour.html" class="block py-1 text-sm text-gray-600">Cycling Tour</a>
-            <a href="moshi-tour.html" class="block py-1 text-sm text-gray-600">Moshi Tour</a>
-        </div>
-
-        <!-- Information -->
-        <div class="font-bold text-green-800 pt-3">Information</div>
-        <div class="pl-4 space-y-1">
-            <a href="tour-faq.html" class="block py-1 text-sm text-gray-600">Tour FAQ</a>
-            <a href="booking-policy.html" class="block py-1 text-sm text-gray-600">Booking Policy</a>
-        </div>
-
-        <!-- Contact Us -->
-        <div class="pt-4 border-t mt-4">
-            <a href="contact.html" class="block py-3 px-4 text-center bg-green-700 text-white font-semibold rounded-xl hover:bg-green-800 transition">Contact Us</a>
-        </div>
-    </div>
-</nav>
-
-<!-- Hero Section -->
-<section class="hero-section pt-32 pb-20">
-    <div class="container mx-auto px-4 text-center text-white">
-        <div class="max-w-3xl mx-auto">
-            <i class="fas fa-heartbeat text-4xl text-orange-300 mb-4"></i>
-            <h1 class="text-4xl md:text-6xl font-bold mb-4">CAREFUL ACCLIMATISATION</h1>
-            <div class="w-24 h-1 bg-orange-400 mx-auto mb-6"></div>
-            <p class="text-xl opacity-95">How to Avoid Altitude Sickness on Kilimanjaro</p>
-        </div>
-    </div>
-</section>
-
-<!-- Main Content -->
-<section class="py-16 bg-gray-50">
-    <div class="container mx-auto px-4">
-        <div class="max-w-5xl mx-auto">
-
-            <!-- Images - 2 Images Side by Side -->
-<div class="grid md:grid-cols-2 gap-6 mb-10">
-    <div class="rounded-2xl overflow-hidden shadow-xl">
-        <img src="./images/54.jpeg" alt="Moshi Tour" class="w-full h-80 object-cover hover:scale-105 transition duration-300">
-    </div>
-    <div class="rounded-2xl overflow-hidden shadow-xl">
-        <img src="https://images.pexels.com/photos/4386467/pexels-photo-4386467.jpeg?auto=compress&cs=tinysrgb&w=800" alt="Health Check Medical" class="w-full h-80 object-cover hover:scale-105 transition duration-300">
+        <!-- Facebook -->
+        <a href="https://www.facebook.com/africafootprintstanzania" target="_blank" class="text-gray-400 hover:text-white text-2xl transition">
+            <i class="fab fa-facebook"></i>
+        </a>
+        
+        <!-- WhatsApp -->
+        <a href="https://wa.me/255789178090" target="_blank" class="text-gray-400 hover:text-white text-2xl transition">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        
+        <!-- LinkedIn -->
+        <a href="https://www.linkedin.com/in/wilderness-footprints-tanzania-04633082" target="_blank" class="text-gray-400 hover:text-white text-2xl transition">
+            <i class="fab fa-linkedin"></i>
+        </a>
+        
+        <!-- TikTok -->
+        <a href="https://vm.tiktok.com/ZS92vqX1esH6L-DVzme/" target="_blank" class="text-gray-400 hover:text-white text-2xl transition">
+            <i class="fab fa-tiktok"></i>
+        </a>
+        
     </div>
 </div>
-
-            <!-- Three Key Points -->
-            <div class="grid md:grid-cols-3 gap-6 mb-10">
-                <div class="info-card p-5 text-center">
-                    <i class="fas fa-turtle text-3xl text-orange-500 mb-3"></i>
-                    <h3 class="font-bold text-gray-800">Go Slowly</h3>
-                    <p class="text-gray-600 text-sm">"Pole Pole" - Swahili for slowly, slowly. If you cannot manage a conversation comfortably, you are going too fast.</p>
-                </div>
-                <div class="info-card p-5 text-center">
-                    <i class="fas fa-tint text-3xl text-blue-500 mb-3"></i>
-                    <h3 class="font-bold text-gray-800">Stay Hydrated</h3>
-                    <p class="text-gray-600 text-sm">Drink at least 3 litres of water daily. Proper hydration dramatically helps acclimatisation.</p>
-                </div>
-                <div class="info-card p-5 text-center">
-                    <i class="fas fa-capsules text-3xl text-green-600 mb-3"></i>
-                    <h3 class="font-bold text-gray-800">Consider Diamox</h3>
-                    <p class="text-gray-600 text-sm">Proven to help body acclimatise faster. Consult your doctor for prescription.</p>
-                </div>
             </div>
-
-            <!-- What is Altitude Sickness -->
-            <div class="info-card p-6 mb-8">
-                <h2 class="text-2xl font-bold text-gray-800 mb-4"><i class="fas fa-question-circle text-orange-500 mr-2"></i> What is Altitude Sickness?</h2>
-                <p class="text-gray-600 leading-relaxed">Altitude sickness, also called Acute Mountain Sickness (AMS), hypobaropathy and soroche, is an illness caused by exposure to the low air pressure, especially low partial pressure of oxygen, which many climbers experience at high altitudes. AMS is caused by exerting yourself at high altitudes, especially if you have not been properly acclimatised. It is most common at altitudes above 2400 metres. Kilimanjaro's peak is nearly 6000 metres above sea level. At this height, the air pressure (and the amount of oxygen it contains) is less than half that at sea level, and has been said to be comparable to 'working with only one lung'.</p>
-                <p class="text-gray-600 mt-3">Not everyone suffers from AMS, of course, and it is very difficult to predict who is or is not vulnerable to it. Generally speaking, a fit person is less vulnerable than an unfit person. Even so, anyone can be vulnerable at altitudes above 3500 metres, no matter their fitness level.</p>
+            <div class="border-t border-gray-800 mt-8 pt-6 text-center text-sm">
+                <p>&copy; 2026 Wilderness Footprints Tanzania. All rights reserved.</p>
             </div>
-
-            <!-- Avoiding AMS -->
-            <div class="info-card p-6 mb-8">
-                <h2 class="text-2xl font-bold text-gray-800 mb-4"><i class="fas fa-shield-alt text-orange-500 mr-2"></i> Avoiding AMS</h2>
-                <div class="space-y-4">
-                    <div class="flex items-start gap-3">
-                        <i class="fas fa-mountain-city text-green-600 mt-1"></i>
-                        <div><strong class="text-gray-800">1. Walk high, sleep low</strong><p class="text-gray-600 text-sm">Gradually climb higher each day, then descend lower to sleep.</p></div>
-                    </div>
-                    <div class="flex items-start gap-3">
-                        <i class="fas fa-turtle text-green-600 mt-1"></i>
-                        <div><strong class="text-gray-800">2. Slow and steady</strong><p class="text-gray-600 text-sm">Keep respiration rate low enough to maintain normal conversation.</p></div>
-                    </div>
-                    <div class="flex items-start gap-3">
-                        <i class="fas fa-tint text-green-600 mt-1"></i>
-                        <div><strong class="text-gray-800">3. Drink much more water</strong><p class="text-gray-600 text-sm">At least 3 litres each day.</p></div>
-                    </div>
-                    <div class="flex items-start gap-3">
-                        <i class="fas fa-capsules text-green-600 mt-1"></i>
-                        <div><strong class="text-gray-800">4. Diamox</strong><p class="text-gray-600 text-sm">Helpful in avoiding AMS. Consult your doctor before taking.</p></div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Effects of Low Atmospheric Pressure -->
-            <div class="warning-box p-6 mb-8">
-                <h3 class="text-xl font-bold text-orange-800 mb-3"><i class="fas fa-exclamation-triangle mr-2"></i> Effects of Exposure to Low Atmospheric Pressure</h3>
-                <div class="space-y-3">
-                    <div><strong class="text-gray-800">1. Low oxygen saturation</strong><p class="text-gray-600 text-sm">Blood with low oxygen leads to fatigue, breathlessness. Our guides have pulse-oxymeters to check oxygen saturation daily.</p></div>
-                    <div><strong class="text-gray-800">2. Cerebral oedema</strong><p class="text-gray-600 text-sm">Fluid collects in sinuses - presents as mild headache, can cause disorientation, coma.</p></div>
-                    <div><strong class="text-gray-800">3. Pulmonary oedema</strong><p class="text-gray-600 text-sm">Fluid seeps into lung air spaces - presents like pneumonia.</p></div>
-                </div>
-            </div>
-
-            <!-- How to Recognise AMS -->
-            <div class="danger-box p-6 mb-8">
-                <h3 class="text-xl font-bold text-red-700 mb-3"><i class="fas fa-hand-holding-medical mr-2"></i> How to Recognise AMS</h3>
-                <p class="text-gray-700">AMS does not present as a slow, gradual worsening. It is generally a rapid, dramatic onset of symptoms that can render a person unable to walk or take care of themselves. Our guides are trained to recognise AMS and apply appropriate first aid.</p>
-            </div>
-
-            <!-- Descent Protocol -->
-            <div class="info-card p-6 mb-8">
-                <h2 class="text-2xl font-bold text-gray-800 mb-4"><i class="fas fa-arrow-down text-orange-500 mr-2"></i> Our Client Descent Protocol</h2>
-                
-                <div class="protocol-step p-4 mb-4">
-                    <h4 class="font-bold text-green-800"><i class="fas fa-chart-line mr-2"></i> 1) Measuring Oxygen Saturation</h4>
-                    <p class="text-gray-600 text-sm mt-1">If below 80%: Test every half hour for 2 hours. If not rising to 75% → descend immediately. If at least 75% → continue with close monitoring.</p>
-                </div>
-
-                <div class="protocol-step p-4">
-                    <h4 class="font-bold text-green-800"><i class="fas fa-clipboard-list mr-2"></i> 2) Evaluation on the Lake Louise Scale</h4>
-                    <p class="text-gray-600 text-sm mt-1">Score 6-8: Guide considers whether you can continue based on score, oxygen saturation, pulse rate. If higher than 8 → descend immediately.</p>
-                </div>
-            </div>
-
-            <!-- Key Points Summary -->
-            <div class="key-point p-6 mb-10 text-center">
-                <i class="fas fa-lightbulb text-3xl text-orange-500 mb-3"></i>
-                <h3 class="text-xl font-bold text-gray-800 mb-2">The Single Biggest Reason</h3>
-                <p class="text-gray-600">The single biggest reason why people fail to summit is because they have not acclimatised well. Follow our guides' advice, stay hydrated, go slowly, and trust the process.</p>
-            </div>
-
-            <!-- Request Button -->
-            <div class="text-center">
-                <a href="contact.html" class="btn-primary text-lg px-10 py-4">Book Your Kilimanjaro Trek</a>
-            </div>
-
         </div>
-    </div>
-</section>
+    </footer>
 
-<!-- Footer -->
-<footer class="bg-gray-900 text-gray-300 py-10">
-    <div class="container mx-auto px-4">
-        <div class="grid md:grid-cols-3 gap-8">
-            <div><h3 class="text-white text-xl font-bold mb-4">Wilderness Footprints</h3><p class="text-sm">Tanzania Trekking & Safaris. Step into the heart of the wilderness with us.</p></div>
-            <div><h3 class="text-white text-xl font-bold mb-4">Contact</h3><p class="text-sm"><i class="fas fa-map-marker-alt mr-2"></i> Boma Road, Near New Safari Hotel, Arusha, Tanzania</p><p class="text-sm mt-2"><i class="fab fa-whatsapp mr-2"></i> +255789178090 (WhatsApp)</p><p class="text-sm mt-2"><i class="fas fa-envelope mr-2"></i> wildernessfootprints@gmail.com</p></div>
-            <div><h3 class="text-white text-xl font-bold mb-4">Follow Us</h3><div class="flex space-x-4"><a href="#" class="text-gray-400 hover:text-white text-2xl"><i class="fab fa-facebook"></i></a><a href="#" class="text-gray-400 hover:text-white text-2xl"><i class="fab fa-whatsapp"></i></a></div><div class="mt-4 text-sm">Select Language: <span class="text-green-400">Google Translate</span></div></div>
-        </div>
-        <div class="border-t border-gray-800 mt-8 pt-6 text-center text-sm"><p>&copy; 2024 Wilderness Footprints Tanzania. All rights reserved.</p></div>
-    </div>
-</footer>
-
-<script>
-    function toggleMobileMenu() { document.getElementById('mobileMenu').classList.toggle('hidden'); }
-</script>
+    <script>
+        function toggleMobileMenu() { document.getElementById('mobileMenu').classList.toggle('hidden'); }
+    </script>
 </body>
+
 </html>

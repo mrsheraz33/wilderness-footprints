@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,306 +9,896 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&family=Open+Sans:wght@300;400;500;600;700&display=swap');
-        * { font-family: 'Open Sans', sans-serif; }
-        .heading-font { font-family: 'Montserrat', sans-serif; }
-        .dropdown:hover .dropdown-menu { display: block; }
+
+        * {
+            font-family: 'Open Sans', sans-serif;
+        }
+
+        .heading-font {
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+
         .dropdown-menu {
-            display: none; position: absolute; top: 100%; left: 0;
-            background: white; min-width: 220px; box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-            z-index: 1000; border-radius: 8px; padding: 8px 0;
-            max-height: 70vh; overflow-y: auto;
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: white;
+            min-width: 220px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            border-radius: 8px;
+            padding: 8px 0;
+            max-height: 70vh;
+            overflow-y: auto;
         }
+
         .dropdown-menu a {
-            display: block; padding: 10px 20px; color: #1e3a2e;
-            text-decoration: none; font-size: 14px; transition: all 0.3s;
+            display: block;
+            padding: 10px 20px;
+            color: #1e3a2e;
+            text-decoration: none;
+            font-size: 14px;
+            transition: all 0.3s;
         }
-        .dropdown-menu a:hover { background: #e8f0e8; color: #0f2b1f; }
+
+        .dropdown-menu a:hover {
+            background: #e8f0e8;
+            color: #0f2b1f;
+        }
+
         .btn-primary {
-            background: #e67e22; color: white; padding: 14px 32px;
-            border-radius: 50px; text-decoration: none; font-weight: 700;
-            transition: all 0.3s; display: inline-block;
+            background: #e67e22;
+            color: white;
+            padding: 14px 32px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: all 0.3s;
+            display: inline-block;
         }
-        .btn-primary:hover { background: #d35400; transform: translateY(-3px); box-shadow: 0 10px 25px rgba(230,126,34,0.3); }
+
+        .btn-primary:hover {
+            background: #d35400;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(230, 126, 34, 0.3);
+        }
+
         .hero-section {
             background: linear-gradient(135deg, #0a2a1f 0%, #1a4d3a 50%, #0f2b1f 100%);
         }
+
         .route-card {
-            background: white; border-radius: 24px; transition: all 0.35s ease; border: 1px solid #e2e8f0;
+            background: white;
+            border-radius: 24px;
+            transition: all 0.35s ease;
+            border: 1px solid #e2e8f0;
         }
-        .route-card:hover { transform: translateY(-6px); box-shadow: 0 20px 35px rgba(0,0,0,0.12); border-color: #e67e22; }
-        .price-tag { background: #e67e22; color: white; border-radius: 30px; padding: 6px 18px; font-weight: 700; font-size: 0.85rem; display: inline-block; }
-        .difficulty-moderate { background: #f59e0b; color: white; padding: 3px 12px; border-radius: 30px; font-size: 0.7rem; font-weight: 600; }
-        .difficulty-hard { background: #ef4444; color: white; padding: 3px 12px; border-radius: 30px; font-size: 0.7rem; font-weight: 600; }
-        .success-high { background: #059669; color: white; padding: 3px 12px; border-radius: 30px; font-size: 0.7rem; font-weight: 600; }
-        .success-medium { background: #d97706; color: white; padding: 3px 12px; border-radius: 30px; font-size: 0.7rem; font-weight: 600; }
-        .success-low { background: #dc2626; color: white; padding: 3px 12px; border-radius: 30px; font-size: 0.7rem; font-weight: 600; }
-        .day-card { background: white; border-radius: 20px; transition: all 0.3s ease; border: 1px solid #e2e8f0; }
-        .day-card:hover { transform: translateX(6px); box-shadow: 0 15px 30px rgba(0,0,0,0.1); border-color: #e67e22; }
-        .elevation-badge { background: #e8f0ec; color: #1e3a2e; border-radius: 30px; padding: 4px 14px; font-size: 0.7rem; font-weight: 600; display: inline-block; }
-        .day-number { background: #e67e22; color: white; width: 45px; height: 45px; border-radius: 45px; display: flex; align-items: center; justify-content: center; font-weight: bold; font-size: 1.2rem; }
-        .option-box { background: #fef3c7; border-radius: 16px; border-left: 4px solid #e67e22; }
-        .price-box { background: linear-gradient(135deg, #fef3c7, #fde68a); border-radius: 20px; }
+
+        .route-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 20px 35px rgba(0, 0, 0, 0.12);
+            border-color: #e67e22;
+        }
+
+        .price-tag {
+            background: #e67e22;
+            color: white;
+            border-radius: 30px;
+            padding: 6px 18px;
+            font-weight: 700;
+            font-size: 0.85rem;
+            display: inline-block;
+        }
+
+        .difficulty-moderate {
+            background: #f59e0b;
+            color: white;
+            padding: 3px 12px;
+            border-radius: 30px;
+            font-size: 0.7rem;
+            font-weight: 600;
+        }
+
+        .difficulty-hard {
+            background: #ef4444;
+            color: white;
+            padding: 3px 12px;
+            border-radius: 30px;
+            font-size: 0.7rem;
+            font-weight: 600;
+        }
+
+        .success-high {
+            background: #059669;
+            color: white;
+            padding: 3px 12px;
+            border-radius: 30px;
+            font-size: 0.7rem;
+            font-weight: 600;
+        }
+
+        .success-medium {
+            background: #d97706;
+            color: white;
+            padding: 3px 12px;
+            border-radius: 30px;
+            font-size: 0.7rem;
+            font-weight: 600;
+        }
+
+        .success-low {
+            background: #dc2626;
+            color: white;
+            padding: 3px 12px;
+            border-radius: 30px;
+            font-size: 0.7rem;
+            font-weight: 600;
+        }
+
+        .day-card {
+            background: white;
+            border-radius: 20px;
+            transition: all 0.3s ease;
+            border: 1px solid #e2e8f0;
+        }
+
+        .day-card:hover {
+            transform: translateX(6px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+            border-color: #e67e22;
+        }
+
+        .elevation-badge {
+            background: #e8f0ec;
+            color: #1e3a2e;
+            border-radius: 30px;
+            padding: 4px 14px;
+            font-size: 0.7rem;
+            font-weight: 600;
+            display: inline-block;
+        }
+
+        .day-number {
+            background: #e67e22;
+            color: white;
+            width: 45px;
+            height: 45px;
+            border-radius: 45px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 1.2rem;
+        }
+
+        .option-box {
+            background: #fef3c7;
+            border-radius: 16px;
+            border-left: 4px solid #e67e22;
+        }
+
+        .price-box {
+            background: linear-gradient(135deg, #fef3c7, #fde68a);
+            border-radius: 20px;
+        }
+
         .section-img {
             border-radius: 24px;
             transition: all 0.3s ease;
         }
+
         .section-img:hover {
             transform: scale(1.01);
-            box-shadow: 0 20px 35px rgba(0,0,0,0.1);
+            box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
         }
     </style>
 </head>
+
 <body>
 
-<!-- Navbar -->
-<nav class="bg-white shadow-md fixed w-full z-50">
-    <div class="container mx-auto px-4 py-3 flex justify-between items-center">
-        <a href="index.html" class="flex items-center space-x-2">
-            <img src="images/logo.jpeg" alt="Logo" class="h-12 w-auto" onerror="this.src='https://via.placeholder.com/50x50?text=WFT'">
-            <span class="font-bold text-base sm:text-lg md:text-xl text-green-800">Wilderness Footprints Tanzania</span>
+    <!-- Navbar -->
+    <nav class="bg-white shadow-md fixed w-full z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="index.html" class="flex items-center space-x-2">
+                <img src="images/logo.jpeg" alt="Logo" class="h-12 w-auto"
+                    onerror="this.src='https://via.placeholder.com/50x50?text=WFT'">
+                <span class="font-bold text-base sm:text-lg md:text-xl text-green-800">Wilderness Footprints
+                    Tanzania</span>
+            </a>
+
+            <div class="hidden lg:flex space-x-4 xl:space-x-6 items-center">
+                <div class="dropdown relative"><a href="#" class="text-gray-700 hover:text-green-700 font-medium">About
+                        Us <i class="fas fa-chevron-down text-xs"></i></a>
+                    <div class="dropdown-menu"><a href="index.html">Home</a><a href="who-are-we.html">Who Are We</a>
+                    </div>
+                </div>
+                <div class="dropdown relative"><a href="#" class="text-gray-700 hover:text-green-700 font-medium">Day
+                        Trips <i class="fas fa-chevron-down text-xs"></i></a>
+                    <div class="dropdown-menu"><a href="day-trips.html">All Day Trips</a></div>
+                </div>
+                <div class="dropdown relative"><a href="#"
+                        class="text-gray-700 hover:text-green-700 font-medium">Safaris <i
+                            class="fas fa-chevron-down text-xs"></i></a>
+                    <div class="dropdown-menu"><a href="3-days-family-safari.html">3 Days Family Safari</a><a
+                            href="4-days-classic-safari.html">4 Days Classic Safari</a><a
+                            href="5-days-safari-footprints.html">5 Days Safari Footprints</a><a
+                            href="6-days-safari-experience.html">6 Days Safari Experience</a><a
+                            href="7-days-cultural-safari.html">7 Days Cultural Safari</a><a
+                            href="8-days-ngorongoro-highlands-treks.html">8 Days Ngorongoro Highlands Treks</a><a
+                            href="9-days-mara-river-crossing.html">9 Days Mara River Crossing</a><a
+                            href="8-days-honeymoon-safaris.html">8 Days Honeymoon Safaris</a><a
+                            href="western-safari-tanzania.html">Western Safari Tanzania</a><a
+                            href="southern-safari-tanzania.html">Southern Safari Tanzania</a><a
+                            href="4-days-tanzania-safari-isbania.html">4 Days Safari from Isbania</a><a
+                            href="balloon-safari.html">Balloon Safari</a><a href="olduvai-gorge.html">Olduvai
+                            Gorge</a><a href="lake-natron.html">Lake Natron</a><a href="lake-eyasi.html">Lake
+                            Eyasi</a><a href="kenya-safaris.html">Kenya Safaris</a></div>
+                </div>
+                <div class="dropdown relative"><a href="#"
+                        class="text-gray-700 hover:text-green-700 font-medium">Trekking <i
+                            class="fas fa-chevron-down text-xs"></i></a>
+                    <div class="dropdown-menu"><a href="kilimanjaro-routes.html">Kilimanjaro Routes</a><a
+                            href="kili-day-trip.html">Kili Day Trip</a><a href="mount-kenya-trekking-4-days.html">Mount
+                            Kenya Trekking</a><a href="mount-meru-treks.html">Mount Meru Treks</a><a
+                            href="mount-lolmalasin.html">Mount Lolmalasin</a><a href="mount-hanang.html">Mount
+                            Hanang</a><a href="mount-oldonyo-lengai.html">Mount Oldonyo Lengai</a><a
+                            href="food-menu.html">Food Menu</a><a href="careful-acclimatisation.html">Careful
+                            Acclimatisation</a><a href="health-info.html">Health Information</a><a
+                            href="what-to-pack.html">What to Pack</a></div>
+                </div>
+                <div class="dropdown relative"><a href="#"
+                        class="text-gray-700 hover:text-green-700 font-medium">Activities <i
+                            class="fas fa-chevron-down text-xs"></i></a>
+                    <div class="dropdown-menu"><a href="beach-holidays.html">Beach Holidays</a><a
+                            href="maasai-visit.html">Maasai Visit</a><a href="serval-wildlife.html">Serval
+                            Wildlife</a><a href="tour-in-mto-wa-mbu.html">Mto Wa Mbu Tour</a><a
+                            href="cycling-tour.html">Cycling Tour</a><a href="moshi-tour.html">Moshi Tour</a></div>
+                </div>
+                <a href="tour-faq.html" class="text-gray-700 hover:text-green-700 font-medium">Tour FAQ</a>
+                <a href="booking-policy.html" class="text-gray-700 hover:text-green-700 font-medium">Booking Policy</a>
+                <a href="contact.html" class="btn-primary text-sm py-2 px-5">Contact Us</a>
+            </div>
+            <button class="lg:hidden text-gray-700" onclick="toggleMobileMenu()"><i
+                    class="fas fa-bars text-2xl"></i></button>
+        </div>
+        <div id="mobileMenu"
+            class="hidden lg:hidden bg-white border-t px-4 py-3 space-y-2 max-h-[92vh] overflow-y-auto">
+            <div class="font-bold text-green-800 pt-2">About Us</div>
+            <div class="pl-4"><a href="index.html" class="block py-1 text-sm text-gray-600">Home</a><a
+                    href="who-are-we.html" class="block py-1 text-sm text-gray-600">Who Are We</a></div>
+            <div class="font-bold text-green-800 pt-3">Day Trips</div>
+            <div class="pl-4"><a href="day-trips.html" class="block py-1 text-sm text-gray-600">All Day Trips</a></div>
+            <div class="font-bold text-green-800 pt-3">Safaris</div>
+            <div class="pl-4"><a href="3-days-family-safari.html" class="block py-1 text-sm text-gray-600">3 Days Family
+                    Safari</a><a href="4-days-classic-safari.html" class="block py-1 text-sm text-gray-600">4 Days
+                    Classic Safari</a><a href="5-days-safari-footprints.html" class="block py-1 text-sm text-gray-600">5
+                    Days Safari Footprints</a><a href="6-days-safari-experience.html"
+                    class="block py-1 text-sm text-gray-600">6 Days Safari Experience</a><a
+                    href="7-days-cultural-safari.html" class="block py-1 text-sm text-gray-600">7 Days Cultural
+                    Safari</a><a href="8-days-ngorongoro-highlands-treks.html"
+                    class="block py-1 text-sm text-gray-600">8 Days Ngorongoro Highlands Treks</a><a
+                    href="9-days-mara-river-crossing.html" class="block py-1 text-sm text-gray-600">9 Days Mara River
+                    Crossing</a><a href="8-days-honeymoon-safaris.html" class="block py-1 text-sm text-gray-600">8 Days
+                    Honeymoon Safaris</a><a href="western-safari-tanzania.html"
+                    class="block py-1 text-sm text-gray-600">Western Safari Tanzania</a><a
+                    href="southern-safari-tanzania.html" class="block py-1 text-sm text-gray-600">Southern Safari
+                    Tanzania</a><a href="4-days-tanzania-safari-isbania.html" class="block py-1 text-sm text-gray-600">4
+                    Days Safari from Isbania</a><a href="balloon-safari.html"
+                    class="block py-1 text-sm text-gray-600">Balloon Safari</a><a href="olduvai-gorge.html"
+                    class="block py-1 text-sm text-gray-600">Olduvai Gorge</a><a href="lake-natron.html"
+                    class="block py-1 text-sm text-gray-600">Lake Natron</a><a href="lake-eyasi.html"
+                    class="block py-1 text-sm text-gray-600">Lake Eyasi</a><a href="kenya-safaris.html"
+                    class="block py-1 text-sm text-gray-600">Kenya Safaris</a></div>
+            <div class="font-bold text-green-800 pt-3">Trekking</div>
+            <div class="pl-4"><a href="kilimanjaro-routes.html" class="block py-1 text-sm text-gray-600">Kilimanjaro
+                    Routes</a><a href="kili-day-trip.html" class="block py-1 text-sm text-gray-600">Kili Day Trip</a><a
+                    href="mount-kenya-trekking-4-days.html" class="block py-1 text-sm text-gray-600">Mount Kenya
+                    Trekking</a><a href="mount-meru-treks.html" class="block py-1 text-sm text-gray-600">Mount Meru
+                    Treks</a><a href="mount-lolmalasin.html" class="block py-1 text-sm text-gray-600">Mount
+                    Lolmalasin</a><a href="mount-hanang.html" class="block py-1 text-sm text-gray-600">Mount
+                    Hanang</a><a href="mount-oldonyo-lengai.html" class="block py-1 text-sm text-gray-600">Mount Oldonyo
+                    Lengai</a><a href="food-menu.html" class="block py-1 text-sm text-gray-600">Food Menu</a><a
+                    href="careful-acclimatisation.html" class="block py-1 text-sm text-gray-600">Careful
+                    Acclimatisation</a><a href="health-info.html" class="block py-1 text-sm text-gray-600">Health
+                    Information</a><a href="what-to-pack.html" class="block py-1 text-sm text-gray-600">What to Pack</a>
+            </div>
+            <div class="font-bold text-green-800 pt-3">Activities</div>
+            <div class="pl-4"><a href="beach-holidays.html" class="block py-1 text-sm text-gray-600">Beach
+                    Holidays</a><a href="maasai-visit.html" class="block py-1 text-sm text-gray-600">Maasai Visit</a><a
+                    href="serval-wildlife.html" class="block py-1 text-sm text-gray-600">Serval Wildlife</a><a
+                    href="tour-in-mto-wa-mbu.html" class="block py-1 text-sm text-gray-600">Mto Wa Mbu Tour</a><a
+                    href="cycling-tour.html" class="block py-1 text-sm text-gray-600">Cycling Tour</a><a
+                    href="moshi-tour.html" class="block py-1 text-sm text-gray-600">Moshi Tour</a></div>
+            <div class="font-bold text-green-800 pt-3">Information</div>
+            <div class="pl-4"><a href="tour-faq.html" class="block py-1 text-sm text-gray-600">Tour FAQ</a><a
+                    href="booking-policy.html" class="block py-1 text-sm text-gray-600">Booking Policy</a></div>
+            <div class="pt-4 border-t mt-4"><a href="contact.html"
+                    class="block py-3 px-4 text-center bg-green-700 text-white font-semibold rounded-xl">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section pt-32 pb-20">
+        <div class="container mx-auto px-4 text-center text-white">
+            <div class="max-w-3xl mx-auto">
+                <i class="fas fa-mountain text-4xl text-orange-400 mb-4"></i>
+                <h1 class="text-5xl md:text-7xl font-bold mb-4 heading-font">KILI TREKS</h1>
+                <div class="w-24 h-1 bg-orange-400 mx-auto mb-6"></div>
+                <p class="text-xl opacity-95">Mount Kilimanjaro Trekking Routes & Prices</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="py-16 bg-slate-50">
+        <div class="container mx-auto px-4">
+            <div class="max-w-6xl mx-auto">
+
+                <!-- IMAGE 1: Hero section ke baad -->
+                <img src="./images/80.jpeg" alt="Mount Kilimanjaro"
+                    class="section-img w-full h-80 object-cover mb-10 shadow-lg">
+
+                <!-- Intro -->
+                <div class="bg-white rounded-2xl p-8 mb-10 shadow-sm text-center">
+                    <p class="text-gray-700 text-lg">Climbing Mount Kilimanjaro (5,895m) is a once-in-a-lifetime
+                        adventure. There are 7 main trekking routes, each offering a different experience in terms of
+                        scenery, difficulty, success rate, and comfort. Choosing the right route is key to a successful
+                        summit.</p>
+                </div>
+
+                <!-- IMAGE 2: Routes Overview ke baad -->
+                <img src="./images/33.jpeg" alt="Kilimanjaro Trekking"
+                    class="section-img w-full h-64 object-cover mb-8 shadow-lg">
+
+                <!-- Routes Overview -->
+                <div class="mb-10">
+                    <h2 class="text-2xl font-bold text-gray-800 mb-4 heading-font"><i
+                            class="fas fa-route text-orange-600 mr-2"></i> Kilimanjaro Routes Overview</h2>
+                    <div class="bg-white rounded-xl p-5 shadow-sm">
+                        <p class="text-gray-700">There are 7 official routes: <strong>Lemosho, Machame, Marangu, Rongai,
+                                Umbwe, Shira, and Northern Circuit</strong></p>
+                    </div>
+                </div>
+
+                <!-- Route Cards Grid (7 Routes) -->
+                <div class="grid md:grid-cols-2 gap-6 mb-12">
+                    <!-- 1. Lemosho Route -->
+                    <div class="route-card p-6">
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="text-xl font-bold text-gray-800">1. Lemosho Route</h3><span
+                                class="price-tag">$2,200 - $3,200</span>
+                        </div>
+                        <div class="flex flex-wrap gap-2 mb-3"><span class="difficulty-moderate">Moderate</span><span
+                                class="success-high">Success: 90%+</span><span
+                                class="bg-gray-100 px-3 py-1 rounded-full text-xs"><i
+                                    class="fas fa-campground mr-1"></i> Camping</span><span
+                                class="bg-gray-100 px-3 py-1 rounded-full text-xs"><i class="far fa-clock mr-1"></i> 7-9
+                                days</span></div>
+                        <p class="text-gray-600 text-sm mb-3"><i class="fas fa-star text-orange-500 mr-1"></i>
+                            <strong>Best Overall</strong> - Most scenic route, excellent acclimatization</p>
+                        <p class="text-gray-600 text-sm"><i class="fas fa-eye text-green-600 mr-1"></i> Highlights:
+                            Rainforest, Shira Plateau, panoramic views</p>
+                        <p class="text-gray-600 text-sm mt-2"><i class="fas fa-user-check text-blue-600 mr-1"></i> Best
+                            for: First-time climbers</p>
+                    </div>
+
+                    <!-- 2. Machame Route (WITH IMAGE) -->
+                    <div class="route-card p-6">
+
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="text-xl font-bold text-gray-800">2. Machame Route</h3>
+                            <span class="price-tag">$1,800 - $2,800</span>
+                        </div>
+                        <div class="flex flex-wrap gap-2 mb-3">
+                            <span class="difficulty-moderate">Moderate-Challenging</span>
+                            <span class="success-high">Success: 80-85%</span>
+                            <span class="bg-gray-100 px-3 py-1 rounded-full text-xs"><i
+                                    class="fas fa-campground mr-1"></i> Camping</span>
+                            <span class="bg-gray-100 px-3 py-1 rounded-full text-xs"><i class="far fa-clock mr-1"></i>
+                                6-7 days</span>
+                        </div>
+                        <p class="text-gray-600 text-sm mb-3"><i class="fas fa-fire text-orange-500 mr-1"></i>
+                            <strong>Most Popular</strong> - Very scenic, good acclimatization</p>
+                        <p class="text-gray-600 text-sm"><i class="fas fa-eye text-green-600 mr-1"></i> Highlights:
+                            "Climb high, sleep low"</p>
+                        <p class="text-gray-600 text-sm mt-2"><i class="fas fa-user-check text-blue-600 mr-1"></i> Best
+                            for: Adventurous trekkers</p>
+                    </div>
+
+                    <!-- 3. Marangu Route -->
+                    <div class="route-card p-6">
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="text-xl font-bold text-gray-800">3. Marangu Route</h3><span
+                                class="price-tag">$1,400 - $2,000</span>
+                        </div>
+                        <div class="flex flex-wrap gap-2 mb-3"><span class="difficulty-moderate">Moderate</span><span
+                                class="success-medium">Success: 65-75%</span><span
+                                class="bg-gray-100 px-3 py-1 rounded-full text-xs"><i class="fas fa-home mr-1"></i>
+                                Huts</span><span class="bg-gray-100 px-3 py-1 rounded-full text-xs"><i
+                                    class="far fa-clock mr-1"></i> 5-6 days</span></div>
+                        <p class="text-gray-600 text-sm mb-3"><i class="fas fa-coffee text-orange-500 mr-1"></i>
+                            <strong>Comfort Route</strong> - Budget-friendly, hut accommodation</p>
+                        <p class="text-gray-600 text-sm mt-2"><i class="fas fa-user-check text-blue-600 mr-1"></i> Best
+                            for: Budget travelers & beginners</p>
+                    </div>
+
+                    <!-- 4. Rongai Route -->
+                    <div class="route-card p-6">
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="text-xl font-bold text-gray-800">4. Rongai Route</h3><span
+                                class="price-tag">$1,900 - $2,700</span>
+                        </div>
+                        <div class="flex flex-wrap gap-2 mb-3"><span class="difficulty-moderate">Moderate</span><span
+                                class="success-high">Success: 80-85%</span><span
+                                class="bg-gray-100 px-3 py-1 rounded-full text-xs"><i
+                                    class="fas fa-campground mr-1"></i> Camping</span><span
+                                class="bg-gray-100 px-3 py-1 rounded-full text-xs"><i class="far fa-clock mr-1"></i> 6-7
+                                days</span></div>
+                        <p class="text-gray-600 text-sm mb-3"><i class="fas fa-volume-mute text-orange-500 mr-1"></i>
+                            <strong>Quiet Route</strong> - Only route from north, less crowded</p>
+                        <p class="text-gray-600 text-sm mt-2"><i class="fas fa-user-check text-blue-600 mr-1"></i> Best
+                            for: Those seeking a quiet experience</p>
+                    </div>
+
+                    <!-- 5. Northern Circuit -->
+                    <div class="route-card p-6">
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="text-xl font-bold text-gray-800">5. Northern Circuit</h3><span
+                                class="price-tag">$2,800 - $3,800</span>
+                        </div>
+                        <div class="flex flex-wrap gap-2 mb-3"><span class="difficulty-moderate">Moderate</span><span
+                                class="success-high">Success: 90%+</span><span
+                                class="bg-gray-100 px-3 py-1 rounded-full text-xs"><i
+                                    class="fas fa-campground mr-1"></i> Camping</span><span
+                                class="bg-gray-100 px-3 py-1 rounded-full text-xs"><i class="far fa-clock mr-1"></i>
+                                8-10 days</span></div>
+                        <p class="text-gray-600 text-sm mb-3"><i class="fas fa-trophy text-orange-500 mr-1"></i>
+                            <strong>Best Success Rate</strong> - Longest route, best acclimatization</p>
+                        <p class="text-gray-600 text-sm mt-2"><i class="fas fa-user-check text-blue-600 mr-1"></i> Best
+                            for: High success & premium experience</p>
+                    </div>
+
+                    <!-- 6. Umbwe Route -->
+                    <div class="route-card p-6">
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="text-xl font-bold text-gray-800">6. Umbwe Route</h3><span
+                                class="price-tag">$1,700 - $2,500</span>
+                        </div>
+                        <div class="flex flex-wrap gap-2 mb-3"><span class="difficulty-hard">Very Difficult</span><span
+                                class="success-low">Success: ~60%</span><span
+                                class="bg-gray-100 px-3 py-1 rounded-full text-xs"><i
+                                    class="fas fa-campground mr-1"></i> Camping</span><span
+                                class="bg-gray-100 px-3 py-1 rounded-full text-xs"><i class="far fa-clock mr-1"></i> 5-6
+                                days</span></div>
+                        <p class="text-gray-600 text-sm mb-3"><i class="fas fa-bolt text-orange-500 mr-1"></i>
+                            <strong>Most Challenging</strong> - Fast, steep, scenic</p>
+                        <p class="text-gray-600 text-sm mt-2"><i class="fas fa-user-check text-blue-600 mr-1"></i> Best
+                            for: Experienced climbers only</p>
+                    </div>
+
+                    <!-- 7. Shira Route -->
+                    <div class="route-card p-6">
+                        <div class="flex justify-between items-start mb-3">
+                            <h3 class="text-xl font-bold text-gray-800">7. Shira Route</h3><span
+                                class="price-tag">$2,000 - $2,800</span>
+                        </div>
+                        <div class="flex flex-wrap gap-2 mb-3"><span class="difficulty-moderate">Moderate</span><span
+                                class="success-high">Success: ~85%</span><span
+                                class="bg-gray-100 px-3 py-1 rounded-full text-xs"><i
+                                    class="fas fa-campground mr-1"></i> Camping</span><span
+                                class="bg-gray-100 px-3 py-1 rounded-full text-xs"><i class="far fa-clock mr-1"></i> 6-7
+                                days</span></div>
+                        <p class="text-gray-600 text-sm mb-3">Similar to Lemosho - Starts at higher altitude</p>
+                        <p class="text-gray-600 text-sm"><i
+                                class="fas fa-exclamation-triangle text-yellow-600 mr-1"></i> Not ideal for beginners
+                            due to altitude start</p>
+                    </div>
+                </div>
+
+                <!-- IMAGE 3: Included + Not Included ke baad -->
+                <img src="./images/71.jpeg" alt="Kilimanjaro Summit"
+                    class="section-img w-full h-64 object-cover mb-8 shadow-lg">
+
+                <!-- Included + Not Included -->
+                <div class="grid md:grid-cols-2 gap-8 mb-12">
+                    <div class="bg-green-50 rounded-2xl p-6">
+                        <h3 class="text-xl font-bold text-green-800 mb-4"><i class="fas fa-check-circle mr-2"></i>
+                            What's Included</h3>
+                        <ul class="space-y-2">
+                            <li><i class="fas fa-check text-green-600 mr-2"></i> Park fees</li>
+                            <li><i class="fas fa-check text-green-600 mr-2"></i> Professional guides & porters</li>
+                            <li><i class="fas fa-check text-green-600 mr-2"></i> Camping equipment or huts</li>
+                            <li><i class="fas fa-check text-green-600 mr-2"></i> Meals on the mountain</li>
+                            <li><i class="fas fa-check text-green-600 mr-2"></i> Rescue fees</li>
+                            <li><i class="fas fa-check text-green-600 mr-2"></i> Transfers</li>
+                        </ul>
+                    </div>
+                    <div class="bg-red-50 rounded-2xl p-6">
+                        <h3 class="text-xl font-bold text-red-700 mb-4"><i class="fas fa-times-circle mr-2"></i> Not
+                            Included</h3>
+                        <ul class="space-y-2">
+                            <li><i class="fas fa-times text-red-500 mr-2"></i> Flights</li>
+                            <li><i class="fas fa-times text-red-500 mr-2"></i> Visa & insurance</li>
+                            <li><i class="fas fa-times text-red-500 mr-2"></i> Tips for crew</li>
+                            <li><i class="fas fa-times text-red-500 mr-2"></i> Personal gear</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- Final Advice -->
+                <div class="bg-gray-800 rounded-2xl p-8 mb-12 text-white">
+                    <h3 class="text-2xl font-bold mb-5 heading-font"><i class="fas fa-medal text-orange-400 mr-2"></i>
+                        Final Advice</h3>
+                    <div class="grid md:grid-cols-4 gap-4 text-center">
+                        <div class="bg-gray-700 rounded-xl p-4"><i
+                                class="fas fa-crown text-2xl text-orange-400 mb-2"></i>
+                            <p class="font-bold">Best Success</p>
+                            <p class="text-sm">Lemosho or Northern Circuit</p>
+                        </div>
+                        <div class="bg-gray-700 rounded-xl p-4"><i
+                                class="fas fa-wallet text-2xl text-green-400 mb-2"></i>
+                            <p class="font-bold">Best Budget</p>
+                            <p class="text-sm">Marangu</p>
+                        </div>
+                        <div class="bg-gray-700 rounded-xl p-4"><i
+                                class="fas fa-hiking text-2xl text-orange-400 mb-2"></i>
+                            <p class="font-bold">Best Adventure</p>
+                            <p class="text-sm">Machame</p>
+                        </div>
+                        <div class="bg-gray-700 rounded-xl p-4"><i class="fas fa-leaf text-2xl text-green-400 mb-2"></i>
+                            <p class="font-bold">Best Quiet Route</p>
+                            <p class="text-sm">Rongai</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Map Images - 2 Maps Side by Side -->
+                <div class="grid md:grid-cols-2 gap-6 mb-10">
+                    <div class="rounded-2xl overflow-hidden shadow-xl">
+                        <img src="./images/119.jpeg" alt="Kilimanjaro Route Map"
+                            class="w-full h-80 object-cover hover:scale-105 transition duration-300">
+
+                    </div>
+                    <div class="rounded-2xl overflow-hidden shadow-xl">
+                        <img src="./images/120.jpeg" alt="Tanzania Safari Map"
+                            class="w-full h-80 object-cover hover:scale-105 transition duration-300">
+
+                    </div>
+                </div>
+                <!-- IMAGE 4: Umbwe & Rongai section ke upar -->
+                <img src="./images/82.jpeg" alt="Umbwe Rongai Route"
+                    class="section-img w-full h-64 object-cover mb-6 shadow-lg">
+
+                <!-- ========== UMBWE & RONGAI ROUTE CIRCUIT SECTION ========== -->
+                <div class="mb-16">
+                    <div class="text-center mb-8">
+                        <h2 class="text-3xl font-bold text-gray-800 heading-font">Umbwe & Rongai Route Circuit</h2>
+                        <div class="w-20 h-0.5 bg-orange-500 mx-auto my-3"></div>
+                        <p class="text-gray-600">Mount Kilimanjaro Trekking</p>
+                    </div>
+
+                    <div class="route-card p-6 mb-6">
+                        <div class="flex flex-wrap justify-between items-center mb-4">
+                            <h3 class="text-2xl font-bold text-gray-800">Umbwe & Rongai Route Circuit</h3>
+                            <span class="price-tag">$2,350</span>
+                        </div>
+                        <p class="text-gray-600 mb-4">Experience the ultimate Mount Kilimanjaro adventure by combining
+                            two of the mountain's most iconic routes — the challenging Umbwe Route and the scenic Rongai
+                            Route Circuit. This unforgettable trekking experience offers dramatic landscapes, remote
+                            wilderness, excellent acclimatization, and breathtaking summit views from Africa's highest
+                            peak. Starting through the steep and adventurous Umbwe Route, trekkers pass dense
+                            rainforest, giant heathers, alpine desert, and glacier landscapes before reaching Uhuru Peak
+                            at 5,895 meters. The journey continues through the peaceful northern side of Kilimanjaro via
+                            the Rongai Route Circuit, known for its quieter trails and stunning panoramic scenery.</p>
+                        <p class="text-gray-600">This route combination is perfect for adventurous climbers seeking a
+                            unique Kilimanjaro trekking experience with diverse landscapes, fewer crowds, and rewarding
+                            summit success.</p>
+                    </div>
+
+                    <div class="route-card p-6 mb-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-4"><i
+                                class="fas fa-star text-orange-500 mr-2"></i> Tour Highlights</h3>
+                        <div class="grid md:grid-cols-2 gap-2">
+                            <div><i class="fas fa-check-circle text-green-600 mr-2"></i> Trek Africa's highest mountain
+                                – Mount Kilimanjaro</div>
+                            <div><i class="fas fa-check-circle text-green-600 mr-2"></i> Conquer Uhuru Peak (5,895m)
+                            </div>
+                            <div><i class="fas fa-check-circle text-green-600 mr-2"></i> Experience both Umbwe and
+                                Rongai routes</div>
+                            <div><i class="fas fa-check-circle text-green-600 mr-2"></i> Explore rainforest, moorland,
+                                alpine desert, and glaciers</div>
+                            <div><i class="fas fa-check-circle text-green-600 mr-2"></i> Incredible sunrise views from
+                                the summit</div>
+                            <div><i class="fas fa-check-circle text-green-600 mr-2"></i> Professional mountain guides
+                                and support crew</div>
+                            <div><i class="fas fa-check-circle text-green-600 mr-2"></i> Excellent acclimatization
+                                profile</div>
+                            <div><i class="fas fa-check-circle text-green-600 mr-2"></i> Scenic northern circuit
+                                landscapes</div>
+                        </div>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-6 mb-6">
+                        <div class="route-card p-6">
+                            <h3 class="text-xl font-bold text-green-800 mb-4"><i class="fas fa-check-circle mr-2"></i>
+                                Price Includes</h3>
+                            <ul class="space-y-2 text-gray-600 text-sm">
+                                <li><i class="fas fa-check text-green-600 mr-2"></i> Kilimanjaro National Park fees</li>
+                                <li><i class="fas fa-check text-green-600 mr-2"></i> Professional English-speaking
+                                    mountain guides</li>
+                                <li><i class="fas fa-check text-green-600 mr-2"></i> Porters and cook services</li>
+                                <li><i class="fas fa-check text-green-600 mr-2"></i> Mountain tents and camping
+                                    equipment</li>
+                                <li><i class="fas fa-check text-green-600 mr-2"></i> All meals during the trek</li>
+                                <li><i class="fas fa-check text-green-600 mr-2"></i> Drinking water on the mountain</li>
+                                <li><i class="fas fa-check text-green-600 mr-2"></i> Airport transfers</li>
+                                <li><i class="fas fa-check text-green-600 mr-2"></i> Rescue fees</li>
+                                <li><i class="fas fa-check text-green-600 mr-2"></i> Government taxes</li>
+                            </ul>
+                        </div>
+                        <div class="route-card p-6">
+                            <h3 class="text-xl font-bold text-red-700 mb-4"><i class="fas fa-times-circle mr-2"></i>
+                                Price Excludes</h3>
+                            <ul class="space-y-2 text-gray-600 text-sm">
+                                <li><i class="fas fa-times text-red-500 mr-2"></i> International flights</li>
+                                <li><i class="fas fa-times text-red-500 mr-2"></i> Tanzania visa</li>
+                                <li><i class="fas fa-times text-red-500 mr-2"></i> Personal trekking gear</li>
+                                <li><i class="fas fa-times text-red-500 mr-2"></i> Travel insurance</li>
+                                <li><i class="fas fa-times text-red-500 mr-2"></i> Tips for guides and porters</li>
+                                <li><i class="fas fa-times text-red-500 mr-2"></i> Personal expenses</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="grid md:grid-cols-2 gap-6 mb-8">
+                        <div class="bg-orange-50 rounded-2xl p-5">
+                            <h3 class="font-bold text-orange-800 mb-2"><i class="fas fa-calendar-alt mr-2"></i> Best
+                                Time to Trek</h3>
+                            <p class="text-gray-600 text-sm">The best months for this Kilimanjaro trekking adventure
+                                are: January to March, June to October, and December holidays.</p>
+                        </div>
+                        <div class="bg-green-50 rounded-2xl p-5">
+                            <h3 class="font-bold text-green-800 mb-2"><i class="fas fa-medal mr-2"></i> Why Book With Us
+                            </h3>
+                            <p class="text-gray-600 text-sm">Experienced local mountain experts • Safe and reliable
+                                trekking services • Affordable trekking packages • Professional customer support •
+                                Customized Tanzania adventures</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- IMAGE 5: Western Bridge section ke upar -->
+
+
+                <!-- ========== KILIMANJARO WESTERN BRIDGE SECTION ========== -->
+                <div>
+                    <div class="text-center mb-8">
+                        <h2 class="text-3xl font-bold text-gray-800 heading-font">Kilimanjaro Western Bridge</h2>
+                        <div class="w-20 h-0.5 bg-orange-500 mx-auto my-3"></div>
+                        <p class="text-gray-600">9-Days Lemosho Western-Breach Route • Favourite Route</p>
+                    </div>
+
+                    <div class="bg-white rounded-2xl p-6 mb-8 shadow-sm">
+                        <h2 class="text-xl font-bold text-gray-800 mb-3"><i
+                                class="fas fa-info-circle text-orange-600 mr-2"></i> Package Information</h2>
+                        <p class="text-gray-600">Both our Standard and All-Inclusive Packages include: <strong>2 Nights
+                                Hotel prior to the climb + 1 Night at Hotel post climb</strong>. Total trip takes
+                            <strong>12 days</strong> (not including flights).</p>
+                    </div>
+
+                    <div class="day-card p-6 mb-4">
+                        <div class="flex flex-wrap gap-4 items-start">
+                            <div class="day-number">1</div>
+                            <div class="flex-1">
+                                <div class="flex flex-wrap justify-between items-center mb-2">
+                                    <h3 class="text-lg font-bold text-gray-800">DAY 1: RAINFOREST ZONE</h3><span
+                                        class="elevation-badge">2,100m → 2,821m</span>
+                                </div>
+                                <p class="text-gray-600">Pick up from hotel. Drive to Lemosho Entrance Gate (3hrs). Trek
+                                    through lush rainforest. You may see Colobus Monkeys. Trek: 2-3 hrs.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="day-card p-6 mb-4">
+                        <div class="flex flex-wrap gap-4 items-start">
+                            <div class="day-number">2</div>
+                            <div class="flex-1">
+                                <div class="flex flex-wrap justify-between items-center mb-2">
+                                    <h3 class="text-lg font-bold text-gray-800">DAY 2: HEATHER / MOORLAND ZONE</h3><span
+                                        class="elevation-badge">2,821m → 3,444m</span>
+                                </div>
+                                <p class="text-gray-600">Climb to Shira 1 Camp. Trek: 5-7 hrs.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="day-card p-6 mb-4">
+                        <div class="flex flex-wrap gap-4 items-start">
+                            <div class="day-number">3</div>
+                            <div class="flex-1">
+                                <div class="flex flex-wrap justify-between items-center mb-2">
+                                    <h3 class="text-lg font-bold text-gray-800">DAY 3: HEATHER / MOORLAND ZONE</h3><span
+                                        class="elevation-badge">3,444m → 4,200m</span>
+                                </div>
+                                <p class="text-gray-600">Climb to Moir Camp. Trek: 5-7 hrs.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="day-card p-6 mb-4">
+                        <div class="flex flex-wrap gap-4 items-start">
+                            <div class="day-number">4</div>
+                            <div class="flex-1">
+                                <div class="flex flex-wrap justify-between items-center mb-2">
+                                    <h3 class="text-lg font-bold text-gray-800">DAY 4: LAVA TOWER</h3><span
+                                        class="elevation-badge">4,200m → 4,600m</span>
+                                </div>
+                                <p class="text-gray-600">Climb to Lava Tower Camp. Optional: climb Lava Tower. Trek: 3
+                                    hrs.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="day-card p-6 mb-4">
+                        <div class="flex flex-wrap gap-4 items-start">
+                            <div class="day-number">5</div>
+                            <div class="flex-1">
+                                <div class="flex flex-wrap justify-between items-center mb-2">
+                                    <h3 class="text-lg font-bold text-gray-800">DAY 5: ACCLIMATIZATION HIKE</h3><span
+                                        class="elevation-badge">4,600m → 4,900m</span>
+                                </div>
+                                <p class="text-gray-600">Acclimatization hike to Arrow Glacier Camp (2-3 hrs).</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="day-card p-6 mb-4">
+                        <div class="flex flex-wrap gap-4 items-start">
+                            <div class="day-number">6</div>
+                            <div class="flex-1">
+                                <div class="flex flex-wrap justify-between items-center mb-2">
+                                    <h3 class="text-lg font-bold text-gray-800">DAY 6: ARROW GLACIER CAMP</h3><span
+                                        class="elevation-badge">4,600m → 4,900m</span>
+                                </div>
+                                <p class="text-gray-600">Climb to Arrow Glacier Camp. Trek: 1-1.5 hrs.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="day-card p-6 mb-4">
+                        <div class="flex flex-wrap gap-4 items-start">
+                            <div class="day-number">7</div>
+                            <div class="flex-1">
+                                <div class="flex flex-wrap justify-between items-center mb-2">
+                                    <h3 class="text-lg font-bold text-gray-800">DAY 7: WESTERN BREACH</h3><span
+                                        class="elevation-badge">4,900m → 5,730m</span>
+                                </div>
+                                <p class="text-gray-600">Cross Western-Breach to Crater Camp. Trek: 5-7 hrs.</p>
+                                <div class="mt-3 p-3 bg-orange-50 rounded-lg">
+                                    <p class="font-semibold text-orange-800"><i class="fas fa-code-branch mr-1"></i> Two
+                                        Options Available</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="grid md:grid-cols-2 gap-5 mb-5">
+                        <div class="option-box p-5">
+                            <h4 class="font-bold text-orange-800"><i class="fas fa-sun mr-2"></i> Option #1 - Summit Day
+                                7</h4>
+                            <p class="text-sm">Summit in mid-afternoon with very few climbers.</p>
+                        </div>
+                        <div class="option-box p-5">
+                            <h4 class="font-bold text-orange-800"><i class="fas fa-sunrise mr-2"></i> Option #2 - Summit
+                                Day 8</h4>
+                            <p class="text-sm">Traditional sunrise summit experience.</p>
+                        </div>
+                    </div>
+                    <div class="day-card p-6 mb-4">
+                        <div class="flex flex-wrap gap-4 items-start">
+                            <div class="day-number">8</div>
+                            <div class="flex-1">
+                                <h3 class="text-lg font-bold text-gray-800 mb-2">DAY 8: SUMMIT DAY</h3>
+                                <p class="text-gray-600"><strong>Option #1:</strong> Descend to Mweka
+                                    Camp.<br><strong>Option #2:</strong> Ascent to Uhuru Peak, then descend to Mweka
+                                    Camp.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="day-card p-6 mb-8">
+                        <div class="flex flex-wrap gap-4 items-start">
+                            <div class="day-number">9</div>
+                            <div class="flex-1">
+                                <h3 class="text-lg font-bold text-gray-800 mb-2">DAY 9: MWEKA GATE & OFFICIAL
+                                    CERTIFICATE</h3>
+                                <p class="text-gray-600">Descend to Mweka Gate, receive Official Kilimanjaro
+                                    Certificate. Drive back to Arusha.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="price-box p-6 mb-8 text-center">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-2"><i class="fas fa-tag mr-2"></i> PRICE PER
+                            PERSON</h3>
+                        <p class="text-3xl font-bold text-orange-700">FROM $3,500</p>
+                    </div>
+                </div>
+
+                <!-- IMAGE 6: Request button ke baad, footer se pehle (Gallery) -->
+                <div class="mt-12 mb-10">
+                    <h3 class="text-2xl font-bold text-center text-gray-800 mb-6 heading-font">Kilimanjaro Gallery</h3>
+                    <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+                        <img src="./images/51.jpeg" alt="Gallery"
+                            class="rounded-xl shadow-md h-40 w-full object-cover hover:scale-105 transition">
+                        <img src="./images/56.jpeg" alt="Gallery"
+                            class="rounded-xl shadow-md h-40 w-full object-cover hover:scale-105 transition">
+                        <img src="./images/61.jpeg" alt="Gallery"
+                            class="rounded-xl shadow-md h-40 w-full object-cover hover:scale-105 transition">
+                        <img src="./images/59.jpeg" alt="Gallery"
+                            class="rounded-xl shadow-md h-40 w-full object-cover hover:scale-105 transition">
+                    </div>
+                </div>
+
+                <!-- Request Button -->
+                <div class="text-center">
+                    <a href="contact.html" class="btn-primary text-lg px-10 py-4">Request Your Custom Itinerary</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-10">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-white text-xl font-bold mb-4">Wilderness Footprints</h3>
+                    <p class="text-sm">Tanzania Trekking & Safaris. Step into the heart of the wilderness with us.</p>
+                </div>
+                <div>
+                    <h3 class="text-white text-xl font-bold mb-4">Contact</h3>
+                    <p class="text-sm"><i class="fas fa-map-marker-alt mr-2"></i> Boma Road, Near New Safari Hotel,
+                        Arusha, Tanzania</p>
+                    <p class="text-sm mt-2"><i class="fab fa-whatsapp mr-2"></i> +255789178090 (WhatsApp)</p>
+                    <p class="text-sm mt-2"><i class="fas fa-envelope mr-2"></i> wildernessfootprints@gmail.com</p>
+                </div>
+             <div>
+    <h3 class="text-white text-xl font-bold mb-4">Follow Us</h3>
+    <div class="flex space-x-4">
+        
+        <!-- Facebook -->
+        <a href="https://www.facebook.com/africafootprintstanzania" target="_blank" class="text-gray-400 hover:text-white text-2xl transition">
+            <i class="fab fa-facebook"></i>
         </a>
-
-        <div class="hidden lg:flex space-x-4 xl:space-x-6 items-center">
-            <div class="dropdown relative"><a href="#" class="text-gray-700 hover:text-green-700 font-medium">About Us <i class="fas fa-chevron-down text-xs"></i></a><div class="dropdown-menu"><a href="index.html">Home</a><a href="who-are-we.html">Who Are We</a></div></div>
-            <div class="dropdown relative"><a href="#" class="text-gray-700 hover:text-green-700 font-medium">Day Trips <i class="fas fa-chevron-down text-xs"></i></a><div class="dropdown-menu"><a href="day-trips.html">All Day Trips</a></div></div>
-            <div class="dropdown relative"><a href="#" class="text-gray-700 hover:text-green-700 font-medium">Safaris <i class="fas fa-chevron-down text-xs"></i></a><div class="dropdown-menu"><a href="3-days-family-safari.html">3 Days Family Safari</a><a href="4-days-classic-safari.html">4 Days Classic Safari</a><a href="5-days-safari-footprints.html">5 Days Safari Footprints</a><a href="6-days-safari-experience.html">6 Days Safari Experience</a><a href="7-days-cultural-safari.html">7 Days Cultural Safari</a><a href="8-days-ngorongoro-highlands-treks.html">8 Days Ngorongoro Highlands Treks</a><a href="9-days-mara-river-crossing.html">9 Days Mara River Crossing</a><a href="8-days-honeymoon-safaris.html">8 Days Honeymoon Safaris</a><a href="western-safari-tanzania.html">Western Safari Tanzania</a><a href="southern-safari-tanzania.html">Southern Safari Tanzania</a><a href="4-days-tanzania-safari-isbania.html">4 Days Safari from Isbania</a><a href="balloon-safari.html">Balloon Safari</a><a href="olduvai-gorge.html">Olduvai Gorge</a><a href="lake-natron.html">Lake Natron</a><a href="lake-eyasi.html">Lake Eyasi</a><a href="kenya-safaris.html">Kenya Safaris</a></div></div>
-            <div class="dropdown relative"><a href="#" class="text-gray-700 hover:text-green-700 font-medium">Trekking <i class="fas fa-chevron-down text-xs"></i></a><div class="dropdown-menu"><a href="kilimanjaro-routes.html">Kilimanjaro Routes</a><a href="kili-day-trip.html">Kili Day Trip</a><a href="mount-kenya-trekking-4-days.html">Mount Kenya Trekking</a><a href="mount-meru-treks.html">Mount Meru Treks</a><a href="mount-lolmalasin.html">Mount Lolmalasin</a><a href="mount-hanang.html">Mount Hanang</a><a href="mount-oldonyo-lengai.html">Mount Oldonyo Lengai</a><a href="food-menu.html">Food Menu</a><a href="careful-acclimatisation.html">Careful Acclimatisation</a><a href="health-info.html">Health Information</a><a href="what-to-pack.html">What to Pack</a></div></div>
-            <div class="dropdown relative"><a href="#" class="text-gray-700 hover:text-green-700 font-medium">Activities <i class="fas fa-chevron-down text-xs"></i></a><div class="dropdown-menu"><a href="beach-holidays.html">Beach Holidays</a><a href="maasai-visit.html">Maasai Visit</a><a href="serval-wildlife.html">Serval Wildlife</a><a href="tour-in-mto-wa-mbu.html">Mto Wa Mbu Tour</a><a href="cycling-tour.html">Cycling Tour</a><a href="moshi-tour.html">Moshi Tour</a></div></div>
-            <a href="tour-faq.html" class="text-gray-700 hover:text-green-700 font-medium">Tour FAQ</a>
-            <a href="booking-policy.html" class="text-gray-700 hover:text-green-700 font-medium">Booking Policy</a>
-            <a href="contact.html" class="btn-primary text-sm py-2 px-5">Contact Us</a>
-        </div>
-        <button class="lg:hidden text-gray-700" onclick="toggleMobileMenu()"><i class="fas fa-bars text-2xl"></i></button>
-    </div>
-    <div id="mobileMenu" class="hidden lg:hidden bg-white border-t px-4 py-3 space-y-2 max-h-[92vh] overflow-y-auto">
-        <div class="font-bold text-green-800 pt-2">About Us</div><div class="pl-4"><a href="index.html" class="block py-1 text-sm text-gray-600">Home</a><a href="who-are-we.html" class="block py-1 text-sm text-gray-600">Who Are We</a></div>
-        <div class="font-bold text-green-800 pt-3">Day Trips</div><div class="pl-4"><a href="day-trips.html" class="block py-1 text-sm text-gray-600">All Day Trips</a></div>
-        <div class="font-bold text-green-800 pt-3">Safaris</div><div class="pl-4"><a href="3-days-family-safari.html" class="block py-1 text-sm text-gray-600">3 Days Family Safari</a><a href="4-days-classic-safari.html" class="block py-1 text-sm text-gray-600">4 Days Classic Safari</a><a href="5-days-safari-footprints.html" class="block py-1 text-sm text-gray-600">5 Days Safari Footprints</a><a href="6-days-safari-experience.html" class="block py-1 text-sm text-gray-600">6 Days Safari Experience</a><a href="7-days-cultural-safari.html" class="block py-1 text-sm text-gray-600">7 Days Cultural Safari</a><a href="8-days-ngorongoro-highlands-treks.html" class="block py-1 text-sm text-gray-600">8 Days Ngorongoro Highlands Treks</a><a href="9-days-mara-river-crossing.html" class="block py-1 text-sm text-gray-600">9 Days Mara River Crossing</a><a href="8-days-honeymoon-safaris.html" class="block py-1 text-sm text-gray-600">8 Days Honeymoon Safaris</a><a href="western-safari-tanzania.html" class="block py-1 text-sm text-gray-600">Western Safari Tanzania</a><a href="southern-safari-tanzania.html" class="block py-1 text-sm text-gray-600">Southern Safari Tanzania</a><a href="4-days-tanzania-safari-isbania.html" class="block py-1 text-sm text-gray-600">4 Days Safari from Isbania</a><a href="balloon-safari.html" class="block py-1 text-sm text-gray-600">Balloon Safari</a><a href="olduvai-gorge.html" class="block py-1 text-sm text-gray-600">Olduvai Gorge</a><a href="lake-natron.html" class="block py-1 text-sm text-gray-600">Lake Natron</a><a href="lake-eyasi.html" class="block py-1 text-sm text-gray-600">Lake Eyasi</a><a href="kenya-safaris.html" class="block py-1 text-sm text-gray-600">Kenya Safaris</a></div>
-        <div class="font-bold text-green-800 pt-3">Trekking</div><div class="pl-4"><a href="kilimanjaro-routes.html" class="block py-1 text-sm text-gray-600">Kilimanjaro Routes</a><a href="kili-day-trip.html" class="block py-1 text-sm text-gray-600">Kili Day Trip</a><a href="mount-kenya-trekking-4-days.html" class="block py-1 text-sm text-gray-600">Mount Kenya Trekking</a><a href="mount-meru-treks.html" class="block py-1 text-sm text-gray-600">Mount Meru Treks</a><a href="mount-lolmalasin.html" class="block py-1 text-sm text-gray-600">Mount Lolmalasin</a><a href="mount-hanang.html" class="block py-1 text-sm text-gray-600">Mount Hanang</a><a href="mount-oldonyo-lengai.html" class="block py-1 text-sm text-gray-600">Mount Oldonyo Lengai</a><a href="food-menu.html" class="block py-1 text-sm text-gray-600">Food Menu</a><a href="careful-acclimatisation.html" class="block py-1 text-sm text-gray-600">Careful Acclimatisation</a><a href="health-info.html" class="block py-1 text-sm text-gray-600">Health Information</a><a href="what-to-pack.html" class="block py-1 text-sm text-gray-600">What to Pack</a></div>
-        <div class="font-bold text-green-800 pt-3">Activities</div><div class="pl-4"><a href="beach-holidays.html" class="block py-1 text-sm text-gray-600">Beach Holidays</a><a href="maasai-visit.html" class="block py-1 text-sm text-gray-600">Maasai Visit</a><a href="serval-wildlife.html" class="block py-1 text-sm text-gray-600">Serval Wildlife</a><a href="tour-in-mto-wa-mbu.html" class="block py-1 text-sm text-gray-600">Mto Wa Mbu Tour</a><a href="cycling-tour.html" class="block py-1 text-sm text-gray-600">Cycling Tour</a><a href="moshi-tour.html" class="block py-1 text-sm text-gray-600">Moshi Tour</a></div>
-        <div class="font-bold text-green-800 pt-3">Information</div><div class="pl-4"><a href="tour-faq.html" class="block py-1 text-sm text-gray-600">Tour FAQ</a><a href="booking-policy.html" class="block py-1 text-sm text-gray-600">Booking Policy</a></div>
-        <div class="pt-4 border-t mt-4"><a href="contact.html" class="block py-3 px-4 text-center bg-green-700 text-white font-semibold rounded-xl">Contact Us</a></div>
-    </div>
-</nav>
-
-<!-- Hero Section -->
-<section class="hero-section pt-32 pb-20">
-    <div class="container mx-auto px-4 text-center text-white">
-        <div class="max-w-3xl mx-auto">
-            <i class="fas fa-mountain text-4xl text-orange-400 mb-4"></i>
-            <h1 class="text-5xl md:text-7xl font-bold mb-4 heading-font">KILI TREKS</h1>
-            <div class="w-24 h-1 bg-orange-400 mx-auto mb-6"></div>
-            <p class="text-xl opacity-95">Mount Kilimanjaro Trekking Routes & Prices</p>
-        </div>
-    </div>
-</section>
-
-<!-- Main Content -->
-<section class="py-16 bg-slate-50">
-    <div class="container mx-auto px-4">
-        <div class="max-w-6xl mx-auto">
-
-            <!-- IMAGE 1: Hero section ke baad -->
-            <img src="./images/80.jpeg" alt="Mount Kilimanjaro" class="section-img w-full h-80 object-cover mb-10 shadow-lg">
-
-            <!-- Intro -->
-            <div class="bg-white rounded-2xl p-8 mb-10 shadow-sm text-center">
-                <p class="text-gray-700 text-lg">Climbing Mount Kilimanjaro (5,895m) is a once-in-a-lifetime adventure. There are 7 main trekking routes, each offering a different experience in terms of scenery, difficulty, success rate, and comfort. Choosing the right route is key to a successful summit.</p>
-            </div>
-
-            <!-- IMAGE 2: Routes Overview ke baad -->
-            <img src="./images/33.jpeg" alt="Kilimanjaro Trekking" class="section-img w-full h-64 object-cover mb-8 shadow-lg">
-
-            <!-- Routes Overview -->
-            <div class="mb-10">
-                <h2 class="text-2xl font-bold text-gray-800 mb-4 heading-font"><i class="fas fa-route text-orange-600 mr-2"></i> Kilimanjaro Routes Overview</h2>
-                <div class="bg-white rounded-xl p-5 shadow-sm">
-                    <p class="text-gray-700">There are 7 official routes: <strong>Lemosho, Machame, Marangu, Rongai, Umbwe, Shira, and Northern Circuit</strong></p>
-                </div>
-            </div>
-
-            <!-- Route Cards Grid (7 Routes) -->
-            <div class="grid md:grid-cols-2 gap-6 mb-12">
-                <!-- 1. Lemosho Route -->
-                <div class="route-card p-6"><div class="flex justify-between items-start mb-3"><h3 class="text-xl font-bold text-gray-800">1. Lemosho Route</h3><span class="price-tag">$2,200 - $3,200</span></div><div class="flex flex-wrap gap-2 mb-3"><span class="difficulty-moderate">Moderate</span><span class="success-high">Success: 90%+</span><span class="bg-gray-100 px-3 py-1 rounded-full text-xs"><i class="fas fa-campground mr-1"></i> Camping</span><span class="bg-gray-100 px-3 py-1 rounded-full text-xs"><i class="far fa-clock mr-1"></i> 7-9 days</span></div><p class="text-gray-600 text-sm mb-3"><i class="fas fa-star text-orange-500 mr-1"></i> <strong>Best Overall</strong> - Most scenic route, excellent acclimatization</p><p class="text-gray-600 text-sm"><i class="fas fa-eye text-green-600 mr-1"></i> Highlights: Rainforest, Shira Plateau, panoramic views</p><p class="text-gray-600 text-sm mt-2"><i class="fas fa-user-check text-blue-600 mr-1"></i> Best for: First-time climbers</p></div>
-
-                <!-- 2. Machame Route (WITH IMAGE) -->
-                <div class="route-card p-6">
-                 
-                    <div class="flex justify-between items-start mb-3">
-                        <h3 class="text-xl font-bold text-gray-800">2. Machame Route</h3>
-                        <span class="price-tag">$1,800 - $2,800</span>
-                    </div>
-                    <div class="flex flex-wrap gap-2 mb-3">
-                        <span class="difficulty-moderate">Moderate-Challenging</span>
-                        <span class="success-high">Success: 80-85%</span>
-                        <span class="bg-gray-100 px-3 py-1 rounded-full text-xs"><i class="fas fa-campground mr-1"></i> Camping</span>
-                        <span class="bg-gray-100 px-3 py-1 rounded-full text-xs"><i class="far fa-clock mr-1"></i> 6-7 days</span>
-                    </div>
-                    <p class="text-gray-600 text-sm mb-3"><i class="fas fa-fire text-orange-500 mr-1"></i> <strong>Most Popular</strong> - Very scenic, good acclimatization</p>
-                    <p class="text-gray-600 text-sm"><i class="fas fa-eye text-green-600 mr-1"></i> Highlights: "Climb high, sleep low"</p>
-                    <p class="text-gray-600 text-sm mt-2"><i class="fas fa-user-check text-blue-600 mr-1"></i> Best for: Adventurous trekkers</p>
-                </div>
-
-                <!-- 3. Marangu Route -->
-                <div class="route-card p-6"><div class="flex justify-between items-start mb-3"><h3 class="text-xl font-bold text-gray-800">3. Marangu Route</h3><span class="price-tag">$1,400 - $2,000</span></div><div class="flex flex-wrap gap-2 mb-3"><span class="difficulty-moderate">Moderate</span><span class="success-medium">Success: 65-75%</span><span class="bg-gray-100 px-3 py-1 rounded-full text-xs"><i class="fas fa-home mr-1"></i> Huts</span><span class="bg-gray-100 px-3 py-1 rounded-full text-xs"><i class="far fa-clock mr-1"></i> 5-6 days</span></div><p class="text-gray-600 text-sm mb-3"><i class="fas fa-coffee text-orange-500 mr-1"></i> <strong>Comfort Route</strong> - Budget-friendly, hut accommodation</p><p class="text-gray-600 text-sm mt-2"><i class="fas fa-user-check text-blue-600 mr-1"></i> Best for: Budget travelers & beginners</p></div>
-
-                <!-- 4. Rongai Route -->
-                <div class="route-card p-6"><div class="flex justify-between items-start mb-3"><h3 class="text-xl font-bold text-gray-800">4. Rongai Route</h3><span class="price-tag">$1,900 - $2,700</span></div><div class="flex flex-wrap gap-2 mb-3"><span class="difficulty-moderate">Moderate</span><span class="success-high">Success: 80-85%</span><span class="bg-gray-100 px-3 py-1 rounded-full text-xs"><i class="fas fa-campground mr-1"></i> Camping</span><span class="bg-gray-100 px-3 py-1 rounded-full text-xs"><i class="far fa-clock mr-1"></i> 6-7 days</span></div><p class="text-gray-600 text-sm mb-3"><i class="fas fa-volume-mute text-orange-500 mr-1"></i> <strong>Quiet Route</strong> - Only route from north, less crowded</p><p class="text-gray-600 text-sm mt-2"><i class="fas fa-user-check text-blue-600 mr-1"></i> Best for: Those seeking a quiet experience</p></div>
-
-                <!-- 5. Northern Circuit -->
-                <div class="route-card p-6"><div class="flex justify-between items-start mb-3"><h3 class="text-xl font-bold text-gray-800">5. Northern Circuit</h3><span class="price-tag">$2,800 - $3,800</span></div><div class="flex flex-wrap gap-2 mb-3"><span class="difficulty-moderate">Moderate</span><span class="success-high">Success: 90%+</span><span class="bg-gray-100 px-3 py-1 rounded-full text-xs"><i class="fas fa-campground mr-1"></i> Camping</span><span class="bg-gray-100 px-3 py-1 rounded-full text-xs"><i class="far fa-clock mr-1"></i> 8-10 days</span></div><p class="text-gray-600 text-sm mb-3"><i class="fas fa-trophy text-orange-500 mr-1"></i> <strong>Best Success Rate</strong> - Longest route, best acclimatization</p><p class="text-gray-600 text-sm mt-2"><i class="fas fa-user-check text-blue-600 mr-1"></i> Best for: High success & premium experience</p></div>
-
-                <!-- 6. Umbwe Route -->
-                <div class="route-card p-6"><div class="flex justify-between items-start mb-3"><h3 class="text-xl font-bold text-gray-800">6. Umbwe Route</h3><span class="price-tag">$1,700 - $2,500</span></div><div class="flex flex-wrap gap-2 mb-3"><span class="difficulty-hard">Very Difficult</span><span class="success-low">Success: ~60%</span><span class="bg-gray-100 px-3 py-1 rounded-full text-xs"><i class="fas fa-campground mr-1"></i> Camping</span><span class="bg-gray-100 px-3 py-1 rounded-full text-xs"><i class="far fa-clock mr-1"></i> 5-6 days</span></div><p class="text-gray-600 text-sm mb-3"><i class="fas fa-bolt text-orange-500 mr-1"></i> <strong>Most Challenging</strong> - Fast, steep, scenic</p><p class="text-gray-600 text-sm mt-2"><i class="fas fa-user-check text-blue-600 mr-1"></i> Best for: Experienced climbers only</p></div>
-
-                <!-- 7. Shira Route -->
-                <div class="route-card p-6"><div class="flex justify-between items-start mb-3"><h3 class="text-xl font-bold text-gray-800">7. Shira Route</h3><span class="price-tag">$2,000 - $2,800</span></div><div class="flex flex-wrap gap-2 mb-3"><span class="difficulty-moderate">Moderate</span><span class="success-high">Success: ~85%</span><span class="bg-gray-100 px-3 py-1 rounded-full text-xs"><i class="fas fa-campground mr-1"></i> Camping</span><span class="bg-gray-100 px-3 py-1 rounded-full text-xs"><i class="far fa-clock mr-1"></i> 6-7 days</span></div><p class="text-gray-600 text-sm mb-3">Similar to Lemosho - Starts at higher altitude</p><p class="text-gray-600 text-sm"><i class="fas fa-exclamation-triangle text-yellow-600 mr-1"></i> Not ideal for beginners due to altitude start</p></div>
-            </div>
-
-            <!-- IMAGE 3: Included + Not Included ke baad -->
-            <img src="./images/71.jpeg" alt="Kilimanjaro Summit" class="section-img w-full h-64 object-cover mb-8 shadow-lg">
-
-            <!-- Included + Not Included -->
-            <div class="grid md:grid-cols-2 gap-8 mb-12">
-                <div class="bg-green-50 rounded-2xl p-6"><h3 class="text-xl font-bold text-green-800 mb-4"><i class="fas fa-check-circle mr-2"></i> What's Included</h3><ul class="space-y-2"><li><i class="fas fa-check text-green-600 mr-2"></i> Park fees</li><li><i class="fas fa-check text-green-600 mr-2"></i> Professional guides & porters</li><li><i class="fas fa-check text-green-600 mr-2"></i> Camping equipment or huts</li><li><i class="fas fa-check text-green-600 mr-2"></i> Meals on the mountain</li><li><i class="fas fa-check text-green-600 mr-2"></i> Rescue fees</li><li><i class="fas fa-check text-green-600 mr-2"></i> Transfers</li></ul></div>
-                <div class="bg-red-50 rounded-2xl p-6"><h3 class="text-xl font-bold text-red-700 mb-4"><i class="fas fa-times-circle mr-2"></i> Not Included</h3><ul class="space-y-2"><li><i class="fas fa-times text-red-500 mr-2"></i> Flights</li><li><i class="fas fa-times text-red-500 mr-2"></i> Visa & insurance</li><li><i class="fas fa-times text-red-500 mr-2"></i> Tips for crew</li><li><i class="fas fa-times text-red-500 mr-2"></i> Personal gear</li></ul></div>
-            </div>
-
-            <!-- Final Advice -->
-            <div class="bg-gray-800 rounded-2xl p-8 mb-12 text-white">
-                <h3 class="text-2xl font-bold mb-5 heading-font"><i class="fas fa-medal text-orange-400 mr-2"></i> Final Advice</h3>
-                <div class="grid md:grid-cols-4 gap-4 text-center">
-                    <div class="bg-gray-700 rounded-xl p-4"><i class="fas fa-crown text-2xl text-orange-400 mb-2"></i><p class="font-bold">Best Success</p><p class="text-sm">Lemosho or Northern Circuit</p></div>
-                    <div class="bg-gray-700 rounded-xl p-4"><i class="fas fa-wallet text-2xl text-green-400 mb-2"></i><p class="font-bold">Best Budget</p><p class="text-sm">Marangu</p></div>
-                    <div class="bg-gray-700 rounded-xl p-4"><i class="fas fa-hiking text-2xl text-orange-400 mb-2"></i><p class="font-bold">Best Adventure</p><p class="text-sm">Machame</p></div>
-                    <div class="bg-gray-700 rounded-xl p-4"><i class="fas fa-leaf text-2xl text-green-400 mb-2"></i><p class="font-bold">Best Quiet Route</p><p class="text-sm">Rongai</p></div>
-                </div>
-            </div>
-
-<!-- Map Images - 2 Maps Side by Side -->
-<div class="grid md:grid-cols-2 gap-6 mb-10">
-    <div class="rounded-2xl overflow-hidden shadow-xl">
-        <img src="./images/119.jpeg" alt="Kilimanjaro Route Map" class="w-full h-80 object-cover hover:scale-105 transition duration-300">
-   
-    </div>
-    <div class="rounded-2xl overflow-hidden shadow-xl">
-        <img src="./images/120.jpeg" alt="Tanzania Safari Map" class="w-full h-80 object-cover hover:scale-105 transition duration-300">
-      
+        
+        <!-- WhatsApp -->
+        <a href="https://wa.me/255789178090" target="_blank" class="text-gray-400 hover:text-white text-2xl transition">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        
+        <!-- LinkedIn -->
+        <a href="https://www.linkedin.com/in/wilderness-footprints-tanzania-04633082" target="_blank" class="text-gray-400 hover:text-white text-2xl transition">
+            <i class="fab fa-linkedin"></i>
+        </a>
+        
+        <!-- TikTok -->
+        <a href="https://vm.tiktok.com/ZS92vqX1esH6L-DVzme/" target="_blank" class="text-gray-400 hover:text-white text-2xl transition">
+            <i class="fab fa-tiktok"></i>
+        </a>
+        
     </div>
 </div>
-            <!-- IMAGE 4: Umbwe & Rongai section ke upar -->
-            <img src="./images/82.jpeg" alt="Umbwe Rongai Route" class="section-img w-full h-64 object-cover mb-6 shadow-lg">
-
-            <!-- ========== UMBWE & RONGAI ROUTE CIRCUIT SECTION ========== -->
-            <div class="mb-16">
-                <div class="text-center mb-8">
-                    <h2 class="text-3xl font-bold text-gray-800 heading-font">Umbwe & Rongai Route Circuit</h2>
-                    <div class="w-20 h-0.5 bg-orange-500 mx-auto my-3"></div>
-                    <p class="text-gray-600">Mount Kilimanjaro Trekking</p>
-                </div>
-
-                <div class="route-card p-6 mb-6">
-                    <div class="flex flex-wrap justify-between items-center mb-4">
-                        <h3 class="text-2xl font-bold text-gray-800">Umbwe & Rongai Route Circuit</h3>
-                        <span class="price-tag">$2,350</span>
-                    </div>
-                    <p class="text-gray-600 mb-4">Experience the ultimate Mount Kilimanjaro adventure by combining two of the mountain's most iconic routes — the challenging Umbwe Route and the scenic Rongai Route Circuit. This unforgettable trekking experience offers dramatic landscapes, remote wilderness, excellent acclimatization, and breathtaking summit views from Africa's highest peak. Starting through the steep and adventurous Umbwe Route, trekkers pass dense rainforest, giant heathers, alpine desert, and glacier landscapes before reaching Uhuru Peak at 5,895 meters. The journey continues through the peaceful northern side of Kilimanjaro via the Rongai Route Circuit, known for its quieter trails and stunning panoramic scenery.</p>
-                    <p class="text-gray-600">This route combination is perfect for adventurous climbers seeking a unique Kilimanjaro trekking experience with diverse landscapes, fewer crowds, and rewarding summit success.</p>
-                </div>
-
-                <div class="route-card p-6 mb-6">
-                    <h3 class="text-xl font-bold text-gray-800 mb-4"><i class="fas fa-star text-orange-500 mr-2"></i> Tour Highlights</h3>
-                    <div class="grid md:grid-cols-2 gap-2">
-                        <div><i class="fas fa-check-circle text-green-600 mr-2"></i> Trek Africa's highest mountain – Mount Kilimanjaro</div>
-                        <div><i class="fas fa-check-circle text-green-600 mr-2"></i> Conquer Uhuru Peak (5,895m)</div>
-                        <div><i class="fas fa-check-circle text-green-600 mr-2"></i> Experience both Umbwe and Rongai routes</div>
-                        <div><i class="fas fa-check-circle text-green-600 mr-2"></i> Explore rainforest, moorland, alpine desert, and glaciers</div>
-                        <div><i class="fas fa-check-circle text-green-600 mr-2"></i> Incredible sunrise views from the summit</div>
-                        <div><i class="fas fa-check-circle text-green-600 mr-2"></i> Professional mountain guides and support crew</div>
-                        <div><i class="fas fa-check-circle text-green-600 mr-2"></i> Excellent acclimatization profile</div>
-                        <div><i class="fas fa-check-circle text-green-600 mr-2"></i> Scenic northern circuit landscapes</div>
-                    </div>
-                </div>
-
-                <div class="grid md:grid-cols-2 gap-6 mb-6">
-                    <div class="route-card p-6"><h3 class="text-xl font-bold text-green-800 mb-4"><i class="fas fa-check-circle mr-2"></i> Price Includes</h3><ul class="space-y-2 text-gray-600 text-sm"><li><i class="fas fa-check text-green-600 mr-2"></i> Kilimanjaro National Park fees</li><li><i class="fas fa-check text-green-600 mr-2"></i> Professional English-speaking mountain guides</li><li><i class="fas fa-check text-green-600 mr-2"></i> Porters and cook services</li><li><i class="fas fa-check text-green-600 mr-2"></i> Mountain tents and camping equipment</li><li><i class="fas fa-check text-green-600 mr-2"></i> All meals during the trek</li><li><i class="fas fa-check text-green-600 mr-2"></i> Drinking water on the mountain</li><li><i class="fas fa-check text-green-600 mr-2"></i> Airport transfers</li><li><i class="fas fa-check text-green-600 mr-2"></i> Rescue fees</li><li><i class="fas fa-check text-green-600 mr-2"></i> Government taxes</li></ul></div>
-                    <div class="route-card p-6"><h3 class="text-xl font-bold text-red-700 mb-4"><i class="fas fa-times-circle mr-2"></i> Price Excludes</h3><ul class="space-y-2 text-gray-600 text-sm"><li><i class="fas fa-times text-red-500 mr-2"></i> International flights</li><li><i class="fas fa-times text-red-500 mr-2"></i> Tanzania visa</li><li><i class="fas fa-times text-red-500 mr-2"></i> Personal trekking gear</li><li><i class="fas fa-times text-red-500 mr-2"></i> Travel insurance</li><li><i class="fas fa-times text-red-500 mr-2"></i> Tips for guides and porters</li><li><i class="fas fa-times text-red-500 mr-2"></i> Personal expenses</li></ul></div>
-                </div>
-
-                <div class="grid md:grid-cols-2 gap-6 mb-8">
-                    <div class="bg-orange-50 rounded-2xl p-5"><h3 class="font-bold text-orange-800 mb-2"><i class="fas fa-calendar-alt mr-2"></i> Best Time to Trek</h3><p class="text-gray-600 text-sm">The best months for this Kilimanjaro trekking adventure are: January to March, June to October, and December holidays.</p></div>
-                    <div class="bg-green-50 rounded-2xl p-5"><h3 class="font-bold text-green-800 mb-2"><i class="fas fa-medal mr-2"></i> Why Book With Us</h3><p class="text-gray-600 text-sm">Experienced local mountain experts • Safe and reliable trekking services • Affordable trekking packages • Professional customer support • Customized Tanzania adventures</p></div>
-                </div>
             </div>
-
-            <!-- IMAGE 5: Western Bridge section ke upar -->
-           
-
-            <!-- ========== KILIMANJARO WESTERN BRIDGE SECTION ========== -->
-            <div>
-                <div class="text-center mb-8">
-                    <h2 class="text-3xl font-bold text-gray-800 heading-font">Kilimanjaro Western Bridge</h2>
-                    <div class="w-20 h-0.5 bg-orange-500 mx-auto my-3"></div>
-                    <p class="text-gray-600">9-Days Lemosho Western-Breach Route • Favourite Route</p>
-                </div>
-
-                <div class="bg-white rounded-2xl p-6 mb-8 shadow-sm">
-                    <h2 class="text-xl font-bold text-gray-800 mb-3"><i class="fas fa-info-circle text-orange-600 mr-2"></i> Package Information</h2>
-                    <p class="text-gray-600">Both our Standard and All-Inclusive Packages include: <strong>2 Nights Hotel prior to the climb + 1 Night at Hotel post climb</strong>. Total trip takes <strong>12 days</strong> (not including flights).</p>
-                </div>
-
-                <div class="day-card p-6 mb-4"><div class="flex flex-wrap gap-4 items-start"><div class="day-number">1</div><div class="flex-1"><div class="flex flex-wrap justify-between items-center mb-2"><h3 class="text-lg font-bold text-gray-800">DAY 1: RAINFOREST ZONE</h3><span class="elevation-badge">2,100m → 2,821m</span></div><p class="text-gray-600">Pick up from hotel. Drive to Lemosho Entrance Gate (3hrs). Trek through lush rainforest. You may see Colobus Monkeys. Trek: 2-3 hrs.</p></div></div></div>
-                <div class="day-card p-6 mb-4"><div class="flex flex-wrap gap-4 items-start"><div class="day-number">2</div><div class="flex-1"><div class="flex flex-wrap justify-between items-center mb-2"><h3 class="text-lg font-bold text-gray-800">DAY 2: HEATHER / MOORLAND ZONE</h3><span class="elevation-badge">2,821m → 3,444m</span></div><p class="text-gray-600">Climb to Shira 1 Camp. Trek: 5-7 hrs.</p></div></div></div>
-                <div class="day-card p-6 mb-4"><div class="flex flex-wrap gap-4 items-start"><div class="day-number">3</div><div class="flex-1"><div class="flex flex-wrap justify-between items-center mb-2"><h3 class="text-lg font-bold text-gray-800">DAY 3: HEATHER / MOORLAND ZONE</h3><span class="elevation-badge">3,444m → 4,200m</span></div><p class="text-gray-600">Climb to Moir Camp. Trek: 5-7 hrs.</p></div></div></div>
-                <div class="day-card p-6 mb-4"><div class="flex flex-wrap gap-4 items-start"><div class="day-number">4</div><div class="flex-1"><div class="flex flex-wrap justify-between items-center mb-2"><h3 class="text-lg font-bold text-gray-800">DAY 4: LAVA TOWER</h3><span class="elevation-badge">4,200m → 4,600m</span></div><p class="text-gray-600">Climb to Lava Tower Camp. Optional: climb Lava Tower. Trek: 3 hrs.</p></div></div></div>
-                <div class="day-card p-6 mb-4"><div class="flex flex-wrap gap-4 items-start"><div class="day-number">5</div><div class="flex-1"><div class="flex flex-wrap justify-between items-center mb-2"><h3 class="text-lg font-bold text-gray-800">DAY 5: ACCLIMATIZATION HIKE</h3><span class="elevation-badge">4,600m → 4,900m</span></div><p class="text-gray-600">Acclimatization hike to Arrow Glacier Camp (2-3 hrs).</p></div></div></div>
-                <div class="day-card p-6 mb-4"><div class="flex flex-wrap gap-4 items-start"><div class="day-number">6</div><div class="flex-1"><div class="flex flex-wrap justify-between items-center mb-2"><h3 class="text-lg font-bold text-gray-800">DAY 6: ARROW GLACIER CAMP</h3><span class="elevation-badge">4,600m → 4,900m</span></div><p class="text-gray-600">Climb to Arrow Glacier Camp. Trek: 1-1.5 hrs.</p></div></div></div>
-                <div class="day-card p-6 mb-4"><div class="flex flex-wrap gap-4 items-start"><div class="day-number">7</div><div class="flex-1"><div class="flex flex-wrap justify-between items-center mb-2"><h3 class="text-lg font-bold text-gray-800">DAY 7: WESTERN BREACH</h3><span class="elevation-badge">4,900m → 5,730m</span></div><p class="text-gray-600">Cross Western-Breach to Crater Camp. Trek: 5-7 hrs.</p><div class="mt-3 p-3 bg-orange-50 rounded-lg"><p class="font-semibold text-orange-800"><i class="fas fa-code-branch mr-1"></i> Two Options Available</p></div></div></div></div>
-                <div class="grid md:grid-cols-2 gap-5 mb-5"><div class="option-box p-5"><h4 class="font-bold text-orange-800"><i class="fas fa-sun mr-2"></i> Option #1 - Summit Day 7</h4><p class="text-sm">Summit in mid-afternoon with very few climbers.</p></div><div class="option-box p-5"><h4 class="font-bold text-orange-800"><i class="fas fa-sunrise mr-2"></i> Option #2 - Summit Day 8</h4><p class="text-sm">Traditional sunrise summit experience.</p></div></div>
-                <div class="day-card p-6 mb-4"><div class="flex flex-wrap gap-4 items-start"><div class="day-number">8</div><div class="flex-1"><h3 class="text-lg font-bold text-gray-800 mb-2">DAY 8: SUMMIT DAY</h3><p class="text-gray-600"><strong>Option #1:</strong> Descend to Mweka Camp.<br><strong>Option #2:</strong> Ascent to Uhuru Peak, then descend to Mweka Camp.</p></div></div></div>
-                <div class="day-card p-6 mb-8"><div class="flex flex-wrap gap-4 items-start"><div class="day-number">9</div><div class="flex-1"><h3 class="text-lg font-bold text-gray-800 mb-2">DAY 9: MWEKA GATE & OFFICIAL CERTIFICATE</h3><p class="text-gray-600">Descend to Mweka Gate, receive Official Kilimanjaro Certificate. Drive back to Arusha.</p></div></div></div>
-
-                <div class="price-box p-6 mb-8 text-center">
-                    <h3 class="text-2xl font-bold text-gray-800 mb-2"><i class="fas fa-tag mr-2"></i> PRICE PER PERSON</h3>
-                    <p class="text-3xl font-bold text-orange-700">FROM $3,500</p>
-                </div>
+            <div class="border-t border-gray-800 mt-8 pt-6 text-center text-sm">
+                <p>&copy; 2026 Wilderness Footprints Tanzania. All rights reserved.</p>
             </div>
-
-            <!-- IMAGE 6: Request button ke baad, footer se pehle (Gallery) -->
-            <div class="mt-12 mb-10">
-                <h3 class="text-2xl font-bold text-center text-gray-800 mb-6 heading-font">Kilimanjaro Gallery</h3>
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
-                    <img src="./images/51.jpeg" alt="Gallery" class="rounded-xl shadow-md h-40 w-full object-cover hover:scale-105 transition">
-                    <img src="./images/56.jpeg" alt="Gallery" class="rounded-xl shadow-md h-40 w-full object-cover hover:scale-105 transition">
-                    <img src="./images/61.jpeg" alt="Gallery" class="rounded-xl shadow-md h-40 w-full object-cover hover:scale-105 transition">
-                    <img src="./images/59.jpeg" alt="Gallery" class="rounded-xl shadow-md h-40 w-full object-cover hover:scale-105 transition">
-                </div>
-            </div>
-
-            <!-- Request Button -->
-            <div class="text-center">
-                <a href="contact.html" class="btn-primary text-lg px-10 py-4">Request Your Custom Itinerary</a>
-            </div>
-
         </div>
-    </div>
-</section>
+    </footer>
 
-<!-- Footer -->
-<footer class="bg-gray-900 text-gray-300 py-10">
-    <div class="container mx-auto px-4">
-        <div class="grid md:grid-cols-3 gap-8">
-            <div><h3 class="text-white text-xl font-bold mb-4">Wilderness Footprints</h3><p class="text-sm">Tanzania Trekking & Safaris. Step into the heart of the wilderness with us.</p></div>
-            <div><h3 class="text-white text-xl font-bold mb-4">Contact</h3><p class="text-sm"><i class="fas fa-map-marker-alt mr-2"></i> Boma Road, Near New Safari Hotel, Arusha, Tanzania</p><p class="text-sm mt-2"><i class="fab fa-whatsapp mr-2"></i> +255789178090 (WhatsApp)</p><p class="text-sm mt-2"><i class="fas fa-envelope mr-2"></i> wildernessfootprints@gmail.com</p></div>
-            <div><h3 class="text-white text-xl font-bold mb-4">Follow Us</h3><div class="flex space-x-4"><a href="#" class="text-gray-400 hover:text-white text-2xl"><i class="fab fa-facebook"></i></a><a href="#" class="text-gray-400 hover:text-white text-2xl"><i class="fab fa-whatsapp"></i></a></div><div class="mt-4 text-sm">Select Language: <span class="text-green-400">Google Translate</span></div></div>
-        </div>
-        <div class="border-t border-gray-800 mt-8 pt-6 text-center text-sm"><p>&copy; 2024 Wilderness Footprints Tanzania. All rights reserved.</p></div>
-    </div>
-</footer>
-
-<script>
-    function toggleMobileMenu() { document.getElementById('mobileMenu').classList.toggle('hidden'); }
-</script>
+    <script>
+        function toggleMobileMenu() { document.getElementById('mobileMenu').classList.toggle('hidden'); }
+    </script>
 </body>
+
 </html>

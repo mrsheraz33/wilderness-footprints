@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,43 +9,83 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
-        * { font-family: 'Poppins', sans-serif; }
-        .dropdown:hover .dropdown-menu { display: block; }
+
+        * {
+            font-family: 'Poppins', sans-serif;
+        }
+
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
+
         .dropdown-menu {
-            display: none; position: absolute; top: 100%; left: 0;
-            background: white; min-width: 220px; box-shadow: 0 10px 25px rgba(0,0,0,0.1);
-            z-index: 1000; border-radius: 8px; padding: 8px 0;
-            max-height: 70vh; overflow-y: auto;
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: white;
+            min-width: 220px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+            z-index: 1000;
+            border-radius: 8px;
+            padding: 8px 0;
+            max-height: 70vh;
+            overflow-y: auto;
         }
+
         .dropdown-menu a {
-            display: block; padding: 10px 20px; color: #1e3a2e;
-            text-decoration: none; font-size: 14px; transition: all 0.3s;
+            display: block;
+            padding: 10px 20px;
+            color: #1e3a2e;
+            text-decoration: none;
+            font-size: 14px;
+            transition: all 0.3s;
         }
-        .dropdown-menu a:hover { background: #e8f0e8; color: #0f2b1f; }
+
+        .dropdown-menu a:hover {
+            background: #e8f0e8;
+            color: #0f2b1f;
+        }
+
         .btn-primary {
-            background: #e67e22; color: white; padding: 14px 32px;
-            border-radius: 50px; text-decoration: none; font-weight: 700;
-            transition: all 0.3s; display: inline-block;
+            background: #e67e22;
+            color: white;
+            padding: 14px 32px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            transition: all 0.3s;
+            display: inline-block;
         }
-        .btn-primary:hover { background: #d35400; transform: translateY(-3px); box-shadow: 0 10px 25px rgba(230,126,34,0.3); }
+
+        .btn-primary:hover {
+            background: #d35400;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(230, 126, 34, 0.3);
+        }
+
         .hero-section {
             background: linear-gradient(135deg, #1a3c2c 0%, #2d6a4f 50%, #38a169 100%);
         }
+
         .info-card {
             background: white;
             border-radius: 24px;
             transition: all 0.35s ease;
             border: 1px solid #e2e8f0;
         }
+
         .info-card:hover {
             transform: translateY(-4px);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.08);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.08);
             border-color: #e67e22;
         }
+
         .altitude-box {
             background: linear-gradient(135deg, #fef3c7, #fde68a);
             border-radius: 20px;
         }
+
         .vaccine-tag {
             background: #e8f0ec;
             color: #1e3a2e;
@@ -54,307 +95,413 @@
             font-weight: 600;
             display: inline-block;
         }
+
         .tip-box {
             background: #f0fdf4;
             border-left: 4px solid #10b981;
             border-radius: 12px;
         }
+
         .gallery-img {
             transition: all 0.3s ease;
             border-radius: 20px;
         }
+
         .gallery-img:hover {
             transform: scale(1.02);
-            box-shadow: 0 15px 30px rgba(0,0,0,0.15);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
         }
     </style>
 </head>
+
 <body>
 
-<!-- Navbar -->
-<nav class="bg-white shadow-md fixed w-full z-50">
-    <div class="container mx-auto px-4 py-3 flex justify-between items-center">
-        <a href="index.html" class="flex items-center space-x-2">
-            <img src="images/logo.jpeg" alt="Logo" class="h-12 w-auto" onerror="this.src='https://via.placeholder.com/50x50?text=WFT'">
-            <span class="font-bold text-base sm:text-lg md:text-xl text-green-800">Wilderness Footprints Tanzania</span>
-        </a>
+    <!-- Navbar -->
+    <nav class="bg-white shadow-md fixed w-full z-50">
+        <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+            <a href="index.html" class="flex items-center space-x-2">
+                <img src="images/logo.jpeg" alt="Logo" class="h-12 w-auto"
+                    onerror="this.src='https://via.placeholder.com/50x50?text=WFT'">
+                <span class="font-bold text-base sm:text-lg md:text-xl text-green-800">Wilderness Footprints
+                    Tanzania</span>
+            </a>
 
-        <!-- Desktop Menu -->
-        <div class="hidden lg:flex space-x-4 xl:space-x-6 items-center">
-            
-            <!-- About Us Dropdown -->
-            <div class="dropdown relative">
-                <a href="#" class="text-gray-700 hover:text-green-700 font-medium">About Us <i class="fas fa-chevron-down text-xs"></i></a>
-                <div class="dropdown-menu">
-                    <a href="index.html">Home</a>
-                    <a href="who-are-we.html">Who Are We</a>
+            <!-- Desktop Menu -->
+            <div class="hidden lg:flex space-x-4 xl:space-x-6 items-center">
+
+                <!-- About Us Dropdown -->
+                <div class="dropdown relative">
+                    <a href="#" class="text-gray-700 hover:text-green-700 font-medium">About Us <i
+                            class="fas fa-chevron-down text-xs"></i></a>
+                    <div class="dropdown-menu">
+                        <a href="index.html">Home</a>
+                        <a href="who-are-we.html">Who Are We</a>
+                    </div>
                 </div>
+
+                <!-- Day Trips Dropdown -->
+                <div class="dropdown relative">
+                    <a href="#" class="text-gray-700 hover:text-green-700 font-medium">Day Trips <i
+                            class="fas fa-chevron-down text-xs"></i></a>
+                    <div class="dropdown-menu">
+                        <a href="day-trips.html">All Day Trips</a>
+                    </div>
+                </div>
+
+                <!-- Safaris Dropdown -->
+                <div class="dropdown relative">
+                    <a href="#" class="text-gray-700 hover:text-green-700 font-medium">Safaris <i
+                            class="fas fa-chevron-down text-xs"></i></a>
+                    <div class="dropdown-menu">
+                        <a href="3-days-family-safari.html">3 Days Family Safari</a>
+                        <a href="4-days-classic-safari.html">4 Days Classic Safari</a>
+                        <a href="5-days-safari-footprints.html">5 Days Safari Footprints</a>
+                        <a href="6-days-safari-experience.html">6 Days Safari Experience</a>
+                        <a href="7-days-cultural-safari.html">7 Days Cultural Safari</a>
+                        <a href="8-days-ngorongoro-highlands-treks.html">8 Days Ngorongoro Highlands Treks</a>
+                        <a href="9-days-mara-river-crossing.html">9 Days Mara River Crossing</a>
+                        <a href="8-days-honeymoon-safaris.html">8 Days Honeymoon Safaris</a>
+                        <a href="western-safari-tanzania.html">Western Safari Tanzania</a>
+                        <a href="southern-safari-tanzania.html">Southern Safari Tanzania</a>
+                        <a href="4-days-tanzania-safari-isbania.html">4 Days Safari from Isbania</a>
+                        <a href="balloon-safari.html">Balloon Safari</a>
+                        <a href="olduvai-gorge.html">Olduvai Gorge</a>
+                        <a href="lake-natron.html">Lake Natron</a>
+                        <a href="lake-eyasi.html">Lake Eyasi</a>
+                        <a href="kenya-safaris.html">Kenya Safaris</a>
+                    </div>
+                </div>
+
+                <!-- Trekking Dropdown -->
+                <div class="dropdown relative">
+                    <a href="#" class="text-gray-700 hover:text-green-700 font-medium">Trekking <i
+                            class="fas fa-chevron-down text-xs"></i></a>
+                    <div class="dropdown-menu">
+                        <a href="kilimanjaro-routes.html">Kilimanjaro Routes</a>
+                        <a href="kili-day-trip.html">Kili Day Trip</a>
+                        <a href="mount-kenya-trekking-4-days.html">Mount Kenya Trekking</a>
+                        <a href="mount-meru-treks.html">Mount Meru Treks</a>
+                        <a href="mount-lolmalasin.html">Mount Lolmalasin</a>
+                        <a href="mount-hanang.html">Mount Hanang</a>
+                        <a href="mount-oldonyo-lengai.html">Mount Oldonyo Lengai</a>
+                        <a href="food-menu.html">Food Menu</a>
+                        <a href="careful-acclimatisation.html">Careful Acclimatisation</a>
+                        <a href="health-info.html">Health Information</a>
+                        <a href="what-to-pack.html">What to Pack</a>
+                    </div>
+                </div>
+
+                <!-- Activities Dropdown -->
+                <div class="dropdown relative">
+                    <a href="#" class="text-gray-700 hover:text-green-700 font-medium">Activities <i
+                            class="fas fa-chevron-down text-xs"></i></a>
+                    <div class="dropdown-menu">
+                        <a href="beach-holidays.html">Beach Holidays</a>
+                        <a href="maasai-visit.html">Maasai Visit</a>
+                        <a href="serval-wildlife.html">Serval Wildlife</a>
+                        <a href="tour-in-mto-wa-mbu.html">Mto Wa Mbu Tour</a>
+                        <a href="cycling-tour.html">Cycling Tour</a>
+                        <a href="moshi-tour.html">Moshi Tour</a>
+                    </div>
+                </div>
+
+                <!-- Direct Links -->
+                <a href="tour-faq.html" class="text-gray-700 hover:text-green-700 font-medium">Tour FAQ</a>
+                <a href="booking-policy.html" class="text-gray-700 hover:text-green-700 font-medium">Booking Policy</a>
+                <a href="contact.html" class="btn-primary text-sm py-2 px-5">Contact Us</a>
             </div>
 
-            <!-- Day Trips Dropdown -->
-            <div class="dropdown relative">
-                <a href="#" class="text-gray-700 hover:text-green-700 font-medium">Day Trips <i class="fas fa-chevron-down text-xs"></i></a>
-                <div class="dropdown-menu">
-                    <a href="day-trips.html">All Day Trips</a>
-                </div>
-            </div>
-
-            <!-- Safaris Dropdown -->
-            <div class="dropdown relative">
-                <a href="#" class="text-gray-700 hover:text-green-700 font-medium">Safaris <i class="fas fa-chevron-down text-xs"></i></a>
-                <div class="dropdown-menu">
-                    <a href="3-days-family-safari.html">3 Days Family Safari</a>
-                    <a href="4-days-classic-safari.html">4 Days Classic Safari</a>
-                    <a href="5-days-safari-footprints.html">5 Days Safari Footprints</a>
-                    <a href="6-days-safari-experience.html">6 Days Safari Experience</a>
-                    <a href="7-days-cultural-safari.html">7 Days Cultural Safari</a>
-                    <a href="8-days-ngorongoro-highlands-treks.html">8 Days Ngorongoro Highlands Treks</a>
-                    <a href="9-days-mara-river-crossing.html">9 Days Mara River Crossing</a>
-                    <a href="8-days-honeymoon-safaris.html">8 Days Honeymoon Safaris</a>
-                    <a href="western-safari-tanzania.html">Western Safari Tanzania</a>
-                    <a href="southern-safari-tanzania.html">Southern Safari Tanzania</a>
-                    <a href="4-days-tanzania-safari-isbania.html">4 Days Safari from Isbania</a>
-                    <a href="balloon-safari.html">Balloon Safari</a>
-                    <a href="olduvai-gorge.html">Olduvai Gorge</a>
-                    <a href="lake-natron.html">Lake Natron</a>
-                    <a href="lake-eyasi.html">Lake Eyasi</a>
-                    <a href="kenya-safaris.html">Kenya Safaris</a>
-                </div>
-            </div>
-
-            <!-- Trekking Dropdown -->
-            <div class="dropdown relative">
-                <a href="#" class="text-gray-700 hover:text-green-700 font-medium">Trekking <i class="fas fa-chevron-down text-xs"></i></a>
-                <div class="dropdown-menu">
-                    <a href="kilimanjaro-routes.html">Kilimanjaro Routes</a>
-                    <a href="kili-day-trip.html">Kili Day Trip</a>
-                    <a href="mount-kenya-trekking-4-days.html">Mount Kenya Trekking</a>
-                    <a href="mount-meru-treks.html">Mount Meru Treks</a>
-                    <a href="mount-lolmalasin.html">Mount Lolmalasin</a>
-                    <a href="mount-hanang.html">Mount Hanang</a>
-                    <a href="mount-oldonyo-lengai.html">Mount Oldonyo Lengai</a>
-                    <a href="food-menu.html">Food Menu</a>
-                    <a href="careful-acclimatisation.html">Careful Acclimatisation</a>
-                    <a href="health-info.html">Health Information</a>
-                    <a href="what-to-pack.html">What to Pack</a>
-                </div>
-            </div>
-
-            <!-- Activities Dropdown -->
-            <div class="dropdown relative">
-                <a href="#" class="text-gray-700 hover:text-green-700 font-medium">Activities <i class="fas fa-chevron-down text-xs"></i></a>
-                <div class="dropdown-menu">
-                    <a href="beach-holidays.html">Beach Holidays</a>
-                    <a href="maasai-visit.html">Maasai Visit</a>
-                    <a href="serval-wildlife.html">Serval Wildlife</a>
-                    <a href="tour-in-mto-wa-mbu.html">Mto Wa Mbu Tour</a>
-                    <a href="cycling-tour.html">Cycling Tour</a>
-                    <a href="moshi-tour.html">Moshi Tour</a>
-                </div>
-            </div>
-
-            <!-- Direct Links -->
-            <a href="tour-faq.html" class="text-gray-700 hover:text-green-700 font-medium">Tour FAQ</a>
-            <a href="booking-policy.html" class="text-gray-700 hover:text-green-700 font-medium">Booking Policy</a>
-            <a href="contact.html" class="btn-primary text-sm py-2 px-5">Contact Us</a>
+            <!-- Mobile Menu Button -->
+            <button class="lg:hidden text-gray-700" onclick="toggleMobileMenu()">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
         </div>
 
-        <!-- Mobile Menu Button -->
-        <button class="lg:hidden text-gray-700" onclick="toggleMobileMenu()">
-            <i class="fas fa-bars text-2xl"></i>
-        </button>
-    </div>
+        <!-- Mobile Menu -->
+        <div id="mobileMenu"
+            class="hidden lg:hidden bg-white border-t px-4 py-3 space-y-2 max-h-[92vh] overflow-y-auto">
 
-    <!-- Mobile Menu -->
-    <div id="mobileMenu" class="hidden lg:hidden bg-white border-t px-4 py-3 space-y-2 max-h-[92vh] overflow-y-auto">
+            <!-- About Us -->
+            <div class="font-bold text-green-800 pt-2">About Us</div>
+            <div class="pl-4 space-y-1">
+                <a href="index.html" class="block py-1 text-sm text-gray-600">Home</a>
+                <a href="who-are-we.html" class="block py-1 text-sm text-gray-600">Who Are We</a>
+            </div>
+
+            <!-- Day Trips -->
+            <div class="font-bold text-green-800 pt-3">Day Trips</div>
+            <div class="pl-4 space-y-1">
+                <a href="day-trips.html" class="block py-1 text-sm text-gray-600">All Day Trips</a>
+            </div>
+
+            <!-- Safaris -->
+            <div class="font-bold text-green-800 pt-3">Safaris</div>
+            <div class="pl-4 space-y-1">
+                <a href="3-days-family-safari.html" class="block py-1 text-sm text-gray-600">3 Days Family Safari</a>
+                <a href="4-days-classic-safari.html" class="block py-1 text-sm text-gray-600">4 Days Classic Safari</a>
+                <a href="5-days-safari-footprints.html" class="block py-1 text-sm text-gray-600">5 Days Safari
+                    Footprints</a>
+                <a href="6-days-safari-experience.html" class="block py-1 text-sm text-gray-600">6 Days Safari
+                    Experience</a>
+                <a href="7-days-cultural-safari.html" class="block py-1 text-sm text-gray-600">7 Days Cultural
+                    Safari</a>
+                <a href="8-days-ngorongoro-highlands-treks.html" class="block py-1 text-sm text-gray-600">8 Days
+                    Ngorongoro Highlands Treks</a>
+                <a href="9-days-mara-river-crossing.html" class="block py-1 text-sm text-gray-600">9 Days Mara River
+                    Crossing</a>
+                <a href="8-days-honeymoon-safaris.html" class="block py-1 text-sm text-gray-600">8 Days Honeymoon
+                    Safaris</a>
+                <a href="western-safari-tanzania.html" class="block py-1 text-sm text-gray-600">Western Safari
+                    Tanzania</a>
+                <a href="southern-safari-tanzania.html" class="block py-1 text-sm text-gray-600">Southern Safari
+                    Tanzania</a>
+                <a href="4-days-tanzania-safari-isbania.html" class="block py-1 text-sm text-gray-600">4 Days Safari
+                    from Isbania</a>
+                <a href="balloon-safari.html" class="block py-1 text-sm text-gray-600">Balloon Safari</a>
+                <a href="olduvai-gorge.html" class="block py-1 text-sm text-gray-600">Olduvai Gorge</a>
+                <a href="lake-natron.html" class="block py-1 text-sm text-gray-600">Lake Natron</a>
+                <a href="lake-eyasi.html" class="block py-1 text-sm text-gray-600">Lake Eyasi</a>
+                <a href="kenya-safaris.html" class="block py-1 text-sm text-gray-600">Kenya Safaris</a>
+            </div>
+
+            <!-- Trekking -->
+            <div class="font-bold text-green-800 pt-3">Trekking</div>
+            <div class="pl-4 space-y-1">
+                <a href="kilimanjaro-routes.html" class="block py-1 text-sm text-gray-600">Kilimanjaro Routes</a>
+                <a href="kili-day-trip.html" class="block py-1 text-sm text-gray-600">Kili Day Trip</a>
+                <a href="mount-kenya-trekking-4-days.html" class="block py-1 text-sm text-gray-600">Mount Kenya
+                    Trekking</a>
+                <a href="mount-meru-treks.html" class="block py-1 text-sm text-gray-600">Mount Meru Treks</a>
+                <a href="mount-lolmalasin.html" class="block py-1 text-sm text-gray-600">Mount Lolmalasin</a>
+                <a href="mount-hanang.html" class="block py-1 text-sm text-gray-600">Mount Hanang</a>
+                <a href="mount-oldonyo-lengai.html" class="block py-1 text-sm text-gray-600">Mount Oldonyo Lengai</a>
+                <a href="food-menu.html" class="block py-1 text-sm text-gray-600">Food Menu</a>
+                <a href="careful-acclimatisation.html" class="block py-1 text-sm text-gray-600">Careful
+                    Acclimatisation</a>
+                <a href="health-info.html" class="block py-1 text-sm text-gray-600">Health Information</a>
+                <a href="what-to-pack.html" class="block py-1 text-sm text-gray-600">What to Pack</a>
+            </div>
+
+            <!-- Activities -->
+            <div class="font-bold text-green-800 pt-3">Activities</div>
+            <div class="pl-4 space-y-1">
+                <a href="beach-holidays.html" class="block py-1 text-sm text-gray-600">Beach Holidays</a>
+                <a href="maasai-visit.html" class="block py-1 text-sm text-gray-600">Maasai Visit</a>
+                <a href="serval-wildlife.html" class="block py-1 text-sm text-gray-600">Serval Wildlife</a>
+                <a href="tour-in-mto-wa-mbu.html" class="block py-1 text-sm text-gray-600">Mto Wa Mbu Tour</a>
+                <a href="cycling-tour.html" class="block py-1 text-sm text-gray-600">Cycling Tour</a>
+                <a href="moshi-tour.html" class="block py-1 text-sm text-gray-600">Moshi Tour</a>
+            </div>
+
+            <!-- Information -->
+            <div class="font-bold text-green-800 pt-3">Information</div>
+            <div class="pl-4 space-y-1">
+                <a href="tour-faq.html" class="block py-1 text-sm text-gray-600">Tour FAQ</a>
+                <a href="booking-policy.html" class="block py-1 text-sm text-gray-600">Booking Policy</a>
+            </div>
+
+            <!-- Contact Us -->
+            <div class="pt-4 border-t mt-4">
+                <a href="contact.html"
+                    class="block py-3 px-4 text-center bg-green-700 text-white font-semibold rounded-xl hover:bg-green-800 transition">Contact
+                    Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section pt-32 pb-20">
+        <div class="container mx-auto px-4 text-center text-white">
+            <div class="max-w-3xl mx-auto">
+                <i class="fas fa-stethoscope text-4xl text-orange-300 mb-4"></i>
+                <h1 class="text-4xl md:text-6xl font-bold mb-4">HEALTH</h1>
+                <div class="w-24 h-1 bg-orange-400 mx-auto mb-6"></div>
+                <p class="text-xl opacity-95">Make sure you understand Altitude Sickness</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <section class="py-16 bg-gray-50">
+        <div class="container mx-auto px-4">
+            <div class="max-w-5xl mx-auto">
+
+                <!-- Gallery - 3 Health Related Images -->
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-10">
+                    <img src="https://images.pexels.com/photos/40568/medical-appointment-doctor-healthcare-40568.jpeg?auto=compress&cs=tinysrgb&w=600"
+                        alt="Travel Doctor Consultation" class="gallery-img w-full h-48 object-cover shadow-md">
+                    <img src="https://images.pexels.com/photos/4386467/pexels-photo-4386467.jpeg?auto=compress&cs=tinysrgb&w=600"
+                        alt="Vaccination Health" class="gallery-img w-full h-48 object-cover shadow-md">
+                    <img src="https://images.pexels.com/photos/208512/pexels-photo-208512.jpeg?auto=compress&cs=tinysrgb&w=600"
+                        alt="Health Prevention" class="gallery-img w-full h-48 object-cover shadow-md">
+                </div>
+
+                <!-- Travel Doctor Advice -->
+                <div class="info-card p-6 mb-8">
+                    <h2 class="text-xl font-bold text-gray-800 mb-3"><i class="fas fa-user-md text-orange-500 mr-2"></i>
+                        Get advice from a Travel Doctor</h2>
+                    <p class="text-gray-600">We believe you should be aware of altitude sickness (and symptoms) as a
+                        danger to your health and in certain circumstances can cause death. Altitude sickness can be
+                        common and your guides are trained to recognize and observe for these symptoms. We would
+                        strongly recommend you discuss the cause and prevention of Altitude Sickness with your Travel
+                        Doctor prior to departing your country.</p>
+                    <p class="text-gray-600 mt-3">Most people can ascend to 2,500 metres with little or no effect. Some
+                        people commence to display symptoms of altitude sickness after this height.</p>
+                </div>
+
+                <!-- Altitude Levels -->
+                <div class="altitude-box p-6 mb-8">
+                    <h3 class="text-xl font-bold text-orange-800 mb-4"><i class="fas fa-chart-line mr-2"></i> What is
+                        High Altitude?</h3>
+                    <div class="grid md:grid-cols-3 gap-4 text-center">
+                        <div class="bg-white rounded-xl p-4"><strong class="text-orange-600">High Altitude</strong>
+                            <p class="text-gray-600 text-sm">2,500 to 4,000 metres<br>(8,000 to 13,000 feet)</p>
+                        </div>
+                        <div class="bg-white rounded-xl p-4"><strong class="text-orange-600">Very High</strong>
+                            <p class="text-gray-600 text-sm">4,000 to 5,500 metres<br>(13,000 to 18,000 feet)</p>
+                        </div>
+                        <div class="bg-white rounded-xl p-4"><strong class="text-red-600">Extremely High</strong>
+                            <p class="text-gray-600 text-sm">Over 5,500 metres<br>(Over 18,000 feet)</p>
+                        </div>
+                    </div>
+                    <p class="text-center mt-4 font-semibold text-gray-800">Uhuru Peak (summit) is in the Extremely High
+                        category at 5,895 metres</p>
+                </div>
+
+                <!-- Vaccinations -->
+                <div class="info-card p-6 mb-8">
+                    <h2 class="text-xl font-bold text-gray-800 mb-4"><i class="fas fa-syringe text-orange-500 mr-2"></i>
+                        Vaccinations</h2>
+                    <p class="text-gray-600 mb-3">Please see your Travel Doctor for advice. You will be required to have
+                        proof of <strong>Yellow Fever Vaccination</strong> to enter Tanzania. This is a current
+                        requirement.</p>
+                    <h4 class="font-bold text-gray-800 mb-2">Other Vaccinations to consider:</h4>
+                    <div class="flex flex-wrap gap-2 mb-4">
+                        <span class="vaccine-tag"><i class="fas fa-check-circle mr-1"></i> Hepatitis A</span>
+                        <span class="vaccine-tag"><i class="fas fa-check-circle mr-1"></i> Hepatitis B</span>
+                        <span class="vaccine-tag"><i class="fas fa-check-circle mr-1"></i> Typhoid</span>
+                        <span class="vaccine-tag"><i class="fas fa-check-circle mr-1"></i> Diphtheria</span>
+                        <span class="vaccine-tag"><i class="fas fa-check-circle mr-1"></i> Tetanus</span>
+                        <span class="vaccine-tag"><i class="fas fa-check-circle mr-1"></i> Rabies</span>
+                        <span class="vaccine-tag"><i class="fas fa-check-circle mr-1"></i> Tuberculosis</span>
+                        <span class="vaccine-tag"><i class="fas fa-check-circle mr-1"></i> Cholera</span>
+                        <span class="vaccine-tag"><i class="fas fa-check-circle mr-1"></i> Measles</span>
+                    </div>
+                </div>
+
+                <!-- Malaria Warning -->
+                <div class="bg-red-50 rounded-2xl p-6 mb-8 border-l-4 border-red-500">
+                    <h3 class="text-xl font-bold text-red-700 mb-3"><i class="fas fa-mosquito mr-2"></i> Malaria</h3>
+                    <p class="text-gray-700 mb-2">Malaria is an ongoing concern in Tanzania. You need to be aware of
+                        this concern and take the appropriate preventative measures.</p>
+                    <p class="text-gray-700">We recommend seeing your Health Professional/Travel Doctor regarding
+                        prevention well before you leave home. Some malaria medications need to be taken days before the
+                        trek commences. A good insect repellant containing DEET is also recommended to prevent bites. As
+                        you commence your trek, there are no mosquitoes on the mountain. It is still possible to get
+                        malaria before or after the trek or whilst on safari.</p>
+                </div>
+
+                <!-- Diarrhoea & Hydration -->
+                <div class="info-card p-6 mb-8">
+                    <h2 class="text-xl font-bold text-gray-800 mb-3"><i class="fas fa-tint text-blue-500 mr-2"></i>
+                        Diarrhoea</h2>
+                    <p class="text-gray-600 mb-3">It is important to keep well hydrated, particularly whilst trekking
+                        Kilimanjaro. If you develop diarrhoea it is important to rehydrate with solutions such as
+                        Dioralyte or Hydrolyte. Hydrolyte added to your boiled water is actually very useful for staying
+                        hydrated even if you do not suffer from diarrhoea.</p>
+                    <p class="text-gray-600">You may wish to discuss with your Health Professional taking an antibiotic
+                        such as Ciproxin with you in case you get bad diarrhoea. This is a prescription only medicine
+                        but may greatly assist in your recovery.</p>
+                </div>
+
+                <!-- Preventative Measures -->
+                <div class="info-card p-6 mb-8">
+                    <h2 class="text-xl font-bold text-gray-800 mb-4"><i
+                            class="fas fa-shield-alt text-green-600 mr-2"></i> Preventative Measures</h2>
+                    <p class="text-gray-600 mb-4">Some preventative measures are very important. Suffering from
+                        diarrhoea may jeopardise your chances of summiting.</p>
+                    <div class="space-y-3">
+                        <div class="tip-box p-3"><i class="fas fa-tint text-green-600 mr-2"></i> Unless you are sure of
+                            the water supplies' purity, don't drink it. On trek you will be given 3 litres of boiled
+                            water per person per day.</div>
+                        <div class="tip-box p-3"><i class="fas fa-wine-bottle text-green-600 mr-2"></i> If uncertain
+                            about water supply, use bottled water. Hot tea, coffee, bottled drinks are usually safe.
+                        </div>
+                        <div class="tip-box p-3"><i class="fas fa-carrot text-green-600 mr-2"></i> Eat cooked
+                            vegetables. Avoid salads prepared with local water supplies.</div>
+                        <div class="tip-box p-3"><i class="fas fa-cheese text-green-600 mr-2"></i> Boil un-pasteurised
+                            milk before use. Cook meats well and eat whilst hot. Be careful with local cheeses and ice
+                            cream.</div>
+                        <div class="tip-box p-3"><i class="fas fa-fish text-green-600 mr-2"></i> Be careful of shellfish
+                            and fish. They can be harmful even if cooked well.</div>
+                        <div class="tip-box p-3"><i class="fas fa-apple-alt text-green-600 mr-2"></i> Peel all fruits
+                            including tomatoes.</div>
+                        <div class="tip-box p-3"><i class="fas fa-hand-holding-water text-green-600 mr-2"></i> Wash all
+                            dishes in clean hot water. Wash hands regularly and always before eating. Sanitising gels
+                            are recommended.</div>
+                    </div>
+                </div>
+
+                <!-- Request Button -->
+                <div class="text-center">
+                    <a href="contact.html" class="btn-primary text-lg px-10 py-4">Book Your Kilimanjaro Trek</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-10">
+        <div class="container mx-auto px-4">
+            <div class="grid md:grid-cols-3 gap-8">
+                <div>
+                    <h3 class="text-white text-xl font-bold mb-4">Wilderness Footprints</h3>
+                    <p class="text-sm">Tanzania Trekking & Safaris. Step into the heart of the wilderness with us.</p>
+                </div>
+                <div>
+                    <h3 class="text-white text-xl font-bold mb-4">Contact</h3>
+                    <p class="text-sm"><i class="fas fa-map-marker-alt mr-2"></i> Boma Road, Near New Safari Hotel,
+                        Arusha, Tanzania</p>
+                    <p class="text-sm mt-2"><i class="fab fa-whatsapp mr-2"></i> +255789178090 (WhatsApp)</p>
+                    <p class="text-sm mt-2"><i class="fas fa-envelope mr-2"></i> wildernessfootprints@gmail.com</p>
+                </div>
+      <div>
+    <h3 class="text-white text-xl font-bold mb-4">Follow Us</h3>
+    <div class="flex space-x-4">
         
-        <!-- About Us -->
-        <div class="font-bold text-green-800 pt-2">About Us</div>
-        <div class="pl-4 space-y-1">
-             <a href="index.html" class="block py-1 text-sm text-gray-600">Home</a>
-            <a href="who-are-we.html" class="block py-1 text-sm text-gray-600">Who Are We</a>
-        </div>
-
-        <!-- Day Trips -->
-        <div class="font-bold text-green-800 pt-3">Day Trips</div>
-        <div class="pl-4 space-y-1">
-            <a href="day-trips.html" class="block py-1 text-sm text-gray-600">All Day Trips</a>
-        </div>
-
-        <!-- Safaris -->
-        <div class="font-bold text-green-800 pt-3">Safaris</div>
-        <div class="pl-4 space-y-1">
-            <a href="3-days-family-safari.html" class="block py-1 text-sm text-gray-600">3 Days Family Safari</a>
-            <a href="4-days-classic-safari.html" class="block py-1 text-sm text-gray-600">4 Days Classic Safari</a>
-            <a href="5-days-safari-footprints.html" class="block py-1 text-sm text-gray-600">5 Days Safari Footprints</a>
-            <a href="6-days-safari-experience.html" class="block py-1 text-sm text-gray-600">6 Days Safari Experience</a>
-            <a href="7-days-cultural-safari.html" class="block py-1 text-sm text-gray-600">7 Days Cultural Safari</a>
-            <a href="8-days-ngorongoro-highlands-treks.html" class="block py-1 text-sm text-gray-600">8 Days Ngorongoro Highlands Treks</a>
-            <a href="9-days-mara-river-crossing.html" class="block py-1 text-sm text-gray-600">9 Days Mara River Crossing</a>
-            <a href="8-days-honeymoon-safaris.html" class="block py-1 text-sm text-gray-600">8 Days Honeymoon Safaris</a>
-            <a href="western-safari-tanzania.html" class="block py-1 text-sm text-gray-600">Western Safari Tanzania</a>
-            <a href="southern-safari-tanzania.html" class="block py-1 text-sm text-gray-600">Southern Safari Tanzania</a>
-            <a href="4-days-tanzania-safari-isbania.html" class="block py-1 text-sm text-gray-600">4 Days Safari from Isbania</a>
-            <a href="balloon-safari.html" class="block py-1 text-sm text-gray-600">Balloon Safari</a>
-            <a href="olduvai-gorge.html" class="block py-1 text-sm text-gray-600">Olduvai Gorge</a>
-            <a href="lake-natron.html" class="block py-1 text-sm text-gray-600">Lake Natron</a>
-            <a href="lake-eyasi.html" class="block py-1 text-sm text-gray-600">Lake Eyasi</a>
-            <a href="kenya-safaris.html" class="block py-1 text-sm text-gray-600">Kenya Safaris</a>
-        </div>
-
-        <!-- Trekking -->
-        <div class="font-bold text-green-800 pt-3">Trekking</div>
-        <div class="pl-4 space-y-1">
-            <a href="kilimanjaro-routes.html" class="block py-1 text-sm text-gray-600">Kilimanjaro Routes</a>
-            <a href="kili-day-trip.html" class="block py-1 text-sm text-gray-600">Kili Day Trip</a>
-            <a href="mount-kenya-trekking-4-days.html" class="block py-1 text-sm text-gray-600">Mount Kenya Trekking</a>
-            <a href="mount-meru-treks.html" class="block py-1 text-sm text-gray-600">Mount Meru Treks</a>
-            <a href="mount-lolmalasin.html" class="block py-1 text-sm text-gray-600">Mount Lolmalasin</a>
-            <a href="mount-hanang.html" class="block py-1 text-sm text-gray-600">Mount Hanang</a>
-            <a href="mount-oldonyo-lengai.html" class="block py-1 text-sm text-gray-600">Mount Oldonyo Lengai</a>
-            <a href="food-menu.html" class="block py-1 text-sm text-gray-600">Food Menu</a>
-            <a href="careful-acclimatisation.html" class="block py-1 text-sm text-gray-600">Careful Acclimatisation</a>
-            <a href="health-info.html" class="block py-1 text-sm text-gray-600">Health Information</a>
-            <a href="what-to-pack.html" class="block py-1 text-sm text-gray-600">What to Pack</a>
-        </div>
-
-        <!-- Activities -->
-        <div class="font-bold text-green-800 pt-3">Activities</div>
-        <div class="pl-4 space-y-1">
-            <a href="beach-holidays.html" class="block py-1 text-sm text-gray-600">Beach Holidays</a>
-            <a href="maasai-visit.html" class="block py-1 text-sm text-gray-600">Maasai Visit</a>
-            <a href="serval-wildlife.html" class="block py-1 text-sm text-gray-600">Serval Wildlife</a>
-            <a href="tour-in-mto-wa-mbu.html" class="block py-1 text-sm text-gray-600">Mto Wa Mbu Tour</a>
-            <a href="cycling-tour.html" class="block py-1 text-sm text-gray-600">Cycling Tour</a>
-            <a href="moshi-tour.html" class="block py-1 text-sm text-gray-600">Moshi Tour</a>
-        </div>
-
-        <!-- Information -->
-        <div class="font-bold text-green-800 pt-3">Information</div>
-        <div class="pl-4 space-y-1">
-            <a href="tour-faq.html" class="block py-1 text-sm text-gray-600">Tour FAQ</a>
-            <a href="booking-policy.html" class="block py-1 text-sm text-gray-600">Booking Policy</a>
-        </div>
-
-        <!-- Contact Us -->
-        <div class="pt-4 border-t mt-4">
-            <a href="contact.html" class="block py-3 px-4 text-center bg-green-700 text-white font-semibold rounded-xl hover:bg-green-800 transition">Contact Us</a>
-        </div>
+        <!-- Facebook -->
+        <a href="https://www.facebook.com/africafootprintstanzania" target="_blank" class="text-gray-400 hover:text-white text-2xl transition">
+            <i class="fab fa-facebook"></i>
+        </a>
+        
+        <!-- WhatsApp -->
+        <a href="https://wa.me/255789178090" target="_blank" class="text-gray-400 hover:text-white text-2xl transition">
+            <i class="fab fa-whatsapp"></i>
+        </a>
+        
+        <!-- LinkedIn -->
+        <a href="https://www.linkedin.com/in/wilderness-footprints-tanzania-04633082" target="_blank" class="text-gray-400 hover:text-white text-2xl transition">
+            <i class="fab fa-linkedin"></i>
+        </a>
+        
+        <!-- TikTok -->
+        <a href="https://vm.tiktok.com/ZS92vqX1esH6L-DVzme/" target="_blank" class="text-gray-400 hover:text-white text-2xl transition">
+            <i class="fab fa-tiktok"></i>
+        </a>
+        
     </div>
-</nav>
-
-<!-- Hero Section -->
-<section class="hero-section pt-32 pb-20">
-    <div class="container mx-auto px-4 text-center text-white">
-        <div class="max-w-3xl mx-auto">
-            <i class="fas fa-stethoscope text-4xl text-orange-300 mb-4"></i>
-            <h1 class="text-4xl md:text-6xl font-bold mb-4">HEALTH</h1>
-            <div class="w-24 h-1 bg-orange-400 mx-auto mb-6"></div>
-            <p class="text-xl opacity-95">Make sure you understand Altitude Sickness</p>
+</div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-6 text-center text-sm">
+                <p>&copy; 2026 Wilderness Footprints Tanzania. All rights reserved.</p>
+            </div>
         </div>
-    </div>
-</section>
+    </footer>
 
-<!-- Main Content -->
-<section class="py-16 bg-gray-50">
-    <div class="container mx-auto px-4">
-        <div class="max-w-5xl mx-auto">
-
-            <!-- Gallery - 3 Health Related Images -->
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-4 mb-10">
-                <img src="https://images.pexels.com/photos/40568/medical-appointment-doctor-healthcare-40568.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Travel Doctor Consultation" class="gallery-img w-full h-48 object-cover shadow-md">
-                <img src="https://images.pexels.com/photos/4386467/pexels-photo-4386467.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Vaccination Health" class="gallery-img w-full h-48 object-cover shadow-md">
-                <img src="https://images.pexels.com/photos/208512/pexels-photo-208512.jpeg?auto=compress&cs=tinysrgb&w=600" alt="Health Prevention" class="gallery-img w-full h-48 object-cover shadow-md">
-            </div>
-
-            <!-- Travel Doctor Advice -->
-            <div class="info-card p-6 mb-8">
-                <h2 class="text-xl font-bold text-gray-800 mb-3"><i class="fas fa-user-md text-orange-500 mr-2"></i> Get advice from a Travel Doctor</h2>
-                <p class="text-gray-600">We believe you should be aware of altitude sickness (and symptoms) as a danger to your health and in certain circumstances can cause death. Altitude sickness can be common and your guides are trained to recognize and observe for these symptoms. We would strongly recommend you discuss the cause and prevention of Altitude Sickness with your Travel Doctor prior to departing your country.</p>
-                <p class="text-gray-600 mt-3">Most people can ascend to 2,500 metres with little or no effect. Some people commence to display symptoms of altitude sickness after this height.</p>
-            </div>
-
-            <!-- Altitude Levels -->
-            <div class="altitude-box p-6 mb-8">
-                <h3 class="text-xl font-bold text-orange-800 mb-4"><i class="fas fa-chart-line mr-2"></i> What is High Altitude?</h3>
-                <div class="grid md:grid-cols-3 gap-4 text-center">
-                    <div class="bg-white rounded-xl p-4"><strong class="text-orange-600">High Altitude</strong><p class="text-gray-600 text-sm">2,500 to 4,000 metres<br>(8,000 to 13,000 feet)</p></div>
-                    <div class="bg-white rounded-xl p-4"><strong class="text-orange-600">Very High</strong><p class="text-gray-600 text-sm">4,000 to 5,500 metres<br>(13,000 to 18,000 feet)</p></div>
-                    <div class="bg-white rounded-xl p-4"><strong class="text-red-600">Extremely High</strong><p class="text-gray-600 text-sm">Over 5,500 metres<br>(Over 18,000 feet)</p></div>
-                </div>
-                <p class="text-center mt-4 font-semibold text-gray-800">Uhuru Peak (summit) is in the Extremely High category at 5,895 metres</p>
-            </div>
-
-            <!-- Vaccinations -->
-            <div class="info-card p-6 mb-8">
-                <h2 class="text-xl font-bold text-gray-800 mb-4"><i class="fas fa-syringe text-orange-500 mr-2"></i> Vaccinations</h2>
-                <p class="text-gray-600 mb-3">Please see your Travel Doctor for advice. You will be required to have proof of <strong>Yellow Fever Vaccination</strong> to enter Tanzania. This is a current requirement.</p>
-                <h4 class="font-bold text-gray-800 mb-2">Other Vaccinations to consider:</h4>
-                <div class="flex flex-wrap gap-2 mb-4">
-                    <span class="vaccine-tag"><i class="fas fa-check-circle mr-1"></i> Hepatitis A</span>
-                    <span class="vaccine-tag"><i class="fas fa-check-circle mr-1"></i> Hepatitis B</span>
-                    <span class="vaccine-tag"><i class="fas fa-check-circle mr-1"></i> Typhoid</span>
-                    <span class="vaccine-tag"><i class="fas fa-check-circle mr-1"></i> Diphtheria</span>
-                    <span class="vaccine-tag"><i class="fas fa-check-circle mr-1"></i> Tetanus</span>
-                    <span class="vaccine-tag"><i class="fas fa-check-circle mr-1"></i> Rabies</span>
-                    <span class="vaccine-tag"><i class="fas fa-check-circle mr-1"></i> Tuberculosis</span>
-                    <span class="vaccine-tag"><i class="fas fa-check-circle mr-1"></i> Cholera</span>
-                    <span class="vaccine-tag"><i class="fas fa-check-circle mr-1"></i> Measles</span>
-                </div>
-            </div>
-
-            <!-- Malaria Warning -->
-            <div class="bg-red-50 rounded-2xl p-6 mb-8 border-l-4 border-red-500">
-                <h3 class="text-xl font-bold text-red-700 mb-3"><i class="fas fa-mosquito mr-2"></i> Malaria</h3>
-                <p class="text-gray-700 mb-2">Malaria is an ongoing concern in Tanzania. You need to be aware of this concern and take the appropriate preventative measures.</p>
-                <p class="text-gray-700">We recommend seeing your Health Professional/Travel Doctor regarding prevention well before you leave home. Some malaria medications need to be taken days before the trek commences. A good insect repellant containing DEET is also recommended to prevent bites. As you commence your trek, there are no mosquitoes on the mountain. It is still possible to get malaria before or after the trek or whilst on safari.</p>
-            </div>
-
-            <!-- Diarrhoea & Hydration -->
-            <div class="info-card p-6 mb-8">
-                <h2 class="text-xl font-bold text-gray-800 mb-3"><i class="fas fa-tint text-blue-500 mr-2"></i> Diarrhoea</h2>
-                <p class="text-gray-600 mb-3">It is important to keep well hydrated, particularly whilst trekking Kilimanjaro. If you develop diarrhoea it is important to rehydrate with solutions such as Dioralyte or Hydrolyte. Hydrolyte added to your boiled water is actually very useful for staying hydrated even if you do not suffer from diarrhoea.</p>
-                <p class="text-gray-600">You may wish to discuss with your Health Professional taking an antibiotic such as Ciproxin with you in case you get bad diarrhoea. This is a prescription only medicine but may greatly assist in your recovery.</p>
-            </div>
-
-            <!-- Preventative Measures -->
-            <div class="info-card p-6 mb-8">
-                <h2 class="text-xl font-bold text-gray-800 mb-4"><i class="fas fa-shield-alt text-green-600 mr-2"></i> Preventative Measures</h2>
-                <p class="text-gray-600 mb-4">Some preventative measures are very important. Suffering from diarrhoea may jeopardise your chances of summiting.</p>
-                <div class="space-y-3">
-                    <div class="tip-box p-3"><i class="fas fa-tint text-green-600 mr-2"></i> Unless you are sure of the water supplies' purity, don't drink it. On trek you will be given 3 litres of boiled water per person per day.</div>
-                    <div class="tip-box p-3"><i class="fas fa-wine-bottle text-green-600 mr-2"></i> If uncertain about water supply, use bottled water. Hot tea, coffee, bottled drinks are usually safe.</div>
-                    <div class="tip-box p-3"><i class="fas fa-carrot text-green-600 mr-2"></i> Eat cooked vegetables. Avoid salads prepared with local water supplies.</div>
-                    <div class="tip-box p-3"><i class="fas fa-cheese text-green-600 mr-2"></i> Boil un-pasteurised milk before use. Cook meats well and eat whilst hot. Be careful with local cheeses and ice cream.</div>
-                    <div class="tip-box p-3"><i class="fas fa-fish text-green-600 mr-2"></i> Be careful of shellfish and fish. They can be harmful even if cooked well.</div>
-                    <div class="tip-box p-3"><i class="fas fa-apple-alt text-green-600 mr-2"></i> Peel all fruits including tomatoes.</div>
-                    <div class="tip-box p-3"><i class="fas fa-hand-holding-water text-green-600 mr-2"></i> Wash all dishes in clean hot water. Wash hands regularly and always before eating. Sanitising gels are recommended.</div>
-                </div>
-            </div>
-
-            <!-- Request Button -->
-            <div class="text-center">
-                <a href="contact.html" class="btn-primary text-lg px-10 py-4">Book Your Kilimanjaro Trek</a>
-            </div>
-
-        </div>
-    </div>
-</section>
-
-<!-- Footer -->
-<footer class="bg-gray-900 text-gray-300 py-10">
-    <div class="container mx-auto px-4">
-        <div class="grid md:grid-cols-3 gap-8">
-            <div><h3 class="text-white text-xl font-bold mb-4">Wilderness Footprints</h3><p class="text-sm">Tanzania Trekking & Safaris. Step into the heart of the wilderness with us.</p></div>
-            <div><h3 class="text-white text-xl font-bold mb-4">Contact</h3><p class="text-sm"><i class="fas fa-map-marker-alt mr-2"></i> Boma Road, Near New Safari Hotel, Arusha, Tanzania</p><p class="text-sm mt-2"><i class="fab fa-whatsapp mr-2"></i> +255789178090 (WhatsApp)</p><p class="text-sm mt-2"><i class="fas fa-envelope mr-2"></i> wildernessfootprints@gmail.com</p></div>
-            <div><h3 class="text-white text-xl font-bold mb-4">Follow Us</h3><div class="flex space-x-4"><a href="#" class="text-gray-400 hover:text-white text-2xl"><i class="fab fa-facebook"></i></a><a href="#" class="text-gray-400 hover:text-white text-2xl"><i class="fab fa-whatsapp"></i></a></div><div class="mt-4 text-sm">Select Language: <span class="text-green-400">Google Translate</span></div></div>
-        </div>
-        <div class="border-t border-gray-800 mt-8 pt-6 text-center text-sm"><p>&copy; 2024 Wilderness Footprints Tanzania. All rights reserved.</p></div>
-    </div>
-</footer>
-
-<script>
-    function toggleMobileMenu() { document.getElementById('mobileMenu').classList.toggle('hidden'); }
-</script>
+    <script>
+        function toggleMobileMenu() { document.getElementById('mobileMenu').classList.toggle('hidden'); }
+    </script>
 </body>
+
 </html>
