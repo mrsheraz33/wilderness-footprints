@@ -77,20 +77,23 @@
 </head>
 <body>
 
-<!-- Navbar -->
+  <!-- Navbar -->
 <nav class="bg-white shadow-md fixed w-full z-50">
     <div class="container mx-auto px-4 py-3 flex justify-between items-center">
         <a href="index.html" class="flex items-center space-x-2">
-            <img src="images/logo.jpeg" alt="Logo" class="h-12 w-auto" onerror="this.src='https://via.placeholder.com/50x50?text=WFT'">
-            <span class="font-bold text-base sm:text-lg md:text-xl text-green-800">Wilderness Footprints Tanzania</span>
+            <img src="images/logo.jpeg" alt="Logo" class="h-12 w-auto"
+                onerror="this.src='https://via.placeholder.com/50x50?text=WFT'">
+            <span class="font-bold text-base sm:text-lg md:text-xl text-green-800">Wilderness Footprints
+                Tanzania</span>
         </a>
 
         <!-- Desktop Menu -->
         <div class="hidden lg:flex space-x-4 xl:space-x-6 items-center">
-            
+
             <!-- About Us Dropdown -->
             <div class="dropdown relative">
-                <a href="#" class="text-gray-700 hover:text-green-700 font-medium">About Us <i class="fas fa-chevron-down text-xs"></i></a>
+                <a href="#" class="text-gray-700 hover:text-green-700 font-medium">About Us <i
+                        class="fas fa-chevron-down text-xs"></i></a>
                 <div class="dropdown-menu">
                     <a href="index.html">Home</a>
                     <a href="who-are-we.html">Who Are We</a>
@@ -99,7 +102,8 @@
 
             <!-- Day Trips Dropdown -->
             <div class="dropdown relative">
-                <a href="#" class="text-gray-700 hover:text-green-700 font-medium">Day Trips <i class="fas fa-chevron-down text-xs"></i></a>
+                <a href="#" class="text-gray-700 hover:text-green-700 font-medium">Day Trips <i
+                        class="fas fa-chevron-down text-xs"></i></a>
                 <div class="dropdown-menu">
                     <a href="day-trips.html">All Day Trips</a>
                 </div>
@@ -107,7 +111,8 @@
 
             <!-- Safaris Dropdown -->
             <div class="dropdown relative">
-                <a href="#" class="text-gray-700 hover:text-green-700 font-medium">Safaris <i class="fas fa-chevron-down text-xs"></i></a>
+                <a href="#" class="text-gray-700 hover:text-green-700 font-medium">Safaris <i
+                        class="fas fa-chevron-down text-xs"></i></a>
                 <div class="dropdown-menu">
                     <a href="3-days-family-safari.html">3 Days Family Safari</a>
                     <a href="4-days-classic-safari.html">4 Days Classic Safari</a>
@@ -130,7 +135,8 @@
 
             <!-- Trekking Dropdown -->
             <div class="dropdown relative">
-                <a href="#" class="text-gray-700 hover:text-green-700 font-medium">Trekking <i class="fas fa-chevron-down text-xs"></i></a>
+                <a href="#" class="text-gray-700 hover:text-green-700 font-medium">Trekking <i
+                        class="fas fa-chevron-down text-xs"></i></a>
                 <div class="dropdown-menu">
                     <a href="kilimanjaro-routes.html">Kilimanjaro Routes</a>
                     <a href="kili-day-trip.html">Kili Day Trip</a>
@@ -148,7 +154,8 @@
 
             <!-- Activities Dropdown -->
             <div class="dropdown relative">
-                <a href="#" class="text-gray-700 hover:text-green-700 font-medium">Activities <i class="fas fa-chevron-down text-xs"></i></a>
+                <a href="#" class="text-gray-700 hover:text-green-700 font-medium">Activities <i
+                        class="fas fa-chevron-down text-xs"></i></a>
                 <div class="dropdown-menu">
                     <a href="beach-holidays.html">Beach Holidays</a>
                     <a href="maasai-visit.html">Maasai Visit</a>
@@ -158,6 +165,20 @@
                     <a href="moshi-tour.html">Moshi Tour</a>
                 </div>
             </div>
+
+          <!-- 👇 BLOGS DROPDOWN (NEW) 👇 -->
+            <div class="dropdown relative">
+                <a href="#" class="text-gray-700 hover:text-green-700 font-medium">Blogs <i
+                        class="fas fa-chevron-down text-xs"></i></a>
+                <div class="dropdown-menu">
+                    <a href="./blogs/about.html">About</a>
+                    <a href="./blogs/donate.html">Donate</a>
+                    <a href="./blogs/gallery.html">Gallery</a>
+                    <a href="./blogs/info-faq.html">Info & FAQ</a>
+                    <a href="./blogs/programs.html">Programs</a>
+                </div>
+            </div>
+
 
             <!-- Direct Links -->
             <a href="tour-faq.html" class="text-gray-700 hover:text-green-700 font-medium">Tour FAQ</a>
@@ -173,11 +194,11 @@
 
     <!-- Mobile Menu -->
     <div id="mobileMenu" class="hidden lg:hidden bg-white border-t px-4 py-3 space-y-2 max-h-[92vh] overflow-y-auto">
-        
+
         <!-- About Us -->
         <div class="font-bold text-green-800 pt-2">About Us</div>
         <div class="pl-4 space-y-1">
-             <a href="index.html" class="block py-1 text-sm text-gray-600">Home</a>
+            <a href="index.html" class="block py-1 text-sm text-gray-600">Home</a>
             <a href="who-are-we.html" class="block py-1 text-sm text-gray-600">Who Are We</a>
         </div>
 
@@ -233,6 +254,16 @@
             <a href="tour-in-mto-wa-mbu.html" class="block py-1 text-sm text-gray-600">Mto Wa Mbu Tour</a>
             <a href="cycling-tour.html" class="block py-1 text-sm text-gray-600">Cycling Tour</a>
             <a href="moshi-tour.html" class="block py-1 text-sm text-gray-600">Moshi Tour</a>
+        </div>
+
+        <!-- 👇 BLOGS (MOBILE) 👇 -->
+        <div class="font-bold text-green-800 pt-3">Blogs</div>
+        <div class="pl-4 space-y-1">
+            <a href="./blogs/about.html" class="block py-1 text-sm text-gray-600">About</a>
+            <a href="./blogs//donate.html" class="block py-1 text-sm text-gray-600">Donate</a>
+            <a href="./blogs/gallery.html" class="block py-1 text-sm text-gray-600">Gallery</a>
+            <a href="./blogs/info-faq.html" class="block py-1 text-sm text-gray-600">Info & FAQ</a>
+            <a href="./blogs/programs.html" class="block py-1 text-sm text-gray-600">Programs</a>
         </div>
 
         <!-- Information -->
