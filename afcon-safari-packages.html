@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AFCON 2027 Safari Packages - Wilderness Footprints Tanzania</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap');
+        * { font-family: 'Poppins', sans-serif; }
+        
+        .dropdown:hover .dropdown-menu { display: block; }
+        .dropdown-menu {
+            display: none; position: absolute; top: 100%; left: 0;
+            background: white; min-width: 220px; box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+            z-index: 1000; border-radius: 8px; padding: 8px 0;
+            max-height: 70vh; overflow-y: auto;
+        }
+        .dropdown-menu a {
+            display: block; padding: 10px 20px; color: #1e3a2e;
+            text-decoration: none; font-size: 14px; transition: all 0.3s;
+        }
+        .dropdown-menu a:hover { background: #e8f0e8; color: #0f2b1f; }
+        
+        .btn-primary {
+            background: #2d6a4f; color: white; padding: 12px 28px;
+            border-radius: 40px; text-decoration: none; font-weight: 600;
+            transition: all 0.3s; display: inline-block;
+        }
+        .btn-primary:hover { background: #1b4d3e; transform: translateY(-2px); }
+        
+        .btn-gold {
+            background: #f59e0b; color: #1e3a2e; padding: 14px 32px;
+            border-radius: 50px; text-decoration: none; font-weight: 700;
+            transition: all 0.3s; display: inline-block;
+        }
+        .btn-gold:hover { background: #d97706; transform: translateY(-3px) scale(1.02); box-shadow: 0 15px 30px rgba(245,158,11,0.3); }
+        
+        .hero-afcon {
+            background: linear-gradient(135deg, #0a2a1f 0%, #1a4d3a 40%, #2d6a4f 100%);
+            position: relative;
+            overflow: hidden;
+        }
+        .hero-afcon::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -20%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(245,158,11,0.15) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+        .hero-afcon::after {
+            content: '';
+            position: absolute;
+            bottom: -30%;
+            left: -10%;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(45,106,79,0.2) 0%, transparent 70%);
+            border-radius: 50%;
+        }
+        
+        .package-card {
+            background: white;
+            border-radius: 28px;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            border: 1px solid #e2e8f0;
+            position: relative;
+            overflow: hidden;
+        }
+        .package-card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 30px 50px rgba(0,0,0,0.15);
+            border-color: #f59e0b;
+        }
+        .package-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 5px;
+            background: linear-gradient(90deg, #f59e0b, #2d6a4f, #f59e0b);
+            background-size: 200% 100%;
+            animation: shimmer 3s ease-in-out infinite;
+        }
+        @keyframes shimmer {
+            0% { background-position: -200% 0; }
+            100% { background-position: 200% 0; }
+        }
+        
+        .package-badge {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: #f59e0b;
+            color: #1e3a2e;
+            padding: 4px 16px;
+            border-radius: 30px;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.5px;
+        }
+        
+        .package-badge-popular {
+            background: #dc2626;
+            color: white;
+        }
+        
+        .feature-list li {
+            padding: 8px 0;
+            border-bottom: 1px solid #f3f4f6;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+        .feature-list li:last-child { border-bottom: none; }
+        .feature-list i { color: #2d6a4f; margin-top: 3px; }
+        
+        .stat-card {
+            background: rgba(255,255,255,0.08);
+            backdrop-filter: blur(10px);
+            border-radius: 20px;
+            border: 1px solid rgba(255,255,255,0.1);
+            transition: all 0.3s ease;
+        }
+        .stat-card:hover {
+            background: rgba(255,255,255,0.15);
+            transform: translateY(-5px);
+        }
+        
+        .section-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            color: #1e3a2e;
+        }
+        @media (max-width: 768px) { .section-title { font-size: 1.8rem; } }
+        
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 0.8s ease forwards;
+        }
+        .fade-in-d1 { animation-delay: 0.1s; }
+        .fade-in-d2 { animation-delay: 0.2s; }
+        .fade-in-d3 { animation-delay: 0.3s; }
+        .fade-in-d4 { animation-delay: 0.4s; }
+        .fade-in-d5 { animation-delay: 0.5s; }
+        
+        @keyframes fadeInUp {
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .floating {
+            animation: float 3s ease-in-out infinite;
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+        }
+    </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav class="bg-white shadow-md fixed w-full z-50">
+    <div class="container mx-auto px-4 py-3 flex justify-between items-center">
+        <a href="index.html" class="flex items-center space-x-2">
+            <img src="images/logo.jpeg" alt="Logo" class="h-12 w-auto" onerror="this.src='https://via.placeholder.com/50x50?text=WFT'">
+            <span class="font-bold text-base sm:text-lg md:text-xl text-green-800">Wilderness Footprints Tanzania</span>
+        </a>
+        <div class="hidden lg:flex space-x-4 xl:space-x-6 items-center">
+            <div class="dropdown relative"><a href="#" class="text-gray-700 hover:text-green-700 font-medium">About Us <i class="fas fa-chevron-down text-xs"></i></a><div class="dropdown-menu"><a href="index.html">Home</a><a href="who-are-we.html">Who Are We</a></div></div>
+            <div class="dropdown relative"><a href="#" class="text-gray-700 hover:text-green-700 font-medium">Day Trips <i class="fas fa-chevron-down text-xs"></i></a><div class="dropdown-menu"><a href="day-trips.html">All Day Trips</a></div></div>
+            <div class="dropdown relative"><a href="#" class="text-gray-700 hover:text-green-700 font-medium">Safaris <i class="fas fa-chevron-down text-xs"></i></a><div class="dropdown-menu"><a href="3-days-family-safari.html">3 Days Family Safari</a><a href="4-days-classic-safari.html">4 Days Classic Safari</a><a href="5-days-safari-footprints.html">5 Days Safari Footprints</a><a href="6-days-safari-experience.html">6 Days Safari Experience</a><a href="7-days-cultural-safari.html">7 Days Cultural Safari</a><a href="8-days-ngorongoro-highlands-treks.html">8 Days Ngorongoro Highlands Treks</a><a href="9-days-mara-river-crossing.html">9 Days Mara River Crossing</a><a href="8-days-honeymoon-safaris.html">8 Days Honeymoon Safaris</a><a href="western-safari-tanzania.html">Western Safari Tanzania</a><a href="southern-safari-tanzania.html">Southern Safari Tanzania</a><a href="4-days-tanzania-safari-isbania.html">4 Days Safari from Isbania</a><a href="balloon-safari.html">Balloon Safari</a><a href="olduvai-gorge.html">Olduvai Gorge</a><a href="lake-natron.html">Lake Natron</a><a href="lake-eyasi.html">Lake Eyasi</a><a href="kenya-safaris.html">Kenya Safaris</a></div></div>
+            <div class="dropdown relative"><a href="#" class="text-gray-700 hover:text-green-700 font-medium">Trekking <i class="fas fa-chevron-down text-xs"></i></a><div class="dropdown-menu"><a href="kilimanjaro-routes.html">Kilimanjaro Routes</a><a href="kili-day-trip.html">Kili Day Trip</a><a href="mount-kenya-trekking-4-days.html">Mount Kenya Trekking</a><a href="mount-meru-treks.html">Mount Meru Treks</a><a href="mount-lolmalasin.html">Mount Lolmalasin</a><a href="mount-hanang.html">Mount Hanang</a><a href="mount-oldonyo-lengai.html">Mount Oldonyo Lengai</a><a href="food-menu.html">Food Menu</a><a href="careful-acclimatisation.html">Careful Acclimatisation</a><a href="health-info.html">Health Information</a><a href="what-to-pack.html">What to Pack</a></div></div>
+            <div class="dropdown relative"><a href="#" class="text-gray-700 hover:text-green-700 font-medium">Activities <i class="fas fa-chevron-down text-xs"></i></a><div class="dropdown-menu"><a href="beach-holidays.html">Beach Holidays</a><a href="maasai-visit.html">Maasai Visit</a><a href="serval-wildlife.html">Serval Wildlife</a><a href="tour-in-mto-wa-mbu.html">Mto Wa Mbu Tour</a><a href="cycling-tour.html">Cycling Tour</a><a href="moshi-tour.html">Moshi Tour</a></div></div>
+            <div class="dropdown relative"><a href="#" class="text-gray-700 hover:text-green-700 font-medium">Blogs <i class="fas fa-chevron-down text-xs"></i></a><div class="dropdown-menu"><a href="./blogs/about.html">About</a><a href="./blogs/donate.html">Donate</a><a href="./blogs/gallery.html">Gallery</a><a href="./blogs/info-faq.html">Info & FAQ</a><a href="./blogs/programs.html">Programs</a></div></div>
+            <a href="tour-faq.html" class="text-gray-700 hover:text-green-700 font-medium">Tour FAQ</a>
+            <a href="booking-policy.html" class="text-gray-700 hover:text-green-700 font-medium">Booking Policy</a>
+            <a href="contact.html" class="btn-primary text-sm py-2 px-5">Contact Us</a>
+        </div>
+        <button class="lg:hidden text-gray-700" onclick="toggleMobileMenu()"><i class="fas fa-bars text-2xl"></i></button>
+    </div>
+    <div id="mobileMenu" class="hidden lg:hidden bg-white border-t px-4 py-3 space-y-2 max-h-[92vh] overflow-y-auto">
+        <div class="font-bold text-green-800 pt-2">About Us</div><div class="pl-4"><a href="index.html" class="block py-1 text-sm text-gray-600">Home</a><a href="who-are-we.html" class="block py-1 text-sm text-gray-600">Who Are We</a></div>
+        <div class="font-bold text-green-800 pt-3">Day Trips</div><div class="pl-4"><a href="day-trips.html" class="block py-1 text-sm text-gray-600">All Day Trips</a></div>
+        <div class="font-bold text-green-800 pt-3">Safaris</div><div class="pl-4"><a href="3-days-family-safari.html" class="block py-1 text-sm text-gray-600">3 Days Family Safari</a><a href="4-days-classic-safari.html" class="block py-1 text-sm text-gray-600">4 Days Classic Safari</a><a href="5-days-safari-footprints.html" class="block py-1 text-sm text-gray-600">5 Days Safari Footprints</a><a href="6-days-safari-experience.html" class="block py-1 text-sm text-gray-600">6 Days Safari Experience</a><a href="7-days-cultural-safari.html" class="block py-1 text-sm text-gray-600">7 Days Cultural Safari</a><a href="8-days-ngorongoro-highlands-treks.html" class="block py-1 text-sm text-gray-600">8 Days Ngorongoro Highlands Treks</a><a href="9-days-mara-river-crossing.html" class="block py-1 text-sm text-gray-600">9 Days Mara River Crossing</a><a href="8-days-honeymoon-safaris.html" class="block py-1 text-sm text-gray-600">8 Days Honeymoon Safaris</a><a href="western-safari-tanzania.html" class="block py-1 text-sm text-gray-600">Western Safari Tanzania</a><a href="southern-safari-tanzania.html" class="block py-1 text-sm text-gray-600">Southern Safari Tanzania</a><a href="4-days-tanzania-safari-isbania.html" class="block py-1 text-sm text-gray-600">4 Days Safari from Isbania</a><a href="balloon-safari.html" class="block py-1 text-sm text-gray-600">Balloon Safari</a><a href="olduvai-gorge.html" class="block py-1 text-sm text-gray-600">Olduvai Gorge</a><a href="lake-natron.html" class="block py-1 text-sm text-gray-600">Lake Natron</a><a href="lake-eyasi.html" class="block py-1 text-sm text-gray-600">Lake Eyasi</a><a href="kenya-safaris.html" class="block py-1 text-sm text-gray-600">Kenya Safaris</a></div>
+        <div class="font-bold text-green-800 pt-3">Trekking</div><div class="pl-4"><a href="kilimanjaro-routes.html" class="block py-1 text-sm text-gray-600">Kilimanjaro Routes</a><a href="kili-day-trip.html" class="block py-1 text-sm text-gray-600">Kili Day Trip</a><a href="mount-kenya-trekking-4-days.html" class="block py-1 text-sm text-gray-600">Mount Kenya Trekking</a><a href="mount-meru-treks.html" class="block py-1 text-sm text-gray-600">Mount Meru Treks</a><a href="mount-lolmalasin.html" class="block py-1 text-sm text-gray-600">Mount Lolmalasin</a><a href="mount-hanang.html" class="block py-1 text-sm text-gray-600">Mount Hanang</a><a href="mount-oldonyo-lengai.html" class="block py-1 text-sm text-gray-600">Mount Oldonyo Lengai</a><a href="food-menu.html" class="block py-1 text-sm text-gray-600">Food Menu</a><a href="careful-acclimatisation.html" class="block py-1 text-sm text-gray-600">Careful Acclimatisation</a><a href="health-info.html" class="block py-1 text-sm text-gray-600">Health Information</a><a href="what-to-pack.html" class="block py-1 text-sm text-gray-600">What to Pack</a></div>
+        <div class="font-bold text-green-800 pt-3">Activities</div><div class="pl-4"><a href="beach-holidays.html" class="block py-1 text-sm text-gray-600">Beach Holidays</a><a href="maasai-visit.html" class="block py-1 text-sm text-gray-600">Maasai Visit</a><a href="serval-wildlife.html" class="block py-1 text-sm text-gray-600">Serval Wildlife</a><a href="tour-in-mto-wa-mbu.html" class="block py-1 text-sm text-gray-600">Mto Wa Mbu Tour</a><a href="cycling-tour.html" class="block py-1 text-sm text-gray-600">Cycling Tour</a><a href="moshi-tour.html" class="block py-1 text-sm text-gray-600">Moshi Tour</a></div>
+        <div class="font-bold text-green-800 pt-3">Blogs</div><div class="pl-4"><a href="./blogs/about.html" class="block py-1 text-sm text-gray-600">About</a><a href="./blogs/donate.html" class="block py-1 text-sm text-gray-600">Donate</a><a href="./blogs/gallery.html" class="block py-1 text-sm text-gray-600">Gallery</a><a href="./blogs/info-faq.html" class="block py-1 text-sm text-gray-600">Info & FAQ</a><a href="./blogs/programs.html" class="block py-1 text-sm text-gray-600">Programs</a></div>
+        <div class="font-bold text-green-800 pt-3">Information</div><div class="pl-4"><a href="tour-faq.html" class="block py-1 text-sm text-gray-600">Tour FAQ</a><a href="booking-policy.html" class="block py-1 text-sm text-gray-600">Booking Policy</a></div>
+        <div class="pt-4 border-t mt-4"><a href="contact.html" class="block py-3 px-4 text-center bg-green-700 text-white font-semibold rounded-xl hover:bg-green-800 transition">Contact Us</a></div>
+    </div>
+</nav>
+
+<!-- Hero Section -->
+<section class="hero-afcon pt-32 pb-20 relative">
+    <div class="container mx-auto px-4 relative z-10">
+        <div class="max-w-4xl mx-auto text-center text-white">
+            <div class="inline-block bg-yellow-500 text-black font-bold px-6 py-2 rounded-full text-sm mb-6 tracking-wider floating">
+                <i class="fas fa-trophy mr-2"></i> AFCON 2027 OFFICIAL PARTNER
+            </div>
+            <h1 class="text-5xl md:text-7xl font-extrabold mb-4 leading-tight">
+                AFCON 2027 <span class="text-yellow-400">×</span> <br class="sm:hidden">TANZANIA SAFARI
+            </h1>
+            <p class="text-2xl md:text-3xl font-semibold text-yellow-300 mb-4">Football Meets the Wild</p>
+            <p class="text-lg md:text-xl text-white/90 max-w-2xl mx-auto">Come for the Football. Stay for the Wild.</p>
+            <p class="text-base md:text-lg text-white/70 max-w-2xl mx-auto mt-4">Coming to Arusha for AFCON 2027? Add an unforgettable Tanzania safari to your football adventure. Our special AFCON safari packages are designed to fit around your match schedule, with flexible private and small-group options.</p>
+            <div class="flex flex-wrap justify-center gap-4 mt-8">
+                <a href="#packages" class="btn-gold"><i class="fas fa-compass mr-2"></i> Explore Packages</a>
+                <a href="https://wa.me/255655691910" target="_blank" class="bg-white/10 backdrop-blur-sm border border-white/30 text-white px-8 py-3 rounded-full font-semibold hover:bg-white/20 transition"><i class="fab fa-whatsapp mr-2"></i> WhatsApp Us</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Stats Section -->
+<section class="py-12 bg-gray-900">
+    <div class="container mx-auto px-4">
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-5xl mx-auto">
+            <div class="stat-card text-center p-6 text-white">
+                <p class="text-4xl font-bold text-yellow-400">2027</p>
+                <p class="text-sm text-white/70">AFCON Host Year</p>
+            </div>
+            <div class="stat-card text-center p-6 text-white">
+                <p class="text-4xl font-bold text-yellow-400">24</p>
+                <p class="text-sm text-white/70">African Nations Competing</p>
+            </div>
+            <div class="stat-card text-center p-6 text-white">
+                <p class="text-4xl font-bold text-yellow-400">5+</p>
+                <p class="text-sm text-white/70">Safari Packages Available</p>
+            </div>
+            <div class="stat-card text-center p-6 text-white">
+                <p class="text-4xl font-bold text-yellow-400">100%</p>
+                <p class="text-sm text-white/70">Flexible & Customizable</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Packages Section -->
+<section id="packages" class="py-20 bg-gray-50">
+    <div class="container mx-auto px-4">
+        <div class="text-center mb-16">
+            <span class="inline-block bg-yellow-100 text-yellow-800 px-4 py-1 rounded-full text-sm font-semibold mb-3"><i class="fas fa-tag mr-1"></i> Packages</span>
+            <h2 class="section-title">Choose Your AFCON Safari Experience</h2>
+            <p class="text-gray-600 max-w-2xl mx-auto mt-2">Flexible packages designed to fit around your match schedule</p>
+        </div>
+
+        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+
+            <!-- Package 1: 2-Day Quick Safari -->
+            <div class="package-card p-6 fade-in fade-in-d1">
+                <span class="package-badge"><i class="fas fa-bolt mr-1"></i> Quick Escape</span>
+                <div class="flex items-center gap-3 mb-3">
+                    <i class="fas fa-clock text-3xl text-green-700"></i>
+                    <h3 class="text-2xl font-bold text-gray-800">2-DAY QUICK SAFARI</h3>
+                </div>
+                <p class="text-sm text-gray-600 mb-4">Tarangire National Park + Ngorongoro Crater</p>
+                <p class="text-gray-600 text-sm mb-4">Perfect for fans with limited time between matches.</p>
+                <ul class="feature-list space-y-1 text-sm">
+                    <li><i class="fas fa-check-circle"></i> Arusha pickup & drop-off</li>
+                    <li><i class="fas fa-check-circle"></i> Tarangire game drive</li>
+                    <li><i class="fas fa-check-circle"></i> Ngorongoro Crater game drive</li>
+                    <li><i class="fas fa-check-circle"></i> Safari accommodation</li>
+                    <li><i class="fas fa-check-circle"></i> Professional guide & 4×4 safari vehicle</li>
+                </ul>
+                <div class="mt-4 p-3 bg-amber-50 rounded-xl border border-amber-200">
+                    <p class="text-xs text-amber-800"><i class="fas fa-lightbulb mr-1"></i> Ideal for: 1 free day between matches</p>
+                </div>
+                <div class="mt-6 text-center">
+                    <a href="contact.html" class="inline-block bg-green-700 text-white px-6 py-2 rounded-full text-sm font-semibold hover:bg-green-800 transition w-full text-center">View Package <i class="fas fa-arrow-right ml-1"></i></a>
+                </div>
+            </div>
+
+            <!-- Package 2: 3-Day AFCON Safari Escape -->
+            <div class="package-card p-6 fade-in fade-in-d2 border-yellow-400/30">
+                <span class="package-badge package-badge-popular"><i class="fas fa-fire mr-1"></i> Most Popular</span>
+                <div class="flex items-center gap-3 mb-3">
+                    <i class="fas fa-route text-3xl text-green-700"></i>
+                    <h3 class="text-2xl font-bold text-gray-800">3-DAY AFCON SAFARI ESCAPE</h3>
+                </div>
+                <p class="text-sm text-gray-600 mb-4">Tarangire + Ngorongoro + Lake Manyara</p>
+                <p class="text-gray-600 text-sm mb-4">Our recommended option for visitors who want a little more wildlife while staying close to Arusha.</p>
+                <ul class="feature-list space-y-1 text-sm">
+                    <li><i class="fas fa-check-circle"></i> Arusha pickup & drop-off</li>
+                    <li><i class="fas fa-check-circle"></i> 3 national park experiences</li>
+                    <li><i class="fas fa-check-circle"></i> 2 nights accommodation</li>
+                    <li><i class="fas fa-check-circle"></i> Professional safari guide</li>
+                    <li><i class="fas fa-check-circle"></i> 4×4 safari vehicle</li>
+                    <li><i class="fas fa-check-circle"></i> Park & conservation fees</li>
+                </ul>
+                <div class="mt-4 p-3 bg-amber-50 rounded-xl border border-amber-200">
+                    <p class="text-xs text-amber-800"><i class="fas fa-lightbulb mr-1"></i> Ideal for: AFCON visitors with 2–3 free days</p>
+                </div>
+                <div class="mt-6 text-center">
+                    <a href="contact.html" class="inline-block bg-green-700 text-white px-6 py-2 rounded-full text-sm font-semibold hover:bg-green-800 transition w-full text-center">View Package <i class="fas fa-arrow-right ml-1"></i></a>
+                </div>
+            </div>
+
+            <!-- Package 3: 4-Day Wildlife Experience -->
+            <div class="package-card p-6 fade-in fade-in-d3">
+                <div class="flex items-center gap-3 mb-3">
+                    <i class="fas fa-globe-africa text-3xl text-green-700"></i>
+                    <h3 class="text-2xl font-bold text-gray-800">4-DAY TANZANIA WILDLIFE</h3>
+                </div>
+                <p class="text-sm text-gray-600 mb-4">Tarangire + Ngorongoro + Serengeti</p>
+                <p class="text-gray-600 text-sm mb-4">For fans who want to make their AFCON trip a true African adventure.</p>
+                <ul class="feature-list space-y-1 text-sm">
+                    <li><i class="fas fa-check-circle"></i> Tarangire game drive</li>
+                    <li><i class="fas fa-check-circle"></i> Ngorongoro Crater tour</li>
+                    <li><i class="fas fa-check-circle"></i> Serengeti game drive</li>
+                    <li><i class="fas fa-check-circle"></i> 3 nights accommodation</li>
+                    <li><i class="fas fa-check-circle"></i> Professional guide & 4×4</li>
+                    <li><i class="fas fa-check-circle"></i> Park fees & picnic lunches</li>
+                </ul>
+                <div class="mt-4 p-3 bg-amber-50 rounded-xl border border-amber-200">
+                    <p class="text-xs text-amber-800"><i class="fas fa-lightbulb mr-1"></i> Ideal for: Visitors with several free days</p>
+                </div>
+                <div class="mt-6 text-center">
+                    <a href="contact.html" class="inline-block bg-green-700 text-white px-6 py-2 rounded-full text-sm font-semibold hover:bg-green-800 transition w-full text-center">View Package <i class="fas fa-arrow-right ml-1"></i></a>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Second Row: Package 4 & 5 -->
+        <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto mt-8">
+            <!-- Package 4: 5-Day Premium Safari -->
+            <div class="package-card p-6 fade-in fade-in-d4">
+                <span class="package-badge" style="background:#8b5cf6; color:white;"><i class="fas fa-crown mr-1"></i> Premium</span>
+                <div class="flex items-center gap-3 mb-3">
+                    <i class="fas fa-sun text-3xl text-green-700"></i>
+                    <h3 class="text-2xl font-bold text-gray-800">5-DAY AFCON PREMIUM SAFARI</h3>
+                </div>
+                <p class="text-sm text-gray-600 mb-4">Tarangire + Serengeti + Ngorongoro</p>
+                <p class="text-gray-600 text-sm mb-4">The ultimate option for visitors who want to combine AFCON excitement with an unforgettable safari.</p>
+                <ul class="feature-list space-y-1 text-sm">
+                    <li><i class="fas fa-check-circle"></i> Tarangire + Serengeti + Ngorongoro</li>
+                    <li><i class="fas fa-check-circle"></i> 4 nights premium accommodation</li>
+                    <li><i class="fas fa-check-circle"></i> More time in the wilderness</li>
+                    <li><i class="fas fa-check-circle"></i> Premium accommodation options</li>
+                    <li><i class="fas fa-check-circle"></i> Relaxed safari experience</li>
+                    <li><i class="fas fa-check-circle"></i> Professional guide & 4×4 vehicle</li>
+                </ul>
+                <div class="mt-4 p-3 bg-amber-50 rounded-xl border border-amber-200">
+                    <p class="text-xs text-amber-800"><i class="fas fa-lightbulb mr-1"></i> Ideal for: Fans who want the best of northern Tanzania</p>
+                </div>
+                <div class="mt-6 text-center">
+                    <a href="contact.html" class="inline-block bg-green-700 text-white px-6 py-2 rounded-full text-sm font-semibold hover:bg-green-800 transition w-full text-center">View Package <i class="fas fa-arrow-right ml-1"></i></a>
+                </div>
+            </div>
+
+            <!-- Package 5: Custom Package -->
+            <div class="package-card p-6 border-dashed border-2 border-yellow-400 bg-gradient-to-br from-yellow-50 to-white fade-in fade-in-d5">
+                <div class="flex items-center gap-3 mb-3">
+                    <i class="fas fa-futbol text-3xl text-green-700"></i>
+                    <h3 class="text-2xl font-bold text-gray-800">YOUR MATCH. YOUR SAFARI.</h3>
+                </div>
+                <p class="text-sm text-gray-600 mb-4">Tell us your AFCON match dates and we'll plan your safari around your schedule.</p>
+                <ul class="feature-list space-y-1 text-sm">
+                    <li><i class="fas fa-check-circle"></i> Private safaris</li>
+                    <li><i class="fas fa-check-circle"></i> Small groups</li>
+                    <li><i class="fas fa-check-circle"></i> Flexible dates</li>
+                    <li><i class="fas fa-check-circle"></i> Arusha pickup & drop-off</li>
+                    <li><i class="fas fa-check-circle"></i> Custom itineraries</li>
+                </ul>
+                <div class="mt-4 p-3 bg-green-50 rounded-xl border border-green-200">
+                    <p class="text-xs text-green-800"><i class="fas fa-heart mr-1"></i> Tell us your dates & we'll build your safari</p>
+                </div>
+                <div class="mt-6 text-center flex flex-col gap-3">
+                    <a href="contact.html" class="inline-block bg-yellow-500 text-gray-900 px-6 py-2 rounded-full text-sm font-bold hover:bg-yellow-400 transition w-full text-center"><i class="fas fa-calendar-plus mr-2"></i> Plan My AFCON Safari</a>
+                    <a href="https://wa.me/255655691910" target="_blank" class="inline-block bg-green-600 text-white px-6 py-2 rounded-full text-sm font-semibold hover:bg-green-700 transition w-full text-center"><i class="fab fa-whatsapp mr-2"></i> WhatsApp Us</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Why AFCON + Safari Section -->
+<section class="py-16 bg-white">
+    <div class="container mx-auto px-4">
+        <div class="max-w-5xl mx-auto">
+            <div class="text-center mb-12">
+                <span class="inline-block bg-green-100 text-green-800 px-4 py-1 rounded-full text-sm font-semibold mb-3"><i class="fas fa-question-circle mr-1"></i> Why Combine</span>
+                <h2 class="section-title">Why Combine AFCON & Tanzania Safari?</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto mt-2">Experience the best of both worlds – world-class football and unforgettable wildlife adventures</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="text-center p-6 bg-gray-50 rounded-2xl hover:shadow-lg transition">
+                    <div class="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-trophy text-2xl text-yellow-600"></i>
+                    </div>
+                    <h3 class="font-bold text-gray-800">AFCON 2027</h3>
+                    <p class="text-sm text-gray-600 mt-2">Witness Africa's biggest football tournament in Tanzania for the first time ever.</p>
+                </div>
+                <div class="text-center p-6 bg-green-50 rounded-2xl hover:shadow-lg transition">
+                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-paw text-2xl text-green-600"></i>
+                    </div>
+                    <h3 class="font-bold text-gray-800">Wildlife Adventure</h3>
+                    <p class="text-sm text-gray-600 mt-2">Explore Tanzania's famous national parks and witness the Big Five in their natural habitat.</p>
+                </div>
+                <div class="text-center p-6 bg-amber-50 rounded-2xl hover:shadow-lg transition">
+                    <div class="w-16 h-16 bg-amber-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <i class="fas fa-clock text-2xl text-amber-600"></i>
+                    </div>
+                    <h3 class="font-bold text-gray-800">Flexible Planning</h3>
+                    <p class="text-sm text-gray-600 mt-2">Safaris designed to fit around your match schedule. Private & small group options available.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section id="contact" class="py-16 bg-gradient-to-r from-green-800 to-green-700">
+    <div class="container mx-auto px-4 text-center text-white">
+        <i class="fas fa-map-pin text-4xl text-yellow-300 mb-4"></i>
+        <h2 class="text-3xl md:text-5xl font-bold mb-4">Your Match. Your Safari. Your Tanzania.</h2>
+        <p class="text-xl text-white/90 max-w-3xl mx-auto mb-6">Tell us your AFCON match dates and we will help you plan your safari around your football schedule.</p>
+        <div class="flex flex-wrap justify-center gap-4">
+            <a href="contact.html" class="btn-gold text-lg px-10 py-4"><i class="fas fa-calendar-plus mr-2"></i> Plan My AFCON Safari</a>
+            <a href="https://wa.me/255655691910" target="_blank" class="bg-white/10 backdrop-blur-sm border border-white/30 text-white px-8 py-3 rounded-full font-semibold hover:bg-white/20 transition inline-flex items-center gap-2 text-lg"><i class="fab fa-whatsapp"></i> WhatsApp Us</a>
+        </div>
+        <p class="text-sm text-white/60 mt-6"><i class="fas fa-paw mr-1"></i> Operated by Wilderness Footprints Tanzania</p>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-gray-900 text-gray-300 py-10">
+    <div class="container mx-auto px-4">
+        <div class="grid md:grid-cols-3 gap-8">
+            <div><h3 class="text-white text-xl font-bold mb-4">Wilderness Footprints</h3><p class="text-sm">Tanzania Trekking & Safaris. Step into the heart of the wilderness with us.</p></div>
+            <div><h3 class="text-white text-xl font-bold mb-4">Contact</h3><p class="text-sm"><i class="fas fa-map-marker-alt mr-2"></i> Boma Road, Near New Safari Hotel, Arusha, Tanzania</p><p class="text-sm mt-2"><i class="fab fa-whatsapp mr-2"></i> +255655691910 (WhatsApp)</p><p class="text-sm mt-2"><i class="fas fa-envelope mr-2"></i> wildernessfootprints@gmail.com</p></div>
+            <div><h3 class="text-white text-xl font-bold mb-4">Follow Us</h3><div class="flex space-x-4"><a href="https://www.facebook.com/africafootprintstanzania" target="_blank" class="text-gray-400 hover:text-white text-2xl transition"><i class="fab fa-facebook"></i></a><a href="https://wa.me/255655691910" target="_blank" class="text-gray-400 hover:text-white text-2xl transition"><i class="fab fa-whatsapp"></i></a><a href="https://www.linkedin.com/in/wilderness-footprints-tanzania-04633082" target="_blank" class="text-gray-400 hover:text-white text-2xl transition"><i class="fab fa-linkedin"></i></a><a href="https://vm.tiktok.com/ZS92vqX1esH6L-DVzme/" target="_blank" class="text-gray-400 hover:text-white text-2xl transition"><i class="fab fa-tiktok"></i></a></div></div>
+        </div>
+        <div class="border-t border-gray-800 mt-8 pt-6 text-center text-sm"><p>&copy; 2026 Wilderness Footprints Tanzania. All rights reserved.</p></div>
+    </div>
+</footer>
+
+<script>
+    function toggleMobileMenu() { document.getElementById('mobileMenu').classList.toggle('hidden'); }
+</script>
+</body>
+</html>
