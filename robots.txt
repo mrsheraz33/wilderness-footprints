@@ -1,0 +1,10 @@
+User-agent: *
+Allow: /
+Disallow: /css/
+Disallow: /js/
+Disallow: /images/
+Disallow: /blogs/css/
+Disallow: /blogs/js/
+Disallow: /blogs/images/
+
+Sitemap: https://wilderness-footprints.vercel.app/sitemap.xml
