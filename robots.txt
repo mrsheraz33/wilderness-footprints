@@ -7,4 +7,4 @@ Disallow: /blogs/css/
 Disallow: /blogs/js/
 Disallow: /blogs/images/
 
-Sitemap: https://wilderness-footprints.vercel.app/sitemap.xml
+Sitemap: https://www.wildernessfootprintstanzania.com/sitemap.xml
